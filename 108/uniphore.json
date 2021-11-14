@@ -1,0 +1,175 @@
+{
+  "dtml_version": "1.0",
+  "currency": "USD",
+  "customer_id": "Uniphore.com",
+  "plan_name": "Plan for FY 2022",
+  "plan_description": "This plan covers only the marketing and sales funnel",
+  "plan_start_date": "2021/04",
+  "duration": 4,
+  "period": "3m",
+  "dimensions": [{
+    "Country": ["North_America", "India", "SG_HK_MY", "Japan", "Philippines", "Indonesia", "Vietnam", "ANZ", "ME"]
+  }, {
+    "Marketing_Channel": ["ABM", "Inbound", "Outbound"]
+  }, {
+    "Sales_Channel": ["SDR", "Velocity"]
+  }],
+  "metrics": ["MQL", "Stage_0", "Stage_1", "Closed_Won", "MQL_Stage_0_Conversion_Rate", "Survival_Rate", "Win_Rate"],
+  "customers": [],
+  "churn": [],
+  "plans": [],
+  "actuals": [{
+    "metrics.MQL[t=-1]": 0
+  }, {
+    "metrics.MQL_Stage_0_Conversion_Rate[t=-1]": 0.0213
+  }, {
+    "metrics.Stage_1[t=-1]": 0
+  }, {
+    "metrics.Win_Rate[t=-1]": 0.75
+  }],
+  "objectives": [{
+    "metrics.Win_Rate": 0.2
+  }, {
+    "metrics.MQL_Stage_0_Conversion_Rate[Country=North_America][Marketing_Channel=Inbound]": 0.0213
+  }, {
+    "metrics.MQL_Stage_0_Conversion_Rate[Country=India][Marketing_Channel=Inbound]": 0.0481
+  }, {
+    "metrics.MQL_Stage_0_Conversion_Rate[Country=SG_HK_MY][Marketing_Channel=Inbound]": 0.0481
+  }, {
+    "metrics.MQL_Stage_0_Conversion_Rate[Country=Japan][Marketing_Channel=Inbound]": 0.0481
+  }, {
+    "metrics.MQL_Stage_0_Conversion_Rate[Country=Philippines][Marketing_Channel=Inbound]": 0.0481
+  }, {
+    "metrics.MQL_Stage_0_Conversion_Rate[Country=Indonesia][Marketing_Channel=Inbound]": 0.0481
+  }, {
+    "metrics.MQL_Stage_0_Conversion_Rate[Country=Vietnam][Marketing_Channel=Inbound]": 0.0481
+  }, {
+    "metrics.MQL_Stage_0_Conversion_Rate[Country=ANZ][Marketing_Channel=Inbound]": 0.0481
+  }, {
+    "metrics.MQL_Stage_0_Conversion_Rate[Country=ME][Marketing_Channel=Inbound]": 0.0481
+  }, {
+    "metrics.Survival_Rate[Marketing_Channel=ABM]": 0.75
+  }, {
+    "metrics.Survival_Rate[Marketing_Channel=Inbound]": 0.35
+  }, {
+    "metrics.Survival_Rate[Marketing_Channel=Outbound]": 0.75
+  }, {
+    "metrics.Stage_0[Marketing_Channel=ABM][Country=North_America][Sales_Channel=SDR]": [6, 5, 5, 4]
+  }, {
+    "metrics.MQL[Marketing_Channel=Inbound][Country=North_America][Sales_Channel=SDR]": [563, 469, 281, 563]
+  }, {
+    "metrics.Stage_0[Marketing_Channel=Outbound][Country=North_America][Sales_Channel=SDR]": [14, 17, 18, 16]
+  }, {
+    "metrics.Stage_0[Marketing_Channel=ABM][Country=North_America][Sales_Channel=Velocity]": [0, 0, 0, 0]
+  }, {
+    "metrics.MQL[Marketing_Channel=Inbound][Country=North_America][Sales_Channel=Velocity]": [300, 250, 150, 300]
+  }, {
+    "metrics.Stage_0[Marketing_Channel=Outbound][Country=North_America][Sales_Channel=Velocity]": [8, 11, 12, 12]
+  }, {
+    "metrics.Stage_0[Marketing_Channel=ABM][Country=India][Sales_Channel=SDR]": [0, 0, 0, 0]
+  }, {
+    "metrics.MQL[Marketing_Channel=Inbound][Country=India][Sales_Channel=SDR]": [37, 31, 18, 37]
+  }, {
+    "metrics.Stage_0[Marketing_Channel=Outbound][Country=India][Sales_Channel=SDR]": [4, 4, 3, 3]
+  }, {
+    "metrics.Stage_0[Marketing_Channel=ABM][Country=SG_HK_MY][Sales_Channel=SDR]": [0, 0, 0, 0]
+  }, {
+    "metrics.MQL[Marketing_Channel=Inbound][Country=SG_HK_MY][Sales_Channel=SDR]": [49, 41, 25, 49]
+  }, {
+    "metrics.Stage_0[Marketing_Channel=Outbound][Country=SG_HK_MY][Sales_Channel=SDR]": [3, 3, 2, 1]
+  }, {
+    "metrics.Stage_0[Marketing_Channel=ABM][Country=Japan][Sales_Channel=SDR]": [0, 0, 0, 0]
+  }, {
+    "metrics.MQL[Marketing_Channel=Inbound][Country=Japan][Sales_Channel=SDR]": [111, 92, 55, 111]
+  }, {
+    "metrics.Stage_0[Marketing_Channel=Outbound][Country=Japan][Sales_Channel=SDR]": [3, 3, 2, 1]
+  }, {
+    "metrics.Stage_0[Marketing_Channel=ABM][Country=Philippines][Sales_Channel=SDR]": [0, 0, 0, 0]
+  }, {
+    "metrics.MQL[Marketing_Channel=Inbound][Country=Philippines][Sales_Channel=SDR]": [43, 36, 22, 43]
+  }, {
+    "metrics.Stage_0[Marketing_Channel=Outbound][Country=Philippines][Sales_Channel=SDR]": [3, 3, 2, 1]
+  }, {
+    "metrics.Stage_0[Marketing_Channel=ABM][Country=Indonesia][Sales_Channel=SDR]": [0, 0, 0, 0]
+  }, {
+    "metrics.MQL[Marketing_Channel=Inbound][Country=Indonesia][Sales_Channel=SDR]": [37, 31, 18, 37]
+  }, {
+    "metrics.Stage_0[Marketing_Channel=Outbound][Country=Indonesia][Sales_Channel=SDR]": [3, 3, 2, 1]
+  }, {
+    "metrics.Stage_0[Marketing_Channel=ABM][Country=Vietnam][Sales_Channel=SDR]": [0, 0, 0, 0]
+  }, {
+    "metrics.MQL[Marketing_Channel=Inbound][Country=Vietnam][Sales_Channel=SDR]": [49, 41, 25, 49]
+  }, {
+    "metrics.Stage_0[Marketing_Channel=Outbound][Country=Vietnam][Sales_Channel=SDR]": [3, 3, 2, 1]
+  }, {
+    "metrics.Stage_0[Marketing_Channel=ABM][Country=ANZ][Sales_Channel=SDR]": [0, 0, 0, 0]
+  }, {
+    "metrics.MQL[Marketing_Channel=Inbound][Country=ANZ][Sales_Channel=SDR]": [49, 41, 25, 49]
+  }, {
+    "metrics.Stage_0[Marketing_Channel=Outbound][Country=ANZ][Sales_Channel=SDR]": [3, 3, 2, 1]
+  }, {
+    "metrics.Stage_0[Marketing_Channel=ABM][Country=ME][Sales_Channel=SDR]": [0, 0, 0, 0]
+  }, {
+    "metrics.MQL[Marketing_Channel=Inbound][Country=ME][Sales_Channel=SDR]": [74, 62, 37, 74]
+  }, {
+    "metrics.Stage_0[Marketing_Channel=Outbound][Country=ME][Sales_Channel=SDR]": [3, 3, 2, 1]
+  }, {
+    "metrics.Stage_0[Country=India][Sales_Channel=Velocity]": [0, 0, 0, 0]
+  }, {
+    "metrics.MQL[Country=India][Sales_Channel=Velocity]": [0, 0, 0, 0]
+  }, {
+    "metrics.Stage_0[Country=Japan][Sales_Channel=Velocity]": [0, 0, 0, 0]
+  }, {
+    "metrics.MQL[Country=Japan][Sales_Channel=Velocity]": [0, 0, 0, 0]
+  }, {
+    "metrics.Stage_0[Country=Philippines][Sales_Channel=Velocity]": [0, 0, 0, 0]
+  }, {
+    "metrics.MQL[Country=Philippines][Sales_Channel=Velocity]": [0, 0, 0, 0]
+  }, {
+    "metrics.Stage_0[Country=Indonesia][Sales_Channel=Velocity]": [0, 0, 0, 0]
+  }, {
+    "metrics.MQL[Country=Indonesia][Sales_Channel=Velocity]": [0, 0, 0, 0]
+  }, {
+    "metrics.Stage_0[Country=SG_HK_MY][Sales_Channel=Velocity]": [0, 0, 0, 0]
+  }, {
+    "metrics.MQL[Country=SG_HK_MY][Sales_Channel=Velocity]": [0, 0, 0, 0]
+  }, {
+    "metrics.Stage_0[Country=Vietnam][Sales_Channel=Velocity]": [0, 0, 0, 0]
+  }, {
+    "metrics.MQL[Country=Vietnam][Sales_Channel=Velocity]": [0, 0, 0, 0]
+  }, {
+    "metrics.Stage_0[Country=ANZ][Sales_Channel=Velocity]": [0, 0, 0, 0]
+  }, {
+    "metrics.MQL[Country=ANZ][Sales_Channel=Velocity]": [0, 0, 0, 0]
+  }, {
+    "metrics.Stage_0[Country=ME][Sales_Channel=Velocity]": [0, 0, 0, 0]
+  }, {
+    "metrics.MQL[Country=ME][Sales_Channel=Velocity]": [0, 0, 0, 0]
+  }, {
+    "metrics.MQL[Marketing_Channel=ABM]": [0, 0, 0, 0]
+  }, {
+    "metrics.MQL[Marketing_Channel=Outbound]": [0, 0, 0, 0]
+  }],
+  "formulae": [
+    "metrics.Stage_0[Marketing_Channel=Inbound] = metrics.MQL[Marketing_Channel=Inbound] * metrics.MQL_Stage_0_Conversion_Rate[Marketing_Channel=Inbound]",
+    "metrics.Stage_1 = metrics.Stage_0 * metrics.Survival_Rate",
+    "metrics.Closed_Won = metrics.Stage_1 * metrics.Win_Rate"
+  ],
+  "stages": [],
+  "transitions": [],
+  "aggregations": [],
+  "resources": [],
+  "views": [{
+    "name": "Funnel",
+    "metrics": [{
+      "name": "metrics.Stage_0"
+    }, {
+      "name": "metrics.Stage_1",
+      "display_name": "Stage 1plus"
+    }, {
+      "name": "metrics.Closed_Won"
+    }, {
+      "name": "metrics.MQL"
+    }]
+  }]
+}

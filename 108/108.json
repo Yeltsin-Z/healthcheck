@@ -1,0 +1,1672 @@
+{
+    "meta": {
+        "period": "1m",
+        "currency": "USD",
+        "duration": "12",
+        "plan_name": "Path to Quarter",
+        "customer_id": null,
+        "dtml_version": null,
+        "plan_start_date": "2021/05",
+        "plan_description": null
+    },
+    "views": [
+        {
+            "name": "Revenue",
+            "metrics": [
+                {
+                    "name": "metrics.New_Revenue"
+                }
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "displayName": null
+        },
+        {
+            "name": "Pipeline",
+            "metrics": [
+                {
+                    "name": "metrics.Closed_Won"
+                },
+                {
+                    "name": "metrics.New_Pipeline"
+                },
+                {
+                    "name": ""
+                },
+                {
+                    "name": "metrics.Total_Pipeline",
+                    "metrics": [
+                        {
+                            "name": "metrics.Pipeline_Early"
+                        },
+                        {
+                            "name": "metrics.Pipeline_Mid"
+                        },
+                        {
+                            "name": "metrics.Pipeline_Late"
+                        }
+                    ]
+                },
+                {
+                    "name": ""
+                },
+                {
+                    "name": "metrics.Closed_Lost_Total",
+                    "metrics": [
+                        {
+                            "name": "metrics.Closed_Lost_Early"
+                        },
+                        {
+                            "name": "metrics.Closed_Lost_Mid"
+                        },
+                        {
+                            "name": "metrics.Closed_Lost_Late"
+                        }
+                    ]
+                }
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "displayName": null
+        },
+        {
+            "name": "New Pipeline",
+            "metrics": [
+                {
+                    "name": "metrics.Deal_Size"
+                },
+                {
+                    "name": ""
+                },
+                {
+                    "name": "metrics.Sales_Prospected_Opportunities"
+                },
+                {
+                    "name": "metrics.Sales_Prospected_Pipeline"
+                },
+                {
+                    "name": ""
+                },
+                {
+                    "name": "metrics.Marketing_SDR_Opportunities"
+                },
+                {
+                    "name": "metrics.Marketing_SDR_Pipeline"
+                },
+                {
+                    "name": ""
+                },
+                {
+                    "name": "metrics.New_Pipeline"
+                }
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "displayName": null
+        },
+        {
+            "name": "Marketing/SDR",
+            "metrics": [
+                {
+                    "name": "metrics.MQL"
+                },
+                {
+                    "name": "metrics.MQL_S0_Conversion"
+                },
+                {
+                    "name": "metrics.Inbound_S0"
+                },
+                {
+                    "name": ""
+                },
+                {
+                    "name": "metrics.ABM_S0"
+                },
+                {
+                    "name": "metrics.Outbound_S0"
+                },
+                {
+                    "name": ""
+                },
+                {
+                    "name": "metrics.Marketing_SDR_S0"
+                }
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "displayName": null
+        }
+    ],
+    "metrics": [
+        {
+            "name": "Closed_Lost_Total",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Closed_Lost_Total[t=t] = metrics.Closed_Lost_Early[t=t] + metrics.Closed_Lost_Mid[t=t] + metrics.Closed_Lost_Late[t=t]"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": null,
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "display_name": "Closed Lost (Total)"
+        },
+        {
+            "name": "Inbound_S0",
+            "type": "DECIMAL",
+            "formulae": [
+                "metrics.Inbound_S0 = metrics.MQL * metrics.MQL_S0_Conversion"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "display_name": "Inbound S0"
+        },
+        {
+            "name": "MQL",
+            "type": "DECIMAL",
+            "formulae": [
+                "metrics.MQL[NAMER=US][Revenue_Line=NAMER][t=0] = 160.86",
+                "metrics.MQL[NAMER=US][Revenue_Line=NAMER][t=1] =  160.86",
+                "metrics.MQL[NAMER=US][Revenue_Line=NAMER][t=2] =  160.86",
+                "metrics.MQL[NAMER=US][Revenue_Line=NAMER][t=3] =  134",
+                "metrics.MQL[NAMER=US][Revenue_Line=NAMER][t=4] =  134",
+                "metrics.MQL[NAMER=US][Revenue_Line=NAMER][t=5] =  134",
+                "metrics.MQL[NAMER=US][Revenue_Line=NAMER][t=6] =  80.29",
+                "metrics.MQL[NAMER=US][Revenue_Line=NAMER][t=7] =  80.29",
+                "metrics.MQL[NAMER=US][Revenue_Line=NAMER][t=8] =  80.29",
+                "metrics.MQL[NAMER=US][Revenue_Line=NAMER][t=9] =  160.86",
+                "metrics.MQL[NAMER=US][Revenue_Line=NAMER][t=10] =  160.86",
+                "metrics.MQL[NAMER=US][Revenue_Line=NAMER][t=11] =  160.86",
+                "metrics.MQL[NAMER=Canada][Revenue_Line=NAMER][t=0] = 26.81",
+                "metrics.MQL[NAMER=Canada][Revenue_Line=NAMER][t=1] =  26.81",
+                "metrics.MQL[NAMER=Canada][Revenue_Line=NAMER][t=2] =  26.81",
+                "metrics.MQL[NAMER=Canada][Revenue_Line=NAMER][t=3] =  22.33",
+                "metrics.MQL[NAMER=Canada][Revenue_Line=NAMER][t=4] =  22.33",
+                "metrics.MQL[NAMER=Canada][Revenue_Line=NAMER][t=5] =  22.33",
+                "metrics.MQL[NAMER=Canada][Revenue_Line=NAMER][t=6] =  13.38",
+                "metrics.MQL[NAMER=Canada][Revenue_Line=NAMER][t=7] =  13.38",
+                "metrics.MQL[NAMER=Canada][Revenue_Line=NAMER][t=8] =  13.38",
+                "metrics.MQL[NAMER=Canada][Revenue_Line=NAMER][t=9] =  26.81",
+                "metrics.MQL[NAMER=Canada][Revenue_Line=NAMER][t=10] =  26.81",
+                "metrics.MQL[NAMER=Canada][Revenue_Line=NAMER][t=11] =  26.81",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=0] = 12.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=1] =  12.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=2] =  12.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=3] =  10.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=4] =  10.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=5] =  10.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=6] =  6",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=7] =  6",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=8] =  6",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=9] =  12.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=10] =  12.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=11] =  12.33",
+                "metrics.MQL[JAPAC=Japan][Revenue_Line=JAPAC][t=0] = 36.99",
+                "metrics.MQL[JAPAC=Japan][Revenue_Line=JAPAC][t=1] =  36.99",
+                "metrics.MQL[JAPAC=Japan][Revenue_Line=JAPAC][t=2] =  36.99",
+                "metrics.MQL[JAPAC=Japan][Revenue_Line=JAPAC][t=3] =  30.82",
+                "metrics.MQL[JAPAC=Japan][Revenue_Line=JAPAC][t=4] =  30.82",
+                "metrics.MQL[JAPAC=Japan][Revenue_Line=JAPAC][t=5] =  30.82",
+                "metrics.MQL[JAPAC=Japan][Revenue_Line=JAPAC][t=6] =  18.49",
+                "metrics.MQL[JAPAC=Japan][Revenue_Line=JAPAC][t=7] =  18.49",
+                "metrics.MQL[JAPAC=Japan][Revenue_Line=JAPAC][t=8] =  18.49",
+                "metrics.MQL[JAPAC=Japan][Revenue_Line=JAPAC][t=9] =  36.99",
+                "metrics.MQL[JAPAC=Japan][Revenue_Line=JAPAC][t=10] =  36.99",
+                "metrics.MQL[JAPAC=Japan][Revenue_Line=JAPAC][t=11] =  36.99",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=0] = 16.43",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=1] =  16.43",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=2] =  16.43",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=3] =  13.7",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=4] =  13.7",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=5] =  13.7",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=6] =  8.22",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=7] =  8.22",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=8] =  8.22",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=9] =  16.44",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=10] =  16.44",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=11] =  16.44",
+                "metrics.MQL[JAPAC=ME][Revenue_Line=JAPAC][t=0] = 24.67",
+                "metrics.MQL[JAPAC=ME][Revenue_Line=JAPAC][t=1] =  24.67",
+                "metrics.MQL[JAPAC=ME][Revenue_Line=JAPAC][t=2] =  24.67",
+                "metrics.MQL[JAPAC=ME][Revenue_Line=JAPAC][t=3] =  20.67",
+                "metrics.MQL[JAPAC=ME][Revenue_Line=JAPAC][t=4] =  20.67",
+                "metrics.MQL[JAPAC=ME][Revenue_Line=JAPAC][t=5] =  20.67",
+                "metrics.MQL[JAPAC=ME][Revenue_Line=JAPAC][t=6] =  12.33",
+                "metrics.MQL[JAPAC=ME][Revenue_Line=JAPAC][t=7] =  12.33",
+                "metrics.MQL[JAPAC=ME][Revenue_Line=JAPAC][t=8] =  12.33",
+                "metrics.MQL[JAPAC=ME][Revenue_Line=JAPAC][t=9] =  24.67",
+                "metrics.MQL[JAPAC=ME][Revenue_Line=JAPAC][t=10] =  24.67",
+                "metrics.MQL[JAPAC=ME][Revenue_Line=JAPAC][t=11] =  24.67",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=0] = 16.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=1] =  16.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=2] =  16.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=3] =  13.67",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=4] =  13.67",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=5] =  13.67",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=6] =  8.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=7] =  8.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=8] =  8.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=9] =  16.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=10] =  16.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=11] =  16.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=0] = 16.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=1] =  16.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=2] =  16.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=3] =  13.67",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=4] =  13.67",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=5] =  13.67",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=6] =  8.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=7] =  8.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=8] =  8.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=9] =  16.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=10] =  16.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=11] =  16.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=0] = 16.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=1] =  16.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=2] =  16.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=3] =  13.67",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=4] =  13.67",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=5] =  13.67",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=6] =  8.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=7] =  8.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=8] =  8.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=9] =  16.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=10] =  16.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=11] =  16.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=0] = 12.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=1] =  12.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=2] =  12.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=3] =  10.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=4] =  10.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=5] =  10.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=6] =  6",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=7] =  6",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=8] =  6",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=9] =  12.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=10] =  12.33",
+                "metrics.MQL[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=11] =  12.33",
+                "metrics.MQL[Revenue_Line=CAP][t=0] = 19.33",
+                "metrics.MQL[Revenue_Line=CAP][t=1] =  19.33",
+                "metrics.MQL[Revenue_Line=CAP][t=2] =  19.33",
+                "metrics.MQL[Revenue_Line=CAP][t=3] =  16",
+                "metrics.MQL[Revenue_Line=CAP][t=4] =  16",
+                "metrics.MQL[Revenue_Line=CAP][t=5] =  16",
+                "metrics.MQL[Revenue_Line=CAP][t=6] =  9.67",
+                "metrics.MQL[Revenue_Line=CAP][t=7] =  9.67",
+                "metrics.MQL[Revenue_Line=CAP][t=8] =  9.67",
+                "metrics.MQL[Revenue_Line=CAP][t=9] =  19.33",
+                "metrics.MQL[Revenue_Line=CAP][t=10] =  19.33",
+                "metrics.MQL[Revenue_Line=CAP][t=11] =  19.33"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "display_name": "MQL"
+        },
+        {
+            "name": "Pipeline_Progression_Ratio_Early_Mid",
+            "type": "DECIMAL",
+            "formulae": [
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=US][Revenue_Line=NAMER][t=0] = 0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=US][Revenue_Line=NAMER][t=1] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=US][Revenue_Line=NAMER][t=2] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=US][Revenue_Line=NAMER][t=3] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=US][Revenue_Line=NAMER][t=4] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=US][Revenue_Line=NAMER][t=5] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=US][Revenue_Line=NAMER][t=6] =  0.13",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=US][Revenue_Line=NAMER][t=7] =  0.13",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=US][Revenue_Line=NAMER][t=8] =  0.13",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=US][Revenue_Line=NAMER][t=9] =  0.13",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=US][Revenue_Line=NAMER][t=10] =  0.13",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=US][Revenue_Line=NAMER][t=11] =  0.13",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=Canada][Revenue_Line=NAMER][t=0] = 0.22",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=Canada][Revenue_Line=NAMER][t=1] =  0.22",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=Canada][Revenue_Line=NAMER][t=2] =  0.22",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=Canada][Revenue_Line=NAMER][t=3] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=Canada][Revenue_Line=NAMER][t=4] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=Canada][Revenue_Line=NAMER][t=5] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=Canada][Revenue_Line=NAMER][t=6] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=Canada][Revenue_Line=NAMER][t=7] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=Canada][Revenue_Line=NAMER][t=8] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=Canada][Revenue_Line=NAMER][t=9] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=Canada][Revenue_Line=NAMER][t=10] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[NAMER=Canada][Revenue_Line=NAMER][t=11] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=0] = 0.07",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=1] =  0.07",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=2] =  0.07",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=3] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=4] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=5] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=6] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=7] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=8] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=9] =  0.13",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=10] =  0.13",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=11] =  0.13",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=Japan][Revenue_Line=JAPAC][t=0] = 0.05",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=Japan][Revenue_Line=JAPAC][t=1] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=Japan][Revenue_Line=JAPAC][t=2] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=Japan][Revenue_Line=JAPAC][t=3] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=Japan][Revenue_Line=JAPAC][t=4] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=Japan][Revenue_Line=JAPAC][t=5] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=Japan][Revenue_Line=JAPAC][t=6] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=Japan][Revenue_Line=JAPAC][t=7] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=Japan][Revenue_Line=JAPAC][t=8] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=Japan][Revenue_Line=JAPAC][t=9] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=Japan][Revenue_Line=JAPAC][t=10] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=Japan][Revenue_Line=JAPAC][t=11] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY] = 0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=ME][Revenue_Line=JAPAC][t=0] = 0.2",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=ME][Revenue_Line=JAPAC][t=1] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=ME][Revenue_Line=JAPAC][t=2] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=ME][Revenue_Line=JAPAC][t=3] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=ME][Revenue_Line=JAPAC][t=4] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=ME][Revenue_Line=JAPAC][t=5] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=ME][Revenue_Line=JAPAC][t=6] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=ME][Revenue_Line=JAPAC][t=7] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=ME][Revenue_Line=JAPAC][t=8] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=ME][Revenue_Line=JAPAC][t=9] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=ME][Revenue_Line=JAPAC][t=10] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=ME][Revenue_Line=JAPAC][t=11] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=0] = 0.2",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=1] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=2] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=3] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=4] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=5] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=6] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=7] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=8] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=9] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=10] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=11] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=0] = 0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=1] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=2] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=3] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=4] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=5] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=6] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=7] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=8] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=9] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=10] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=11] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=0] = 0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=1] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=2] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=3] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=4] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=5] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=6] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=7] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=8] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=9] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=10] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=11] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=0] = 0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=1] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=2] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=3] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=4] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=5] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=6] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=7] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=8] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=9] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=10] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=11] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[Revenue_Line=CAP][t=0] = 0.25",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[Revenue_Line=CAP][t=1] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[Revenue_Line=CAP][t=2] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[Revenue_Line=CAP][t=3] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[Revenue_Line=CAP][t=4] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[Revenue_Line=CAP][t=5] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[Revenue_Line=CAP][t=6] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[Revenue_Line=CAP][t=7] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[Revenue_Line=CAP][t=8] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[Revenue_Line=CAP][t=9] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[Revenue_Line=CAP][t=10] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Mid[Revenue_Line=CAP][t=11] =  0.15"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "formula",
+                "eop"
+            ],
+            "display_name": "Pipeline Progression Ratio Early To Mid"
+        },
+        {
+            "name": "Marketing_SDR_S0",
+            "type": "DECIMAL",
+            "formulae": [
+                "metrics.Marketing_SDR_S0 = metrics.Inbound_S0 + metrics.ABM_S0 + metrics.Outbound_S0"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "display_name": "Marketing-SDR S0"
+        },
+        {
+            "name": "Closed_Won",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Closed_Won[t=t] = metrics.Pipeline_Late[t=t-1] * metrics.Pipeline_Progression_Ratio_Late_Won[t=t]"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "display_name": "Closed Won"
+        },
+        {
+            "name": "New_Pipeline",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.New_Pipeline = metrics.Sales_Prospected_Pipeline + metrics.Marketing_SDR_Pipeline"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "display_name": "New Pipeline"
+        },
+        {
+            "name": "New_Revenue",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.New_Revenue = metrics.Closed_Won"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "display_name": "New Revenue"
+        },
+        {
+            "name": "Total_Pipeline",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Total_Pipeline = metrics.Pipeline_Early + metrics.Pipeline_Mid + metrics.Pipeline_Late"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "eop"
+            ],
+            "display_name": "Total Pipeline"
+        },
+        {
+            "name": "S0_Opportunity_Rate",
+            "type": "PERCENTAGE",
+            "formulae": [
+                "metrics.S0_Opportunity_Rate = 1.0"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "metrics.Marketing_SDR_S0",
+                "eop"
+            ],
+            "display_name": "S0 Opportunity Rate"
+        },
+        {
+            "name": "Pipeline_Progression_Ratio_Early_Loss",
+            "type": "DECIMAL",
+            "formulae": [
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[Revenue_Line=NAMER] = 0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India] = 0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=Japan][Revenue_Line=JAPAC] = 0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY] = 0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=0] = 0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=1] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=2] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=3] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=4] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=5] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=6] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=7] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=8] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=9] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=10] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=11] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=0] = 0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=1] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=2] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=3] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=4] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=5] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=6] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=7] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=8] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=9] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=10] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=11] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN] = 0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH] = 0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID] = 0.15",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss[Revenue_Line=CAP] = 0.15"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "formula",
+                "eop"
+            ],
+            "display_name": "Pipeline Progression Ratio Early To Loss"
+        },
+        {
+            "name": "Pipeline_Mid",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Pipeline_Mid[NAMER=US][Revenue_Line=NAMER][t=-1] = 22870000",
+                "metrics.Pipeline_Mid[NAMER=Canada][Revenue_Line=NAMER][t=-1] = 0",
+                "metrics.Pipeline_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=-1] = 1233135",
+                "metrics.Pipeline_Mid[JAPAC=Japan][Revenue_Line=JAPAC][t=-1] = 11568000",
+                "metrics.Pipeline_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=-1] = 0",
+                "metrics.Pipeline_Mid[JAPAC=ME][Revenue_Line=JAPAC][t=-1] = 0",
+                "metrics.Pipeline_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=-1] = 0",
+                "metrics.Pipeline_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=-1] = 810000",
+                "metrics.Pipeline_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=-1] = 1476000",
+                "metrics.Pipeline_Mid[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=-1] = 948000",
+                "metrics.Pipeline_Mid[Revenue_Line=CAP][t=-1] = 8025000",
+                "metrics.Pipeline_Mid[t=t] = metrics.Pipeline_Mid[t=t-1] * ( 1 - metrics.Pipeline_Progression_Ratio_Mid_Late[t=t] - metrics.Pipeline_Progression_Ratio_Mid_Loss[t=t] ) + metrics.Pipeline_Early[t=t-1] * metrics.Pipeline_Progression_Ratio_Early_Mid[t=t]"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "eop"
+            ],
+            "display_name": "Pipeline (Mid)"
+        },
+        {
+            "name": "Pipeline_Early",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Pipeline_Early[NAMER=US][Revenue_Line=NAMER][t=-1] = 20768000",
+                "metrics.Pipeline_Early[NAMER=Canada][Revenue_Line=NAMER][t=-1] = 9300000",
+                "metrics.Pipeline_Early[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=-1] = 1222000",
+                "metrics.Pipeline_Early[JAPAC=Japan][Revenue_Line=JAPAC][t=-1] = 7560000",
+                "metrics.Pipeline_Early[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=-1] = 1770000",
+                "metrics.Pipeline_Early[JAPAC=ME][Revenue_Line=JAPAC][t=-1] = 0",
+                "metrics.Pipeline_Early[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=-1] = 0",
+                "metrics.Pipeline_Early[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=-1] = 0",
+                "metrics.Pipeline_Early[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=-1] = 1376000",
+                "metrics.Pipeline_Early[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=-1] = 380000",
+                "metrics.Pipeline_Early[Revenue_Line=CAP][t=-1] = 8140001",
+                "metrics.Pipeline_Early[t=t] = metrics.Pipeline_Early[t=t-1] * ( 1 - metrics.Pipeline_Progression_Ratio_Early_Mid[t=t] - metrics.Pipeline_Progression_Ratio_Early_Loss[t=t] ) + metrics.New_Pipeline[t=t]"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "eop"
+            ],
+            "display_name": "Pipeline (Early)"
+        },
+        {
+            "name": "Sales_Prospected_Opportunities",
+            "type": "DECIMAL",
+            "formulae": [
+                "metrics.Sales_Prospected_Opportunities[NAMER=US][Revenue_Line=NAMER] = 2.5",
+                "metrics.Sales_Prospected_Opportunities[NAMER=Canada][Revenue_Line=NAMER] = 0.5",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India] = 1.2333",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=Japan][Revenue_Line=JAPAC] = 0.4667",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=0] = 0.6333",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=1] =  0.6333",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=2] =  0.6333",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=3] =  0.7667",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=4] =  0.7667",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=5] =  0.7667",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=6] =  0.7667",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=7] =  0.7667",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=8] =  0.7667",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=9] =  0.6333",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=10] =  0.6333",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=11] =  0.6333",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=ME][Revenue_Line=JAPAC][t=0] = 0.9",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=ME][Revenue_Line=JAPAC][t=1] =  0.9",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=ME][Revenue_Line=JAPAC][t=2] =  0.9",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=ME][Revenue_Line=JAPAC][t=3] =  0.9",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=ME][Revenue_Line=JAPAC][t=4] =  0.9",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=ME][Revenue_Line=JAPAC][t=5] =  0.9",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=ME][Revenue_Line=JAPAC][t=6] =  0.7667",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=ME][Revenue_Line=JAPAC][t=7] =  0.7667",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=ME][Revenue_Line=JAPAC][t=8] =  0.7667",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=ME][Revenue_Line=JAPAC][t=9] =  0.7667",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=ME][Revenue_Line=JAPAC][t=10] =  0.7667",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=ME][Revenue_Line=JAPAC][t=11] =  0.7667",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=0] = 0.6",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=1] =  0.6",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=2] =  0.6",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=3] =  0.9",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=4] =  0.9",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=5] =  0.9",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=6] =  0.7667",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=7] =  0.7667",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=8] =  0.7667",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=9] =  0.7667",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=10] =  0.7667",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=11] =  0.7667",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN] = 0.6333",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=0] = 0.5",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=1] =  0.5",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=2] =  0.5",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=3] =  0.5",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=4] =  0.5",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=5] =  0.5",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=6] =  0.6333",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=7] =  0.6333",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=8] =  0.6333",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=9] =  0.6333",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=10] =  0.6333",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=11] =  0.6333",
+                "metrics.Sales_Prospected_Opportunities[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID] = 0.5",
+                "metrics.Sales_Prospected_Opportunities[Revenue_Line=CAP] = 7"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "display_name": "Sales Prospected Opportunities"
+        },
+        {
+            "name": "ABM_S0",
+            "type": "DECIMAL",
+            "formulae": [
+                "metrics.ABM_S0[NAMER=US][Revenue_Line=NAMER][t=0] = 1.714",
+                "metrics.ABM_S0[NAMER=US][Revenue_Line=NAMER][t=1] =  1.714",
+                "metrics.ABM_S0[NAMER=US][Revenue_Line=NAMER][t=2] =  1.714",
+                "metrics.ABM_S0[NAMER=US][Revenue_Line=NAMER][t=3] =  1.429",
+                "metrics.ABM_S0[NAMER=US][Revenue_Line=NAMER][t=4] =  1.429",
+                "metrics.ABM_S0[NAMER=US][Revenue_Line=NAMER][t=5] =  1.429",
+                "metrics.ABM_S0[NAMER=US][Revenue_Line=NAMER][t=6] =  1.429",
+                "metrics.ABM_S0[NAMER=US][Revenue_Line=NAMER][t=7] =  1.429",
+                "metrics.ABM_S0[NAMER=US][Revenue_Line=NAMER][t=8] =  1.429",
+                "metrics.ABM_S0[NAMER=US][Revenue_Line=NAMER][t=9] =  1.143",
+                "metrics.ABM_S0[NAMER=US][Revenue_Line=NAMER][t=10] =  1.143",
+                "metrics.ABM_S0[NAMER=US][Revenue_Line=NAMER][t=11] =  1.143",
+                "metrics.ABM_S0[NAMER=Canada][Revenue_Line=NAMER][t=0] = 0.2857",
+                "metrics.ABM_S0[NAMER=Canada][Revenue_Line=NAMER][t=1] =  0.2857",
+                "metrics.ABM_S0[NAMER=Canada][Revenue_Line=NAMER][t=2] =  0.2857",
+                "metrics.ABM_S0[NAMER=Canada][Revenue_Line=NAMER][t=3] =  0.2381",
+                "metrics.ABM_S0[NAMER=Canada][Revenue_Line=NAMER][t=4] =  0.2381",
+                "metrics.ABM_S0[NAMER=Canada][Revenue_Line=NAMER][t=5] =  0.2381",
+                "metrics.ABM_S0[NAMER=Canada][Revenue_Line=NAMER][t=6] =  0.2381",
+                "metrics.ABM_S0[NAMER=Canada][Revenue_Line=NAMER][t=7] =  0.2381",
+                "metrics.ABM_S0[NAMER=Canada][Revenue_Line=NAMER][t=8] =  0.2381",
+                "metrics.ABM_S0[NAMER=Canada][Revenue_Line=NAMER][t=9] =  0.1905",
+                "metrics.ABM_S0[NAMER=Canada][Revenue_Line=NAMER][t=10] =  0.1905",
+                "metrics.ABM_S0[NAMER=Canada][Revenue_Line=NAMER][t=11] =  0.1905",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=0] = 0.533",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=1] =  0.533",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=2] =  0.533",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=3] =  0.533",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=4] =  0.533",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=5] =  0.533",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=6] =  0.267",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=7] =  0.267",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=8] =  0.267",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=9] =  0.267",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=10] =  0.267",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=11] =  0.267",
+                "metrics.ABM_S0[JAPAC=Japan][Revenue_Line=JAPAC] = 0",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=0] = 0.1333",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=1] =  0.1333",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=2] =  0.1333",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=3] =  0.1333",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=4] =  0.1333",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=5] =  0.1333",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=6] =  0",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=7] =  0",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=8] =  0",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=9] =  0",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=10] =  0",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=11] =  0",
+                "metrics.ABM_S0[JAPAC=ME][Revenue_Line=JAPAC][t=0] = 0",
+                "metrics.ABM_S0[JAPAC=ME][Revenue_Line=JAPAC][t=1] =  0",
+                "metrics.ABM_S0[JAPAC=ME][Revenue_Line=JAPAC][t=2] =  0",
+                "metrics.ABM_S0[JAPAC=ME][Revenue_Line=JAPAC][t=3] =  0",
+                "metrics.ABM_S0[JAPAC=ME][Revenue_Line=JAPAC][t=4] =  0",
+                "metrics.ABM_S0[JAPAC=ME][Revenue_Line=JAPAC][t=5] =  0",
+                "metrics.ABM_S0[JAPAC=ME][Revenue_Line=JAPAC][t=6] =  0.1333",
+                "metrics.ABM_S0[JAPAC=ME][Revenue_Line=JAPAC][t=7] =  0.1333",
+                "metrics.ABM_S0[JAPAC=ME][Revenue_Line=JAPAC][t=8] =  0.1333",
+                "metrics.ABM_S0[JAPAC=ME][Revenue_Line=JAPAC][t=9] =  0.1333",
+                "metrics.ABM_S0[JAPAC=ME][Revenue_Line=JAPAC][t=10] =  0.1333",
+                "metrics.ABM_S0[JAPAC=ME][Revenue_Line=JAPAC][t=11] =  0.1333",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=0] = 0.1333",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=1] =  0.1333",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=2] =  0.1333",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=3] =  0",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=4] =  0",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=5] =  0",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=6] =  0.1333",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=7] =  0.1333",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=8] =  0.1333",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=9] =  0",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=10] =  0",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=11] =  0",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN] = 0",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH] = 0",
+                "metrics.ABM_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID] = 0",
+                "metrics.ABM_S0[Revenue_Line=CAP][t=0] = 0",
+                "metrics.ABM_S0[Revenue_Line=CAP][t=1] =  0",
+                "metrics.ABM_S0[Revenue_Line=CAP][t=2] =  0",
+                "metrics.ABM_S0[Revenue_Line=CAP][t=3] =  0",
+                "metrics.ABM_S0[Revenue_Line=CAP][t=4] =  0",
+                "metrics.ABM_S0[Revenue_Line=CAP][t=5] =  0",
+                "metrics.ABM_S0[Revenue_Line=CAP][t=6] =  0.33",
+                "metrics.ABM_S0[Revenue_Line=CAP][t=7] =  0.33",
+                "metrics.ABM_S0[Revenue_Line=CAP][t=8] =  0.33",
+                "metrics.ABM_S0[Revenue_Line=CAP][t=9] =  0.67",
+                "metrics.ABM_S0[Revenue_Line=CAP][t=10] =  0.67",
+                "metrics.ABM_S0[Revenue_Line=CAP][t=11] =  0.67"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "display_name": "ABM S0"
+        },
+        {
+            "name": "New_Opportunities",
+            "type": "DECIMAL",
+            "formulae": [
+                "metrics.New_Opportunities = metrics.Marketing_SDR_Opportunities + metrics.Sales_Prospected_Opportunities"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "display_name": "New Opportunities"
+        },
+        {
+            "name": "Pipeline_Progression_Ratio_Late_Loss",
+            "type": "DECIMAL",
+            "formulae": [
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[Revenue_Line=NAMER] = 0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India] = 0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[JAPAC=Japan][Revenue_Line=JAPAC] = 0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY] = 0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=0] = 0",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=1] =  0",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=2] =  0",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=3] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=4] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=5] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=6] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=7] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=8] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=9] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=10] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=11] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ] = 0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN] = 0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH] = 0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID] = 0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss[Revenue_Line=CAP] = 0.05"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "formula",
+                "eop"
+            ],
+            "display_name": "Pipeline Progression Ratio Late To Loss"
+        },
+        {
+            "name": "Pipeline_Progression_Ratio_Mid_Loss",
+            "type": "DECIMAL",
+            "formulae": [
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[Revenue_Line=NAMER] = 0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India] = 0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=Japan][Revenue_Line=JAPAC] = 0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY] = 0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=0] = 0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=1] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=2] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=3] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=4] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=5] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=6] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=7] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=8] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=9] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=10] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=ME][Revenue_Line=JAPAC][t=11] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=0] = 0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=1] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=2] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=3] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=4] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=5] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=6] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=7] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=8] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=9] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=10] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=11] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=0] = 0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=1] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=2] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=3] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=4] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=5] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=6] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=7] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=8] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=9] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=10] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=11] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=0] = 0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=1] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=2] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=3] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=4] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=5] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=6] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=7] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=8] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=9] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=10] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=11] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=0] = 0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=1] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=2] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=3] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=4] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=5] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=6] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=7] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=8] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=9] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=10] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=11] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss[Revenue_Line=CAP] = 0.1"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "formula",
+                "eop"
+            ],
+            "display_name": "Pipeline Progression Ratio Mid To Loss"
+        },
+        {
+            "name": "Pipeline_Progression_Ratio_Late_Won",
+            "type": "DECIMAL",
+            "formulae": [
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=US][Revenue_Line=NAMER][t=0] = 0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=US][Revenue_Line=NAMER][t=1] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=US][Revenue_Line=NAMER][t=2] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=US][Revenue_Line=NAMER][t=3] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=US][Revenue_Line=NAMER][t=4] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=US][Revenue_Line=NAMER][t=5] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=US][Revenue_Line=NAMER][t=6] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=US][Revenue_Line=NAMER][t=7] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=US][Revenue_Line=NAMER][t=8] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=US][Revenue_Line=NAMER][t=9] =  0.14",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=US][Revenue_Line=NAMER][t=10] =  0.14",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=US][Revenue_Line=NAMER][t=11] =  0.14",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=Canada][Revenue_Line=NAMER][t=0] = 0",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=Canada][Revenue_Line=NAMER][t=1] =  0",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=Canada][Revenue_Line=NAMER][t=2] =  0",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=Canada][Revenue_Line=NAMER][t=3] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=Canada][Revenue_Line=NAMER][t=4] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=Canada][Revenue_Line=NAMER][t=5] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=Canada][Revenue_Line=NAMER][t=6] =  0",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=Canada][Revenue_Line=NAMER][t=7] =  0",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=Canada][Revenue_Line=NAMER][t=8] =  0",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=Canada][Revenue_Line=NAMER][t=9] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=Canada][Revenue_Line=NAMER][t=10] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[NAMER=Canada][Revenue_Line=NAMER][t=11] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=0] = 0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=1] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=2] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=3] =  0.06",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=4] =  0.06",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=5] =  0.06",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=6] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=7] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=8] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=9] =  0.24",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=10] =  0.24",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=11] =  0.24",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=Japan][Revenue_Line=JAPAC][t=0] = 0.02",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=Japan][Revenue_Line=JAPAC][t=1] =  0.02",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=Japan][Revenue_Line=JAPAC][t=2] =  0.02",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=Japan][Revenue_Line=JAPAC][t=3] =  0.06",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=Japan][Revenue_Line=JAPAC][t=4] =  0.06",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=Japan][Revenue_Line=JAPAC][t=5] =  0.06",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=Japan][Revenue_Line=JAPAC][t=6] =  0.07",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=Japan][Revenue_Line=JAPAC][t=7] =  0.07",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=Japan][Revenue_Line=JAPAC][t=8] =  0.07",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=Japan][Revenue_Line=JAPAC][t=9] =  0.09",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=Japan][Revenue_Line=JAPAC][t=10] =  0.09",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=Japan][Revenue_Line=JAPAC][t=11] =  0.09",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY] = 0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=ME][Revenue_Line=JAPAC][t=0] = 0",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=ME][Revenue_Line=JAPAC][t=1] =  0",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=ME][Revenue_Line=JAPAC][t=2] =  0",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=ME][Revenue_Line=JAPAC][t=3] =  0",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=ME][Revenue_Line=JAPAC][t=4] =  0",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=ME][Revenue_Line=JAPAC][t=5] =  0",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=ME][Revenue_Line=JAPAC][t=6] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=ME][Revenue_Line=JAPAC][t=7] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=ME][Revenue_Line=JAPAC][t=8] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=ME][Revenue_Line=JAPAC][t=9] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=ME][Revenue_Line=JAPAC][t=10] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=ME][Revenue_Line=JAPAC][t=11] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=0] = 0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=1] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=2] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=3] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=4] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=5] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=6] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=7] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=8] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=9] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=10] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=11] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=0] = 0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=1] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=2] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=3] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=4] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=5] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=6] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=7] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=8] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=9] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=10] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=11] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=0] = 0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=1] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=2] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=3] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=4] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=5] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=6] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=7] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=8] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=9] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=10] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=11] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=0] = 0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=1] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=2] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=3] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=4] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=5] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=6] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=7] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=8] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=9] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=10] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=11] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[Revenue_Line=CAP][t=0] = 0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[Revenue_Line=CAP][t=1] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[Revenue_Line=CAP][t=2] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[Revenue_Line=CAP][t=3] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[Revenue_Line=CAP][t=4] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[Revenue_Line=CAP][t=5] =  0.2",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[Revenue_Line=CAP][t=6] =  0.18",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[Revenue_Line=CAP][t=7] =  0.18",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[Revenue_Line=CAP][t=8] =  0.18",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[Revenue_Line=CAP][t=9] =  0.17",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[Revenue_Line=CAP][t=10] =  0.17",
+                "metrics.Pipeline_Progression_Ratio_Late_Won[Revenue_Line=CAP][t=11] =  0.17"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "formula",
+                "eop"
+            ],
+            "display_name": "Pipeline Progression Ratio Late To Won"
+        },
+        {
+            "name": "Closed_Lost_Late",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Closed_Lost_Late[t=t] = metrics.Pipeline_Late[t=t-1] * metrics.Pipeline_Progression_Ratio_Late_Loss[t=t]"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "display_name": "Closed Lost (Late)"
+        },
+        {
+            "name": "MQL_S0_Conversion",
+            "type": "PERCENTAGE",
+            "formulae": [
+                "metrics.MQL_S0_Conversion[Revenue_Line=NAMER] = 0.021",
+                "metrics.MQL_S0_Conversion[Revenue_Line=JAPAC] = 0.048",
+                "metrics.MQL_S0_Conversion[Revenue_Line=CAP] = 0.09"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "formula",
+                "eop"
+            ],
+            "display_name": "MQL-S0 Conversion"
+        },
+        {
+            "name": "Pipeline_Late",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Pipeline_Late[NAMER=US][Revenue_Line=NAMER][t=-1] = 2637500",
+                "metrics.Pipeline_Late[NAMER=Canada][Revenue_Line=NAMER][t=-1] = 0",
+                "metrics.Pipeline_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=-1] = 4329300",
+                "metrics.Pipeline_Late[JAPAC=Japan][Revenue_Line=JAPAC][t=-1] = 9800000",
+                "metrics.Pipeline_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=-1] = 370000",
+                "metrics.Pipeline_Late[JAPAC=ME][Revenue_Line=JAPAC][t=-1] = 0",
+                "metrics.Pipeline_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=-1] = 0",
+                "metrics.Pipeline_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=-1] = 684400",
+                "metrics.Pipeline_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=-1] = 750000",
+                "metrics.Pipeline_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=-1] = 105000",
+                "metrics.Pipeline_Late[Revenue_Line=CAP][t=-1] = 5141800",
+                "metrics.Pipeline_Late[t=t] = metrics.Pipeline_Late[t=t-1] * ( 1 - metrics.Pipeline_Progression_Ratio_Late_Won[t=t] - metrics.Pipeline_Progression_Ratio_Late_Loss[t=t] ) + metrics.Pipeline_Mid[t=t-1] * metrics.Pipeline_Progression_Ratio_Mid_Late[t=t]"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "eop"
+            ],
+            "display_name": "Pipeline (Late)"
+        },
+        {
+            "name": "Pipeline_Progression_Ratio_Mid_Late",
+            "type": "DECIMAL",
+            "formulae": [
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=US][Revenue_Line=NAMER][t=0] = 0.15",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=US][Revenue_Line=NAMER][t=1] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=US][Revenue_Line=NAMER][t=2] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=US][Revenue_Line=NAMER][t=3] =  0.12",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=US][Revenue_Line=NAMER][t=4] =  0.12",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=US][Revenue_Line=NAMER][t=5] =  0.12",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=US][Revenue_Line=NAMER][t=6] =  0.14",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=US][Revenue_Line=NAMER][t=7] =  0.14",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=US][Revenue_Line=NAMER][t=8] =  0.14",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=US][Revenue_Line=NAMER][t=9] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=US][Revenue_Line=NAMER][t=10] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=US][Revenue_Line=NAMER][t=11] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=Canada][Revenue_Line=NAMER][t=0] = 0.25",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=Canada][Revenue_Line=NAMER][t=1] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=Canada][Revenue_Line=NAMER][t=2] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=Canada][Revenue_Line=NAMER][t=3] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=Canada][Revenue_Line=NAMER][t=4] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=Canada][Revenue_Line=NAMER][t=5] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=Canada][Revenue_Line=NAMER][t=6] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=Canada][Revenue_Line=NAMER][t=7] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=Canada][Revenue_Line=NAMER][t=8] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=Canada][Revenue_Line=NAMER][t=9] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=Canada][Revenue_Line=NAMER][t=10] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[NAMER=Canada][Revenue_Line=NAMER][t=11] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=0] = 0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=1] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=2] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=3] =  0.06",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=4] =  0.06",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=5] =  0.06",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=6] =  0.06",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=7] =  0.06",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=8] =  0.06",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=9] =  0.09",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=10] =  0.09",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=11] =  0.09",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=Japan][Revenue_Line=JAPAC][t=0] = 0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=Japan][Revenue_Line=JAPAC][t=1] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=Japan][Revenue_Line=JAPAC][t=2] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=Japan][Revenue_Line=JAPAC][t=3] =  0.06",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=Japan][Revenue_Line=JAPAC][t=4] =  0.06",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=Japan][Revenue_Line=JAPAC][t=5] =  0.06",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=Japan][Revenue_Line=JAPAC][t=6] =  0.06",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=Japan][Revenue_Line=JAPAC][t=7] =  0.06",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=Japan][Revenue_Line=JAPAC][t=8] =  0.06",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=Japan][Revenue_Line=JAPAC][t=9] =  0.07",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=Japan][Revenue_Line=JAPAC][t=10] =  0.07",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=Japan][Revenue_Line=JAPAC][t=11] =  0.07",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY] = 0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=ME][Revenue_Line=JAPAC][t=0] = 0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=ME][Revenue_Line=JAPAC][t=1] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=ME][Revenue_Line=JAPAC][t=2] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=ME][Revenue_Line=JAPAC][t=3] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=ME][Revenue_Line=JAPAC][t=4] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=ME][Revenue_Line=JAPAC][t=5] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=ME][Revenue_Line=JAPAC][t=6] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=ME][Revenue_Line=JAPAC][t=7] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=ME][Revenue_Line=JAPAC][t=8] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=ME][Revenue_Line=JAPAC][t=9] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=ME][Revenue_Line=JAPAC][t=10] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=ME][Revenue_Line=JAPAC][t=11] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=0] = 0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=1] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=2] =  0.05",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=3] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=4] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=5] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=6] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=7] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=8] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=9] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=10] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=11] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=0] = 0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=1] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=2] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=3] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=4] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=5] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=6] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=7] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=8] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=9] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=10] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=11] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=0] = 0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=1] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=2] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=3] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=4] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=5] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=6] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=7] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=8] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=9] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=10] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=11] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=0] = 0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=1] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=2] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=3] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=4] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=5] =  0.1",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=6] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=7] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=8] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=9] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=10] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=11] =  0.08",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[Revenue_Line=CAP][t=0] = 0.25",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[Revenue_Line=CAP][t=1] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[Revenue_Line=CAP][t=2] =  0.25",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[Revenue_Line=CAP][t=3] =  0.22",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[Revenue_Line=CAP][t=4] =  0.22",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[Revenue_Line=CAP][t=5] =  0.22",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[Revenue_Line=CAP][t=6] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[Revenue_Line=CAP][t=7] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[Revenue_Line=CAP][t=8] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[Revenue_Line=CAP][t=9] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[Revenue_Line=CAP][t=10] =  0.15",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late[Revenue_Line=CAP][t=11] =  0.15"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "formula",
+                "eop"
+            ],
+            "display_name": "Pipeline Progression Ratio Mid To Late"
+        },
+        {
+            "name": "Closed_Lost_Early",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Closed_Lost_Early[t=t] = metrics.Pipeline_Early[t=t-1] * metrics.Pipeline_Progression_Ratio_Early_Loss[t=t]"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "display_name": "Closed Lost (Early)"
+        },
+        {
+            "name": "Outbound_S0",
+            "type": "DECIMAL",
+            "formulae": [
+                "metrics.Outbound_S0[NAMER=US][Revenue_Line=NAMER][t=0] = 4",
+                "metrics.Outbound_S0[NAMER=US][Revenue_Line=NAMER][t=1] =  4",
+                "metrics.Outbound_S0[NAMER=US][Revenue_Line=NAMER][t=2] =  4",
+                "metrics.Outbound_S0[NAMER=US][Revenue_Line=NAMER][t=3] =  4.85",
+                "metrics.Outbound_S0[NAMER=US][Revenue_Line=NAMER][t=4] =  4.85",
+                "metrics.Outbound_S0[NAMER=US][Revenue_Line=NAMER][t=5] =  4.85",
+                "metrics.Outbound_S0[NAMER=US][Revenue_Line=NAMER][t=6] =  5.14",
+                "metrics.Outbound_S0[NAMER=US][Revenue_Line=NAMER][t=7] =  5.14",
+                "metrics.Outbound_S0[NAMER=US][Revenue_Line=NAMER][t=8] =  5.14",
+                "metrics.Outbound_S0[NAMER=US][Revenue_Line=NAMER][t=9] =  4.57",
+                "metrics.Outbound_S0[NAMER=US][Revenue_Line=NAMER][t=10] =  4.57",
+                "metrics.Outbound_S0[NAMER=US][Revenue_Line=NAMER][t=11] =  4.57",
+                "metrics.Outbound_S0[NAMER=Canada][Revenue_Line=NAMER][t=0] = 0.6667",
+                "metrics.Outbound_S0[NAMER=Canada][Revenue_Line=NAMER][t=1] =  0.6667",
+                "metrics.Outbound_S0[NAMER=Canada][Revenue_Line=NAMER][t=2] =  0.6667",
+                "metrics.Outbound_S0[NAMER=Canada][Revenue_Line=NAMER][t=3] =  0.8095",
+                "metrics.Outbound_S0[NAMER=Canada][Revenue_Line=NAMER][t=4] =  0.8095",
+                "metrics.Outbound_S0[NAMER=Canada][Revenue_Line=NAMER][t=5] =  0.8095",
+                "metrics.Outbound_S0[NAMER=Canada][Revenue_Line=NAMER][t=6] =  0.8571",
+                "metrics.Outbound_S0[NAMER=Canada][Revenue_Line=NAMER][t=7] =  0.8571",
+                "metrics.Outbound_S0[NAMER=Canada][Revenue_Line=NAMER][t=8] =  0.8671",
+                "metrics.Outbound_S0[NAMER=Canada][Revenue_Line=NAMER][t=9] =  0.7619",
+                "metrics.Outbound_S0[NAMER=Canada][Revenue_Line=NAMER][t=10] =  0.7619",
+                "metrics.Outbound_S0[NAMER=Canada][Revenue_Line=NAMER][t=11] =  0.7619",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=0] = 1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=1] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=2] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=3] =  1.333",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=4] =  1.333",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=5] =  1.333",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=6] =  1.67",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=7] =  1.67",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=8] =  1.67",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=9] =  0.67",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=10] =  0.67",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India][t=11] =  0.67",
+                "metrics.Outbound_S0[JAPAC=Japan][Revenue_Line=JAPAC][t=0] = 0.67",
+                "metrics.Outbound_S0[JAPAC=Japan][Revenue_Line=JAPAC][t=1] =  0.67",
+                "metrics.Outbound_S0[JAPAC=Japan][Revenue_Line=JAPAC][t=2] =  0.67",
+                "metrics.Outbound_S0[JAPAC=Japan][Revenue_Line=JAPAC][t=3] =  1",
+                "metrics.Outbound_S0[JAPAC=Japan][Revenue_Line=JAPAC][t=4] =  1",
+                "metrics.Outbound_S0[JAPAC=Japan][Revenue_Line=JAPAC][t=5] =  1",
+                "metrics.Outbound_S0[JAPAC=Japan][Revenue_Line=JAPAC][t=6] =  1",
+                "metrics.Outbound_S0[JAPAC=Japan][Revenue_Line=JAPAC][t=7] =  1",
+                "metrics.Outbound_S0[JAPAC=Japan][Revenue_Line=JAPAC][t=8] =  1",
+                "metrics.Outbound_S0[JAPAC=Japan][Revenue_Line=JAPAC][t=9] =  0.33",
+                "metrics.Outbound_S0[JAPAC=Japan][Revenue_Line=JAPAC][t=10] =  0.33",
+                "metrics.Outbound_S0[JAPAC=Japan][Revenue_Line=JAPAC][t=11] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=0] = 0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=1] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=2] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=3] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=4] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=5] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=6] =  1.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=7] =  1.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=8] =  1.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=9] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=10] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY][t=11] =  0.33",
+                "metrics.Outbound_S0[JAPAC=ME][Revenue_Line=JAPAC][t=0] = 0.33",
+                "metrics.Outbound_S0[JAPAC=ME][Revenue_Line=JAPAC][t=1] =  0.33",
+                "metrics.Outbound_S0[JAPAC=ME][Revenue_Line=JAPAC][t=2] =  0.33",
+                "metrics.Outbound_S0[JAPAC=ME][Revenue_Line=JAPAC][t=3] =  0.33",
+                "metrics.Outbound_S0[JAPAC=ME][Revenue_Line=JAPAC][t=4] =  0.33",
+                "metrics.Outbound_S0[JAPAC=ME][Revenue_Line=JAPAC][t=5] =  0.33",
+                "metrics.Outbound_S0[JAPAC=ME][Revenue_Line=JAPAC][t=6] =  1.33",
+                "metrics.Outbound_S0[JAPAC=ME][Revenue_Line=JAPAC][t=7] =  1.33",
+                "metrics.Outbound_S0[JAPAC=ME][Revenue_Line=JAPAC][t=8] =  1.33",
+                "metrics.Outbound_S0[JAPAC=ME][Revenue_Line=JAPAC][t=9] =  1",
+                "metrics.Outbound_S0[JAPAC=ME][Revenue_Line=JAPAC][t=10] =  1",
+                "metrics.Outbound_S0[JAPAC=ME][Revenue_Line=JAPAC][t=11] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=0] = 0.667",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=1] =  0.667",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=2] =  0.667",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=3] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=4] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=5] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=6] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=7] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=8] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=9] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=10] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ][t=11] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=0] = 0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=1] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=2] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=3] =  1.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=4] =  1.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=5] =  1.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=6] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=7] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=8] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=9] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=10] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN][t=11] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=0] = 0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=1] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=2] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=3] =  1.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=4] =  1.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=5] =  1.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=6] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=7] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=8] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=9] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=10] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH][t=11] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=0] = 0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=1] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=2] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=3] =  1.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=4] =  1.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=5] =  1.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=6] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=7] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=8] =  1",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=9] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=10] =  0.33",
+                "metrics.Outbound_S0[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID][t=11] =  0.33",
+                "metrics.Outbound_S0[Revenue_Line=CAP] = 1.67"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "display_name": "Outbound S0"
+        },
+        {
+            "name": "Closed_Lost_Mid",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Closed_Lost_Mid[t=t] = metrics.Pipeline_Mid[t=t-1] * metrics.Pipeline_Progression_Ratio_Mid_Loss[t=t]"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "display_name": "Closed Lost (Mid)"
+        },
+        {
+            "name": "Deal_Size",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Deal_Size[NAMER=US][Revenue_Line=NAMER] = 1384615",
+                "metrics.Deal_Size[NAMER=Canada][Revenue_Line=NAMER] = 1000000",
+                "metrics.Deal_Size[JAPAC=APAC][Revenue_Line=JAPAC][APAC=India] = 250000",
+                "metrics.Deal_Size[JAPAC=Japan][Revenue_Line=JAPAC] = 1000000",
+                "metrics.Deal_Size[JAPAC=APAC][Revenue_Line=JAPAC][APAC=SG_HK_MY] = 450000",
+                "metrics.Deal_Size[JAPAC=ME][Revenue_Line=JAPAC] = 750000",
+                "metrics.Deal_Size[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ANZ] = 575000",
+                "metrics.Deal_Size[JAPAC=APAC][Revenue_Line=JAPAC][APAC=VN] = 420000",
+                "metrics.Deal_Size[JAPAC=APAC][Revenue_Line=JAPAC][APAC=PH] = 500000",
+                "metrics.Deal_Size[JAPAC=APAC][Revenue_Line=JAPAC][APAC=ID] = 475000",
+                "metrics.Deal_Size[Revenue_Line=CAP] = 1846154"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "formula",
+                "eop"
+            ],
+            "display_name": "Deal Size"
+        },
+        {
+            "name": "Marketing_SDR_Pipeline",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Marketing_SDR_Pipeline = metrics.Deal_Size * metrics.Marketing_SDR_Opportunities"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "display_name": "Marketing-SDR Pipeline"
+        },
+        {
+            "name": "Marketing_SDR_Opportunities",
+            "type": "DECIMAL",
+            "formulae": [
+                "metrics.Marketing_SDR_Opportunities = metrics.Marketing_SDR_S0 * metrics.S0_Opportunity_Rate"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "display_name": "Marketing-SDR Opportunities"
+        },
+        {
+            "name": "Sales_Prospected_Pipeline",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Sales_Prospected_Pipeline = metrics.Deal_Size * metrics.Sales_Prospected_Opportunities"
+            ],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": "",
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "display_name": "Sales Prospected Pipeline"
+        }
+    ],
+    "modules": [
+        {
+            "name": "Revenue",
+            "input": [],
+            "formulae": [],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": null,
+            "displayName": "Revenue",
+            "calculations": [
+                "metrics.New_Revenue",
+                "metrics.Closed_Won"
+            ]
+        },
+        {
+            "name": "Pipeline",
+            "input": [
+                "metrics.Pipeline_Progression_Ratio_Early_Mid",
+                "metrics.Pipeline_Progression_Ratio_Mid_Late",
+                "metrics.Pipeline_Progression_Ratio_Late_Won",
+                "metrics.Pipeline_Progression_Ratio_Early_Loss",
+                "metrics.Pipeline_Progression_Ratio_Mid_Loss",
+                "metrics.Pipeline_Progression_Ratio_Late_Loss"
+            ],
+            "formulae": [],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": null,
+            "displayName": "Pipeline",
+            "calculations": [
+                "metrics.Closed_Won",
+                "metrics.New_Pipeline",
+                "metrics.Pipeline_Early",
+                "metrics.Pipeline_Mid",
+                "metrics.Pipeline_Late",
+                "metrics.Closed_Lost_Early",
+                "metrics.Closed_Lost_Mid",
+                "metrics.Closed_Lost_Late",
+                "metrics.Total_Pipeline",
+                "metrics.Closed_Lost_Total"
+            ]
+        },
+        {
+            "name": "New_Pipeline",
+            "input": [
+                "metrics.Deal_Size",
+                "metrics.Sales_Prospected_Opportunities"
+            ],
+            "formulae": [],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": null,
+            "displayName": "New Pipeline",
+            "calculations": [
+                "metrics.New_Opportunities",
+                "metrics.Sales_Prospected_Pipeline",
+                "metrics.Marketing_SDR_Pipeline",
+                "metrics.New_Pipeline",
+                "metrics.Marketing_SDR_Opportunities"
+            ]
+        },
+        {
+            "name": "Marketing",
+            "input": [
+                "metrics.MQL",
+                "metrics.MQL_S0_Conversion",
+                "metrics.ABM_S0",
+                "metrics.Outbound_S0",
+                "metrics.S0_Opportunity_Rate"
+            ],
+            "formulae": [],
+            "dimensions": [
+                "Revenue_Line"
+            ],
+            "description": null,
+            "displayName": "Marketing",
+            "calculations": [
+                "metrics.Inbound_S0",
+                "metrics.Marketing_SDR_S0",
+                "metrics.Marketing_SDR_Opportunities"
+            ]
+        }
+    ],
+    "dimensions": [
+        {
+            "Revenue_Line": [
+                "NAMER",
+                "JAPAC",
+                "CAP"
+            ]
+        },
+        {
+            "NAMER::Country": [
+                "US",
+                "Canada"
+            ]
+        },
+        {
+            "JAPAC::Country": [
+                "Japan",
+                "APAC",
+                "ME"
+            ]
+        },
+        {
+            "APAC::SubCountry": [
+                "India",
+                "SG_HK_MY",
+                "ANZ",
+                "VN",
+                "PH",
+                "ID"
+            ]
+        }
+    ],
+    "inverted_formulae": {
+        "rollup_formulae": [
+            "metrics.Deal_Size = ( metrics.Sales_Prospected_Pipeline + metrics.Marketing_SDR_Pipeline ) / ( metrics.Marketing_SDR_Opportunities + metrics.Sales_Prospected_Opportunities )",
+            "metrics.MQL_S0_Conversion = metrics.Inbound_S0 / metrics.MQL",
+            "metrics.Pipeline_Progression_Ratio_Late_Won[t=t] = metrics.Closed_Won[t=t] / metrics.Pipeline_Late[t=t-1]",
+            "metrics.Pipeline_Progression_Ratio_Late_Loss[t=t] = metrics.Closed_Lost_Late[t=t] / metrics.Pipeline_Late[t=t-1]",
+            "metrics.Pipeline_Progression_Ratio_Mid_Loss[t=t] = metrics.Closed_Lost_Mid[t=t] / metrics.Pipeline_Mid[t=t-1]",
+            "metrics.Pipeline_Progression_Ratio_Early_Loss[t=t] = metrics.Closed_Lost_Early[t=t] / metrics.Pipeline_Early[t=t-1]",
+            "metrics.Pipeline_Progression_Ratio_Early_Mid[t=t] = 1 - metrics.Pipeline_Progression_Ratio_Early_Loss[t=t] - ( metrics.Pipeline_Early[t=t] - metrics.New_Pipeline[t=t] ) / metrics.Pipeline_Early[t=t-1]",
+            "metrics.Pipeline_Progression_Ratio_Mid_Late[t=t] = 1 - metrics.Pipeline_Progression_Ratio_Mid_Loss[t=t] - ( ( metrics.Pipeline_Mid[t=t] - metrics.Pipeline_Early[t=t-1] * metrics.Pipeline_Progression_Ratio_Early_Mid[t=t] ) / metrics.Pipeline_Mid[t=t-1] )"
+        ],
+        "autocompute_formulae": [
+            "metrics.Deal_Size = ( metrics.Sales_Prospected_Pipeline + metrics.Marketing_SDR_Pipeline ) / ( metrics.Marketing_SDR_Opportunities + metrics.Sales_Prospected_Opportunities )",
+            "metrics.MQL_S0_Conversion = metrics.Inbound_S0 / metrics.MQL"
+        ]
+    }
+}

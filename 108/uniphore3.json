@@ -1,0 +1,599 @@
+{
+  "dtml_version": "1.0",
+  "currency": "USD",
+  "customer_id": "Uniphore.com",
+  "plan_name": "Path to Quarter - Region",
+  "plan_description": "Tank Filling",
+  "plan_start_date": "2021/01",
+  "duration": 12,
+  "types": {
+    "metrics.New_Pipeline_MQL_S0_rate": "percentage",
+    "metrics.New_Pipeline_ABM_S0_rate": "percentage",
+    "metrics.New_Pipeline_AE_S0_rate": "percentage",
+    "metrics.New_Pipeline_OB_S0_rate": "percentage",
+    "metrics.New_Pipeline_Reference_S0_rate": "percentage",
+    "metrics.New_Pipeline_Channel_S0_rate": "percentage",
+    "metrics.New_Pipeline_OEM_S0_rate": "percentage",
+    "metrics.New_Pipeline_BPO_S0_rate": "percentage",
+    "metrics.New_Pipeline_MQL_Source": "decimal",
+    "metrics.New_Pipeline_MQL_S0": "decimal",
+    "metrics.New_Pipeline_ABM_Source": "decimal",
+    "metrics.New_Pipeline_ABM_S0": "decimal",
+    "metrics.New_Pipeline_OB_Source": "decimal",
+    "metrics.New_Pipeline_OB_S0": "decimal",
+    "metrics.New_Pipeline_AE_Source": "decimal",
+    "metrics.New_Pipeline_AE_S0": "decimal",
+    "metrics.New_Pipeline_Reference_Source": "decimal",
+    "metrics.New_Pipeline_Reference_S0": "decimal",
+    "metrics.New_Pipeline_Channel_Source": "decimal",
+    "metrics.New_Pipeline_Channel_S0": "decimal",
+    "metrics.New_Pipeline_OEM_Source": "decimal",
+    "metrics.New_Pipeline_OEM_S0": "decimal",
+    "metrics.New_Pipeline_BPO_Source": "decimal",
+    "metrics.New_Pipeline_BPO_S0": "decimal",
+    "metrics.New_Pipeline_SDR_New_Opportunities": "decimal",
+    "metrics.New_Pipeline_AE_New_Opportunities": "decimal",
+    "metrics.New_Pipeline_References_New_Opportunities": "decimal",
+    "metrics.New_Pipeline_Channel_New_Opportunities": "decimal"
+  },
+  "period": "1m",
+  "dimensions": [{
+    "Region": ["NAMER", "Velocity", "JAPAC", "CAP"]
+  }],
+  "metrics": [
+    "Deal_Size",
+    "Pipeline_Early",
+    "Pipeline_Mid",
+    "Pipeline_Late",
+    "Pipeline_Progression_Ratio_Early_Mid",
+    "Pipeline_Progression_Ratio_Mid_Late",
+    "Pipeline_Progression_Ratio_Late_Won",
+    "Pipeline_Progression_Ratio_Early_Loss",
+    "Pipeline_Progression_Ratio_Mid_Loss",
+    "Pipeline_Progression_Ratio_Late_Loss",
+    "New_Pipeline_MQL_Source",
+    "New_Pipeline_MQL_S0_rate",
+    "New_Pipeline_MQL_S0",
+    "New_Pipeline_ABM_Source",
+    "New_Pipeline_ABM_S0_rate",
+    "New_Pipeline_ABM_S0",
+    "New_Pipeline_OB_Source",
+    "New_Pipeline_OB_S0_rate",
+    "New_Pipeline_OB_S0",
+    "New_Pipeline_AE_Source",
+    "New_Pipeline_AE_S0_rate",
+    "New_Pipeline_AE_S0",
+    "New_Pipeline_Reference_Source",
+    "New_Pipeline_Reference_S0_rate",
+    "New_Pipeline_Reference_S0",
+    "New_Pipeline_Channel_Source",
+    "New_Pipeline_Channel_S0_rate",
+    "New_Pipeline_Channel_S0",
+    "New_Pipeline_OEM_Source",
+    "New_Pipeline_OEM_S0_rate",
+    "New_Pipeline_OEM_S0",
+    "New_Pipeline_BPO_Source",
+    "New_Pipeline_BPO_S0_rate",
+    "New_Pipeline_BPO_S0",
+    "New_Pipeline_SDR_New_Opportunities",
+    "New_Pipeline_AE_New_Opportunities",
+    "New_Pipeline_References_New_Opportunities",
+    "New_Pipeline_Channel_New_Opportunities",
+    "New_Pipeline_SDR",
+    "New_Pipeline_AE",
+    "New_Pipeline_References",
+    "New_Pipeline_Channel",
+    "Closed_Lost_Early",
+    "Closed_Lost_Mid",
+    "Closed_Lost_Late",
+    "Closed_Won",
+    "Closed_Lost",
+    "Pipeline",
+    "New_Pipeline"
+  ],
+  "customers": [],
+  "churn": [],
+  "plans": [],
+  "actuals": [
+  {
+    "metrics.Pipeline_Early[Region=NAMER][t=-1]": 20768000
+  }, {
+    "metrics.Pipeline_Mid[Region=NAMER][t=-1]": 22870000
+  }, {
+    "metrics.Pipeline_Late[Region=NAMER][t=-1]": 2637500
+  }, {
+    "metrics.Pipeline_Early[Region=Velocity][t=-1]": 0
+  }, {
+    "metrics.Pipeline_Mid[Region=Velocity][t=-1]": 0
+  }, {
+    "metrics.Pipeline_Late[Region=Velocity][t=-1]": 0
+  }, {
+    "metrics.Pipeline_Early[Region=JAPAC][t=-1]": 12308000
+  }, {
+    "metrics.Pipeline_Mid[Region=JAPAC][t=-1]": 16035135
+  }, {
+    "metrics.Pipeline_Late[Region=JAPAC][t=-1]": 16038700
+  }, {
+    "metrics.Pipeline_Early[Region=CAP][t=-1]": 8140001
+  }, {
+    "metrics.Pipeline_Mid[Region=CAP][t=-1]": 8025000
+  }, {
+    "metrics.Pipeline_Late[Region=CAP][t=-1]": 5141800
+  }
+],
+  "objectives": [{
+    "metrics.Deal_Size[Region=NAMER]": 1312500
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Early_Mid[Region=NAMER]": 0.14
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Mid_Late[Region=NAMER]": 0.14
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Late_Won[Region=NAMER]": 0.14
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Early_Loss[Region=NAMER]": 0.15
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Mid_Loss[Region=NAMER]": 0.1
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Late_Loss[Region=NAMER]": 0.05
+  }, {
+    "metrics.New_Pipeline_MQL_Source[Region=NAMER]": [187.6666666667, 187.6666666667, 187.6666666667, 156.3333333333, 156.3333333333, 156.3333333333, 93.6666666667, 93.6666666667, 93.6666666667, 187.6666666667, 187.6666666667, 187.6666666667]
+  }, {
+    "metrics.New_Pipeline_MQL_S0_rate[Region=NAMER]": 0.0213
+  }, {
+    "metrics.New_Pipeline_ABM_Source[Region=NAMER]": [2, 2, 2, 1.6666666667, 1.6666666667, 1.6666666667, 1.6666666667, 1.6666666667, 1.6666666667, 1.3333333333, 1.3333333333, 1.3333333333]
+  }, {
+    "metrics.New_Pipeline_ABM_S0_rate[Region=NAMER]": 1
+  } , {
+    "metrics.New_Pipeline_OB_Source[Region=NAMER]": 0
+  }, {
+    "metrics.New_Pipeline_OB_S0_rate[Region=NAMER]": 0
+  }, {
+    "metrics.New_Pipeline_OB_S0[Region=NAMER]": [4.6666666667, 4.6666666667, 4.6666666667, 5.6666666667, 5.6666666667, 5.6666666667, 6, 6, 6, 5.3333333333, 5.3333333333, 5.3333333333]
+  }, {
+    "metrics.New_Pipeline_AE_Source[Region=NAMER]": [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+  }, {
+    "metrics.New_Pipeline_AE_S0_rate[Region=NAMER]": 1
+  }, {
+    "metrics.New_Pipeline_Reference_Source[Region=NAMER]": 0
+  }, {
+    "metrics.New_Pipeline_Reference_S0_rate[Region=NAMER]": 0.4
+  }, {
+    "metrics.New_Pipeline_Channel_Source[Region=NAMER]": 0
+  }, {
+    "metrics.New_Pipeline_Channel_S0_rate[Region=NAMER]": 0.09
+  }, {
+    "metrics.New_Pipeline_OEM_Source[Region=NAMER]": 0
+  }, {
+    "metrics.New_Pipeline_OEM_S0_rate[Region=NAMER]": 0.5
+  }, {
+    "metrics.New_Pipeline_BPO_Source[Region=NAMER]": 0
+  }, {
+    "metrics.New_Pipeline_BPO_S0_rate[Region=NAMER]": 0.5
+  }, {
+    "metrics.Deal_Size[Region=Velocity]": 0
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Early_Mid[Region=Velocity]": 0
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Mid_Late[Region=Velocity]": 0
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Late_Won[Region=Velocity]": 0
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Early_Loss[Region=Velocity]": 0
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Mid_Loss[Region=Velocity]": 0
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Late_Loss[Region=Velocity]": 0
+  }, {
+    "metrics.New_Pipeline_MQL_Source[Region=Velocity]": 0
+  }, {
+    "metrics.New_Pipeline_MQL_S0_rate[Region=Velocity]": 0
+  }, {
+    "metrics.New_Pipeline_ABM_Source[Region=Velocity]": 0
+  }, {
+    "metrics.New_Pipeline_ABM_S0_rate[Region=Velocity]": 0
+  }, {
+    "metrics.New_Pipeline_OB_Source[Region=Velocity]": 0
+  }, {
+    "metrics.New_Pipeline_OB_S0_rate[Region=Velocity]": 0
+  }, {
+    "metrics.New_Pipeline_AE_Source[Region=Velocity]": 0
+  }, {
+    "metrics.New_Pipeline_AE_S0_rate[Region=Velocity]": 0
+  }, {
+    "metrics.New_Pipeline_Reference_Source[Region=Velocity]": 0
+  }, {
+    "metrics.New_Pipeline_Reference_S0_rate[Region=Velocity]": 0
+  }, {
+    "metrics.New_Pipeline_Channel_Source[Region=Velocity]": 0
+  }, {
+    "metrics.New_Pipeline_Channel_S0_rate[Region=Velocity]": 0
+  }, {
+    "metrics.New_Pipeline_OEM_Source[Region=Velocity]": 0
+  }, {
+    "metrics.New_Pipeline_OEM_S0_rate[Region=Velocity]": 0
+  }, {
+    "metrics.New_Pipeline_BPO_Source[Region=Velocity]": 0
+  }, {
+    "metrics.New_Pipeline_BPO_S0_rate[Region=Velocity]": 0
+  }, {
+    "metrics.Deal_Size[Region=JAPAC]": 402215
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Early_Mid[Region=JAPAC]": 0.07
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Mid_Late[Region=JAPAC]": 0.06
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Late_Won[Region=JAPAC]": 0.15
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Early_Loss[Region=JAPAC]": 0.15
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Mid_Loss[Region=JAPAC]": 0.1
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Late_Loss[Region=JAPAC]": 0.05
+  }, {
+    "metrics.New_Pipeline_MQL_Source[Region=JAPAC]": [154.6666666667, 154.6666666667, 154.6666666667, 129, 129, 129, 77.3333333333, 77.3333333333, 77.3333333333, 154.6666666667, 154.6666666667, 154.6666666667]
+  }, {
+    "metrics.New_Pipeline_MQL_S0_rate[Region=JAPAC]": 0.048
+  }, {
+    "metrics.New_Pipeline_ABM_Source[Region=JAPAC]": [3.3333333333, 3.3333333333, 3.3333333333, 3.3333333333, 3.3333333333, 3.3333333333, 2, 2, 2, 2, 2, 2]
+  }, {
+    "metrics.New_Pipeline_ABM_S0_rate[Region=JAPAC]": 0.4
+  }, {
+    "metrics.New_Pipeline_OB_Source[Region=JAPAC]": [3.3333333333, 3.3333333333, 3.3333333333, 9.3333333333, 9.3333333333, 9.3333333333, 9, 9, 9, 3.3333333333, 3.3333333333, 3.3333333333]
+  }, {
+    "metrics.New_Pipeline_OB_S0_rate[Region=JAPAC]": 0.75
+  }, {
+    "metrics.New_Pipeline_AE_Source[Region=JAPAC]": 17.3333333333
+  }, {
+    "metrics.New_Pipeline_AE_S0_rate[Region=JAPAC]": 0.5
+  }, {
+    "metrics.New_Pipeline_Reference_Source[Region=JAPAC]": 10
+  }, {
+    "metrics.New_Pipeline_Reference_S0_rate[Region=JAPAC]": 0.4
+  }, {
+    "metrics.New_Pipeline_Channel_Source[Region=JAPAC]": 0
+  }, {
+    "metrics.New_Pipeline_Channel_S0_rate[Region=JAPAC]": 0.5
+  }, {
+    "metrics.New_Pipeline_OEM_Source[Region=JAPAC]": 0
+  }, {
+    "metrics.New_Pipeline_OEM_S0_rate[Region=JAPAC]": 0.5
+  }, {
+    "metrics.New_Pipeline_BPO_Source[Region=JAPAC]": 0
+  }, {
+    "metrics.New_Pipeline_BPO_S0_rate[Region=JAPAC]": 0.5
+  }, {
+    "metrics.Deal_Size[Region=CAP]": 1846154
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Early_Mid[Region=CAP]": 0.2
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Mid_Late[Region=CAP]": 0.18
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Late_Won[Region=CAP]": 0.18
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Early_Loss[Region=CAP]": 0.15
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Mid_Loss[Region=CAP]": 0.1
+  }, {
+    "metrics.Pipeline_Progression_Ratio_Late_Loss[Region=CAP]": 0.05
+  }, {
+    "metrics.New_Pipeline_MQL_Source[Region=CAP]": [19.3333333333, 19.3333333333, 19.3333333333, 16, 16, 16, 9.6666666667, 9.6666666667, 9.6666666667, 19.3333333333, 19.3333333333, 19.3333333333]
+  }, {
+    "metrics.New_Pipeline_MQL_S0_rate[Region=CAP]": 0.09
+  }, {
+    "metrics.New_Pipeline_ABM_Source[Region=CAP]": [0, 0, 0, 0, 0, 0, 0.3333333333, 0.3333333333, 0.3333333333, 0.6666666667, 0.6666666667, 0.6666666667]
+  }, {
+    "metrics.New_Pipeline_ABM_S0_rate[Region=CAP]": 1
+  }, {
+    "metrics.New_Pipeline_OB_Source[Region=CAP]": 1.6666666667
+  }, {
+    "metrics.New_Pipeline_OB_S0_rate[Region=CAP]": 1
+  }, {
+    "metrics.New_Pipeline_AE_Source[Region=CAP]": 7
+  }, {
+    "metrics.New_Pipeline_AE_S0_rate[Region=CAP]": 1
+  }, {
+    "metrics.New_Pipeline_Reference_Source[Region=CAP]": 0
+  }, {
+    "metrics.New_Pipeline_Reference_S0_rate[Region=CAP]": 0.4
+  }, {
+    "metrics.New_Pipeline_Channel_Source[Region=CAP]": 0
+  }, {
+    "metrics.New_Pipeline_Channel_S0_rate[Region=CAP]": 0.09
+  }, {
+    "metrics.New_Pipeline_OEM_Source[Region=CAP]": 0
+  }, {
+    "metrics.New_Pipeline_OEM_S0_rate[Region=CAP]": 0.5
+  }, {
+    "metrics.New_Pipeline_BPO_Source[Region=CAP]": 0
+  }, {
+    "metrics.New_Pipeline_BPO_S0_rate[Region=CAP]": 0.5
+  }],
+  "formulae": [
+    "metrics.New_Pipeline_MQL_S0 = metrics.New_Pipeline_MQL_Source * metrics.New_Pipeline_MQL_S0_rate",
+    "metrics.New_Pipeline_ABM_S0 = metrics.New_Pipeline_ABM_Source * metrics.New_Pipeline_ABM_S0_rate",
+    "metrics.New_Pipeline_AE_S0 = metrics.New_Pipeline_AE_Source * metrics.New_Pipeline_AE_S0_rate",
+
+    "metrics.New_Pipeline_OB_S0[Region=Velocity] = metrics.New_Pipeline_OB_Source[Region=Velocity] * metrics.New_Pipeline_OB_S0_rate[Region=Velocity]",
+    "metrics.New_Pipeline_OB_S0[Region=JAPAC] = metrics.New_Pipeline_OB_Source[Region=JAPAC] * metrics.New_Pipeline_OB_S0_rate[Region=JAPAC]",
+    "metrics.New_Pipeline_OB_S0[Region=CAP] = metrics.New_Pipeline_OB_Source[Region=CAP] * metrics.New_Pipeline_OB_S0_rate[Region=CAP]",
+
+    "metrics.New_Pipeline_Reference_S0 = metrics.New_Pipeline_Reference_Source * metrics.New_Pipeline_Reference_S0_rate",
+    "metrics.New_Pipeline_Channel_S0 = metrics.New_Pipeline_Channel_Source * metrics.New_Pipeline_Channel_S0_rate",
+    "metrics.New_Pipeline_OEM_S0 = metrics.New_Pipeline_OEM_Source * metrics.New_Pipeline_OEM_S0_rate",
+    "metrics.New_Pipeline_BPO_S0 = metrics.New_Pipeline_BPO_Source * metrics.New_Pipeline_BPO_S0_rate",
+    "metrics.New_Pipeline_SDR_New_Opportunities = metrics.New_Pipeline_MQL_S0 + metrics.New_Pipeline_ABM_S0 + metrics.New_Pipeline_OB_S0",
+    "metrics.New_Pipeline_AE_New_Opportunities = metrics.New_Pipeline_AE_S0",
+    "metrics.New_Pipeline_References_New_Opportunities = metrics.New_Pipeline_Reference_S0",
+    "metrics.New_Pipeline_Channel_New_Opportunities = metrics.New_Pipeline_Channel_S0 + metrics.New_Pipeline_OEM_S0 + metrics.New_Pipeline_BPO_S0",
+
+    "metrics.New_Pipeline_SDR = metrics.New_Pipeline_SDR_New_Opportunities * metrics.Deal_Size",
+    "metrics.New_Pipeline_AE = metrics.New_Pipeline_AE_New_Opportunities * metrics.Deal_Size",
+    "metrics.New_Pipeline_References = metrics.New_Pipeline_References_New_Opportunities * metrics.Deal_Size",
+    "metrics.New_Pipeline_Channel = metrics.New_Pipeline_Channel_New_Opportunities * metrics.Deal_Size",
+
+    "metrics.New_Pipeline = metrics.New_Pipeline_SDR + metrics.New_Pipeline_AE + metrics.New_Pipeline_References + metrics.New_Pipeline_Channel",
+
+    "metrics.Pipeline_Early[t=t] = metrics.Pipeline_Early[t=t-1] * ( 1 - metrics.Pipeline_Progression_Ratio_Early_Loss[t=t] - metrics.Pipeline_Progression_Ratio_Early_Mid[t=t] ) + metrics.New_Pipeline[t=t]",
+    "metrics.Pipeline_Mid[t=t] = metrics.Pipeline_Mid[t=t-1] * ( 1 - metrics.Pipeline_Progression_Ratio_Mid_Loss[t=t] - metrics.Pipeline_Progression_Ratio_Mid_Late[t=t] ) + metrics.Pipeline_Early[t=t-1] * metrics.Pipeline_Progression_Ratio_Early_Mid[t=t]",
+    "metrics.Pipeline_Late[t=t] = metrics.Pipeline_Late[t=t-1] * ( 1 - metrics.Pipeline_Progression_Ratio_Late_Loss[t=t] - metrics.Pipeline_Progression_Ratio_Late_Won[t=t] ) + metrics.Pipeline_Mid[t=t-1] * metrics.Pipeline_Progression_Ratio_Mid_Late[t=t]",
+
+    "metrics.Closed_Won[t=t] = metrics.Pipeline_Late[t=t-1] * metrics.Pipeline_Progression_Ratio_Late_Won[t=t]",
+    "metrics.Closed_Lost_Early[t=t] = metrics.Pipeline_Early[t=t-1] * metrics.Pipeline_Progression_Ratio_Early_Loss[t=t]",
+    "metrics.Closed_Lost_Mid[t=t] = metrics.Pipeline_Mid[t=t-1] * metrics.Pipeline_Progression_Ratio_Mid_Loss[t=t]",
+    "metrics.Closed_Lost_Late[t=t] = metrics.Pipeline_Late[t=t-1] * metrics.Pipeline_Progression_Ratio_Late_Loss[t=t]",
+
+    "metrics.Pipeline = metrics.Pipeline_Early + metrics.Pipeline_Mid + metrics.Pipeline_Late",
+    "metrics.Closed_Lost = metrics.Closed_Lost_Early + metrics.Closed_Lost_Mid + metrics.Closed_Lost_Late"
+  ],
+  "stages": [],
+  "transitions": [],
+  "aggregations": [
+    {
+      "metric": "metrics.New_Pipeline_MQL_S0_rate",
+      "weight": "metrics.New_Pipeline_MQL_Source",
+      "aggregate": "sum"
+    }, {
+      "metric": "metrics.New_Pipeline_ABM_S0_rate",
+      "weight": "metrics.New_Pipeline_ABM_Source",
+      "aggregate": "sum"
+    }, {
+      "metric": "metrics.New_Pipeline_AE_S0_rate",
+      "weight": "metrics.New_Pipeline_AE_Source",
+      "aggregate": "sum"
+    }, {
+      "metric": "metrics.New_Pipeline_OB_S0_rate",
+      "weight": "metrics.New_Pipeline_OB_Source",
+      "aggregate": "sum"
+    }, {
+      "metric": "metrics.New_Pipeline_Reference_S0_rate",
+      "weight": "metrics.New_Pipeline_Reference_Source",
+      "aggregate": "sum"
+    }, {
+      "metric": "metrics.New_Pipeline_Channel_S0_rate",
+      "weight": "metrics.New_Pipeline_Channel_Source",
+      "aggregate": "sum"
+    }, {
+      "metric": "metrics.New_Pipeline_OEM_S0_rate",
+      "weight": "metrics.New_Pipeline_OEM_Source",
+      "aggregate": "sum"
+    }, {
+      "metric": "metrics.New_Pipeline_BPO_S0_rate",
+      "weight": "metrics.New_Pipeline_BPO_Source",
+      "aggregate": "sum"
+    }
+  ],
+  "resources": [],
+  "views": [{
+    "name": "Pipeline",
+    "metrics": [{
+        "name": "metrics.Pipeline",
+        "metrics": [{
+          "name": "metrics.Pipeline_Early",
+          "display_name": "Early"
+        }, {
+          "name": "metrics.Pipeline_Mid",
+          "display_name": "Mid"
+        }, {
+          "name": "metrics.Pipeline_Late",
+          "display_name": "Late"
+        }]
+      },
+      {
+        "name": "metrics.New_Pipeline",
+        "metrics": [{
+          "name": "metrics.New_Pipeline_SDR",
+          "display_name": "SDR"
+        }, {
+          "name": "metrics.New_Pipeline_AE",
+          "display_name": "AE"
+        }]
+      },
+      {
+        "name": "Closed",
+        "metrics": [{
+          "name": "metrics.Closed_Won"
+        }, {
+          "name": "metrics.Closed_Lost",
+          "metrics": [{
+            "name": "metrics.Closed_Lost_Early",
+            "display_name": "Early"
+          }, {
+            "name": "metrics.Closed_Lost_Mid",
+            "display_name": "Mid"
+          }, {
+            "name": "metrics.Closed_Lost_Late",
+            "display_name": "Late"
+          }]
+        }]
+      }
+    ]
+  }, {
+    "name": "New Pipeline Generation",
+    "metrics": [{
+        "name": "metrics.Deal_Size"
+      },
+      {
+        "name": "SDR",
+        "metrics": [{
+          "name": "metrics.New_Pipeline_SDR_New_Opportunities",
+          "display_name": "New Opportunities"
+        }, {
+          "name": "metrics.New_Pipeline_SDR",
+          "display_name": "New Pipeline"
+        }]
+      },
+      {
+        "name": "AE",
+        "metrics": [{
+          "name": "metrics.New_Pipeline_AE_New_Opportunities",
+          "display_name": "New Opportunities"
+        }, {
+          "name": "metrics.New_Pipeline_AE",
+          "display_name": "New Pipeline"
+        }]
+      },
+      {
+        "name": "References",
+        "metrics": [{
+          "name": "metrics.New_Pipeline_References_New_Opportunities",
+          "display_name": "New Opportunities"
+        }, {
+          "name": "metrics.New_Pipeline_References",
+          "display_name": "New Pipeline"
+        }]
+      },
+      {
+        "name": "Channel",
+        "metrics": [{
+          "name": "metrics.New_Pipeline_Channel_New_Opportunities",
+          "display_name": "New Opportunities"
+        }, {
+          "name": "metrics.New_Pipeline_Channel",
+          "display_name": "New Pipeline"
+        }]
+      }
+    ]
+  }, {
+    "name": "New Pipeline Direct SDR",
+    "metrics": [{
+        "name": "MQL",
+        "metrics": [{
+          "name": "metrics.New_Pipeline_MQL_Source",
+          "display_name": "MQL"
+        }, {
+          "name": "metrics.New_Pipeline_MQL_S0_rate",
+          "display_name": "Conversion Rate"
+        }, {
+          "name": "metrics.New_Pipeline_MQL_S0",
+          "display_name": "Opportunities"
+        }]
+      },
+      {
+        "name": "ABM Accounts",
+        "metrics": [{
+          "name": "metrics.New_Pipeline_ABM_Source",
+          "display_name": "ABM Accounts"
+        }, {
+          "name": "metrics.New_Pipeline_ABM_S0_rate",
+          "display_name": "Conversion Rate"
+        }, {
+          "name": "metrics.New_Pipeline_ABM_S0",
+          "display_name": "Opportunities"
+        }]
+      },
+      {
+        "name": "OB",
+        "metrics": [{
+          "name": "metrics.New_Pipeline_OB_Source",
+          "display_name": "OB"
+        }, {
+          "name": "metrics.New_Pipeline_OB_S0_rate",
+          "display_name": "Conversion Rate"
+        }, {
+          "name": "metrics.New_Pipeline_OB_S0",
+          "display_name": "Opportunities"
+        }]
+      },
+      {
+        "name": "metrics.New_Pipeline_SDR_New_Opportunities",
+        "display_name": "Total Opportunities"
+      }
+    ]
+  }, {
+    "name": "New Pipeline Direct AE",
+    "metrics": [{
+        "name": "metrics.New_Pipeline_AE_Source",
+        "display_name": "AE"
+      },
+      {
+        "name": "metrics.New_Pipeline_AE_S0_rate",
+        "display_name": "Conversion Rate"
+      },
+      {
+        "name": "metrics.New_Pipeline_AE_S0",
+        "display_name": "Opportunities"
+      }
+    ]
+  }, {
+    "name": "New Pipeline References",
+    "metrics": [{
+        "name": "metrics.New_Pipeline_Reference_Source",
+        "display_name": "Reference Leads"
+      },
+      {
+        "name": "metrics.New_Pipeline_Reference_S0_rate",
+        "display_name": "Conversion Rate"
+      },
+      {
+        "name": "metrics.New_Pipeline_Reference_S0",
+        "display_name": "Opportunities"
+      }
+    ]
+  }, {
+    "name": "New Pipeline Channel",
+    "metrics": [{
+        "name": "Channel",
+        "metrics": [{
+          "name": "metrics.New_Pipeline_Channel_Source",
+          "display_name": "Channel"
+        }, {
+          "name": "metrics.New_Pipeline_Channel_S0_rate",
+          "display_name": "Conversion Rate"
+        }, {
+          "name": "metrics.New_Pipeline_Channel_S0",
+          "display_name": "Opportunities"
+        }]
+      },
+      {
+        "name": "OEM",
+        "metrics": [{
+          "name": "metrics.New_Pipeline_OEM_Source",
+          "display_name": "OEM"
+        }, {
+          "name": "metrics.New_Pipeline_OEM_S0_rate",
+          "display_name": "Conversion Rate"
+        }, {
+          "name": "metrics.New_Pipeline_OEM_S0",
+          "display_name": "Opportunities"
+        }]
+      },
+      {
+        "name": "BPO",
+        "metrics": [{
+          "name": "metrics.New_Pipeline_BPO_Source",
+          "display_name": "BPO"
+        }, {
+          "name": "metrics.New_Pipeline_BPO_S0_rate",
+          "display_name": "Conversion Rate"
+        }, {
+          "name": "metrics.New_Pipeline_BPO_S0",
+          "display_name": "Opportunities"
+        }]
+      },
+      {
+        "name": "metrics.New_Pipeline_Channel_New_Opportunities",
+        "display_name": "Total Opportunities"
+      }
+    ]
+  }]
+}

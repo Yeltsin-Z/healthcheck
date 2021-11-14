@@ -1,0 +1,2019 @@
+{
+    "meta": {
+        "period": "1m",
+        "currency": "USD",
+        "duration": 12,
+        "negLimit": -1,
+        "posLimit": 0,
+        "plan_name": "Fareye Business Plan",
+        "dtml_version": "2",
+        "plan_start_date": "2021/04/01",
+        "plan_description": "Fareye Onboarding plan"
+    },
+    "views": [
+        {
+            "name": "Contracted_ARR",
+            "metrics": [
+                {
+                    "name": "metrics.Contracted_ARR",
+                    "metrics": [
+                        {
+                            "name": "metrics.New_Logo_ARR"
+                        },
+                        {
+                            "name": "metrics.Cross_Upsell_ARR"
+                        },
+                        {
+                            "name": "metrics.Scaleup_ARR"
+                        },
+                        {
+                            "name": "metrics.Churn_ARR"
+                        }
+                    ]
+                },
+                {
+                    "name": ""
+                },
+                {
+                    "name": "metrics.Contracted_Customers",
+                    "metrics": [
+                        {
+                            "name": "metrics.New_Logo_Count"
+                        },
+                        {
+                            "name": "metrics.Cross_Upsell_Count"
+                        },
+                        {
+                            "name": "metrics.Churn_Customers"
+                        }
+                    ]
+                },
+                {
+                    "name": ""
+                },
+                {
+                    "name": "metrics.New_Logo_ARPA"
+                },
+                {
+                    "name": "metrics.Cross_Upsell_ARPA"
+                }
+            ],
+            "dimensions": [
+                "Region"
+            ]
+        },
+        {
+            "name": "Billed_ARR",
+            "metrics": [
+                {
+                    "name": "metrics.Billed_ARR",
+                    "metrics": [
+                        {
+                            "name": "metrics.New_Billing_ARR"
+                        },
+                        {
+                            "name": "metrics.Scaleup_Billing_ARR"
+                        },
+                        {
+                            "name": "metrics.Old_Pending_Go_Live_Billing_ARR"
+                        },
+                        {
+                            "name": "metrics.Churn_Billing_ARR"
+                        }
+                    ]
+                },
+                {
+                    "name": ""
+                },
+                {
+                    "name": "metrics.New_Sales_Immediate_Billing"
+                }
+            ],
+            "dimensions": [
+                "Region"
+            ]
+        },
+        {
+            "name": "Brand Marketing",
+            "metrics": [
+                {
+                    "name": "metrics.Brand_Spend"
+                }
+            ],
+            "dimensions": [
+                "Brand_Marketing_Type"
+            ]
+        },
+        {
+            "name": "Performance Marketing",
+            "metrics": [
+                {
+                    "name": "metrics.Performance_Spend"
+                },
+                {
+                    "name": "metrics.MQL_Performance_Marketing"
+                },
+                {
+                    "name": ""
+                },
+                {
+                    "name": "metrics.Cost_Per_MQL"
+                }
+            ],
+            "dimensions": [
+                "Performance_Marketing_Type",
+                "Region"
+            ]
+        },
+        {
+            "name": "MQL and SQL Build Up",
+            "metrics": [
+                {
+                    "name": "metrics.Total_Deals_Quarter"
+                },
+                {
+                    "name": "metrics.SQL_Deal_Conversion"
+                },
+                {
+                    "name": "metrics.SQL"
+                },
+                {
+                    "name": "metrics.MQL_SQL_Conversion"
+                },
+                {
+                    "name": "metrics.MQL_Total",
+                    "metrics": [
+                        {
+                            "name": "metrics.MQL_BDR"
+                        },
+                        {
+                            "name": "metrics.MQL_Performance_Marketing"
+                        }
+                    ]
+                }
+            ],
+            "dimensions": [
+                "Region"
+            ]
+        },
+        {
+            "name": "New Hiring",
+            "metrics": [
+                {
+                    "name": "metrics.Count_New_Hire"
+                },
+                {
+                    "name": "metrics.CTC_Per_New_Hire"
+                },
+                {
+                    "name": "metrics.Total_CTC_New_Hires"
+                }
+            ],
+            "dimensions": [
+                "Department",
+                "Designation",
+                "Location"
+            ]
+        },
+        {
+            "name": "General and Administration",
+            "metrics": [
+                {
+                    "name": "metrics.GA_Total",
+                    "metrics": [
+                        {
+                            "name": "metrics.GA_Office_Expense"
+                        },
+                        {
+                            "name": "metrics.GA_Sim_Expenses"
+                        },
+                        {
+                            "name": "metrics.GA_Legal_Professional_Charges"
+                        },
+                        {
+                            "name": "metrics.GA_Insurance"
+                        },
+                        {
+                            "name": "metrics.GA_Employee_Welfare"
+                        },
+                        {
+                            "name": "metrics.GA_Celebtrations"
+                        },
+                        {
+                            "name": "metrics.GA_Expat_Cost_Visa_Immigration"
+                        },
+                        {
+                            "name": "metrics.GA_Rent"
+                        },
+                        {
+                            "name": "metrics.GA_New_Office_Rent"
+                        },
+                        {
+                            "name": "metrics.GA_Office_Security"
+                        },
+                        {
+                            "name": "metrics.GA_Compliance_Training"
+                        },
+                        {
+                            "name": "metrics.GA_New_Office_Additional_Expense"
+                        },
+                        {
+                            "name": "metrics.GA_Employer_Branding"
+                        },
+                        {
+                            "name": "metrics.GA_Employee_Rewards"
+                        },
+                        {
+                            "name": "metrics.GA_Learning_Training"
+                        },
+                        {
+                            "name": "metrics.GA_Ta_Recruitment_Effort"
+                        },
+                        {
+                            "name": "metrics.GA_Social_Security_Taxes_Overseas"
+                        }
+                    ]
+                }
+            ],
+            "dimensions": []
+        },
+        {
+            "name": "Employee Expenses",
+            "metrics": [
+                {
+                    "name": "metrics.Salary_New_Hire"
+                },
+                {
+                    "name": "metrics.Salary_Increment"
+                },
+                {
+                    "name": "metrics.Recruitment_Charge_Percentage"
+                },
+                {
+                    "name": "metrics.Incentive"
+                },
+                {
+                    "name": "metrics.Off_Roll_Employee"
+                },
+                {
+                    "name": "metrics.Software"
+                },
+                {
+                    "name": "metrics.Travel"
+                },
+                {
+                    "name": "metrics.Salary_Total"
+                },
+                {
+                    "name": "metrics.Recruitment_Charge"
+                },
+                {
+                    "name": "metrics.Employee_Cost"
+                },
+                {
+                    "name": "metrics.Employee_Count"
+                }
+            ],
+            "dimensions": [
+                "Department"
+            ]
+        },
+        {
+            "name": "Server & DevOps",
+            "metrics": [
+                {
+                    "name": "metrics.Server_Spend_Discount"
+                },
+                {
+                    "name": "metrics.Marginal_Server_Spend"
+                },
+                {
+                    "name": "metrics.DevOps_Software_Cost_Percentage"
+                },
+                {
+                    "name": "metrics.Server_Spend"
+                },
+                {
+                    "name": "metrics.DevOps_Software_Cost"
+                }
+            ],
+            "dimensions": []
+        }
+    ],
+    "metrics": [
+        {
+            "name": "New_Logo_ARR",
+            "display_name": "New Logo ARR",
+            "description": "No description",
+            "type": "decimal",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.New_Logo_ARR[Region=Americas] = [225000.0, 225000.0, 300000.0, 360000.0, 360000.0, 480000.0, 570000.9, 570000.9, 760001.2000000001, 619500.0, 619500.0, 826000.0]",
+                "metrics.New_Logo_ARR[Region=EMEA] = [150000.3, 150000.3, 200000.40000000002, 195000.3, 195000.3, 260000.40000000002, 465000.89999999997, 465000.89999999997, 620001.2000000001, 475714.8, 475714.8, 634286.4]",
+                "metrics.New_Logo_ARR[Region=APAC] = [379500.0, 379500.0, 506000.0, 336000.6, 336000.6, 448000.80000000005, 92999.7, 92999.7, 123999.6, 168000.3, 168000.3, 224000.40000000002]"
+            ]
+        },
+        {
+            "name": "Cross_Upsell_ARR",
+            "display_name": "Cross Upsell ARR",
+            "description": "No description",
+            "type": "decimal",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Cross_Upsell_ARR[Region=Americas] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Cross_Upsell_ARR[Region=EMEA] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Cross_Upsell_ARR[Region=APAC] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+            ]
+        },
+        {
+            "name": "New_Logo_Count",
+            "display_name": "New Logo Count",
+            "description": "No description",
+            "type": "decimal",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.New_Logo_Count[Region=Americas] = [0.8999999999999999, 0.8999999999999999, 1.2000000000000002, 1.5, 1.5, 2.0, 2.1, 2.1, 2.8000000000000003, 2.1, 2.1, 2.8000000000000003]",
+                "metrics.New_Logo_Count[Region=EMEA] = [0.8999999999999999, 0.8999999999999999, 1.2000000000000002, 0.8999999999999999, 0.8999999999999999, 1.2000000000000002, 2.1, 2.1, 2.8000000000000003, 1.7999999999999998, 1.7999999999999998, 2.4000000000000004]",
+                "metrics.New_Logo_Count[Region=APAC] = [3.3, 3.3, 4.4, 1.7999999999999998, 1.7999999999999998, 2.4000000000000004, 0.8999999999999999, 0.8999999999999999, 1.2000000000000002, 0.8999999999999999, 0.8999999999999999, 1.2000000000000002]"
+            ]
+        },
+        {
+            "name": "Cross_Upsell_Count",
+            "display_name": "Cross Upsell Count",
+            "description": "No description",
+            "type": "decimal",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Cross_Upsell_Count[Region=Americas] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Cross_Upsell_Count[Region=EMEA] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Cross_Upsell_Count[Region=APAC] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+            ]
+        },
+        {
+            "name": "Churn_ARR",
+            "display_name": "Churn ARR",
+            "description": "No description",
+            "type": "decimal",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Churn_ARR[Region=Americas] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Churn_ARR[Region=EMEA] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Churn_ARR[Region=APAC] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+            ]
+        },
+        {
+            "name": "Churn_Customers",
+            "display_name": "Churn Customers",
+            "description": "No description",
+            "type": "decimal",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Churn_Customers[Region=Americas] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Churn_Customers[Region=EMEA] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Churn_Customers[Region=APAC] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+            ]
+        },
+        {
+            "name": "Contracted_ARR",
+            "display_name": "Contracted ARR",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "eop"
+            ],
+            "formulae": [
+                "metrics.Contracted_ARR[Region=Americas][t=-1] = 2139850",
+                "metrics.Contracted_ARR[Region=EMEA][t=-1] = 4008582",
+                "metrics.Contracted_ARR[Region=APAC][t=-1] = 7375666",
+                "metrics.Contracted_ARR[t=t] = metrics.Contracted_ARR[t=t-1] + metrics.New_Logo_ARR[t=t] + metrics.Cross_Upsell_ARR[t=t] + metrics.Scaleup_ARR[t=t] - metrics.Churn_ARR[t=t]"
+            ]
+        },
+        {
+            "name": "Contracted_Customers",
+            "display_name": "Contracted Customers",
+            "description": "No description",
+            "type": "decimal",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "eop"
+            ],
+            "formulae": [
+                "metrics.Contracted_Customers[Region=Americas][t=-1] = 10",
+                "metrics.Contracted_Customers[Region=EMEA][t=-1] = 31",
+                "metrics.Contracted_Customers[Region=APAC][t=-1] = 55",
+                "metrics.Contracted_Customers[t=t] = metrics.Contracted_Customers[t=t-1] + metrics.New_Logo_Count[t=t] - metrics.Churn_Customers[t=t]"
+            ]
+        },
+        {
+            "name": "New_Logo_ARPA",
+            "display_name": "New Logo ARPA",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "formula",
+                "formula"
+            ],
+            "formulae": [
+                "metrics.New_Logo_ARPA = metrics.New_Logo_ARR / metrics.New_Logo_Count"
+            ]
+        },
+        {
+            "name": "Cross_Upsell_ARPA",
+            "display_name": "Cross Upsell ARPA",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "formula",
+                "formula"
+            ],
+            "formulae": [
+                "metrics.Cross_Upsell_ARPA = metrics.Cross_Upsell_ARR / metrics.Cross_Upsell_Count"
+            ]
+        },
+        {
+            "name": "Scaleup_ARR",
+            "display_name": "Scaleup ARR",
+            "description": "No description",
+            "type": "decimal",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Scaleup_ARR[Region=Americas] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 13749.0, 13749.0, 13749.0]",
+                "metrics.Scaleup_ARR[Region=EMEA] = [2139.0, 2139.0, 2139.0, 2826.0, 2826.0, 2826.0, 19794.0, 19794.0, 19794.0, 0.0, 0.0, 0.0]",
+                "metrics.Scaleup_ARR[Region=APAC] = [30609.0, 30609.0, 30609.0, 56508.0, 56508.0, 56508.0, 4122.0, 4122.0, 4122.0, 1989.0, 1989.0, 1989.0]"
+            ]
+        },
+        {
+            "name": "New_Sales_Immediate_Billing",
+            "display_name": "New Sales Immediate Billing",
+            "description": "No description",
+            "type": "percentage",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "formula",
+                "formula"
+            ],
+            "formulae": [
+                "metrics.New_Sales_Immediate_Billing = 0.86"
+            ]
+        },
+        {
+            "name": "Contracted_ARR_March",
+            "display_name": "Contracted ARR March",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Contracted_ARR_March[Region=Americas] = 2139850",
+                "metrics.Contracted_ARR_March[Region=EMEA] = 4008582",
+                "metrics.Contracted_ARR_March[Region=APAC] = 7375666"
+            ]
+        },
+        {
+            "name": "Billed_ARR_March",
+            "display_name": "Billed ARR March",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Billed_ARR_March[Region=Americas] = 1840271",
+                "metrics.Billed_ARR_March[Region=EMEA] = 3447381",
+                "metrics.Billed_ARR_March[Region=APAC] = 6343073"
+            ]
+        },
+        {
+            "name": "New_Billing_ARR",
+            "display_name": "New Billing ARR",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.New_Billing_ARR = metrics.New_Sales_Immediate_Billing * metrics.Cross_Upsell_ARR + metrics.New_Logo_ARR * metrics.New_Sales_Immediate_Billing"
+            ]
+        },
+        {
+            "name": "Scaleup_Billing_ARR",
+            "display_name": "Scaleup Billing ARR",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Scaleup_Billing_ARR = metrics.Scaleup_ARR"
+            ]
+        },
+        {
+            "name": "Old_Pending_Go_Live_Billing_ARR",
+            "display_name": "Old Pending Go Live Billing ARR",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Old_Pending_Go_Live_Billing_ARR = metrics.Contracted_ARR_March / 12 - metrics.Billed_ARR_March / 12"
+            ]
+        },
+        {
+            "name": "Churn_Billing_ARR",
+            "display_name": "Churn Billing ARR",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Churn_Billing_ARR = metrics.Churn_ARR"
+            ]
+        },
+        {
+            "name": "Billed_ARR",
+            "display_name": "Billed ARR",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "eop"
+            ],
+            "formulae": [
+                "metrics.Billed_ARR[Region=Americas][t=-1] = 1840271",
+                "metrics.Billed_ARR[Region=EMEA][t=-1] = 3447381",
+                "metrics.Billed_ARR[Region=APAC][t=-1] = 6343073",
+                "metrics.Billed_ARR[t=t] = metrics.Billed_ARR[t=t-1] + metrics.New_Billing_ARR[t=t] + metrics.Scaleup_Billing_ARR[t=t] - metrics.Churn_Billing_ARR[t=t] + metrics.Old_Pending_Go_Live_Billing_ARR[t=t]"
+            ]
+        },
+        {
+            "name": "Brand_Spend",
+            "display_name": "Brand Spend",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Brand_Marketing_Type"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Brand_Spend[Brand_Marketing_Type=Events_Brand_Marketing] = [60500.00000,60500.00000,60500.00000,60500.00000,60500.00000,60500.00000,60500.00000,60500.00000,60500.00000,60500.00000,60500.00000,60500.00000]",
+                "metrics.Brand_Spend[Brand_Marketing_Type=Gartner] = [12500.00000,12500.00000,12500.00000,12500.00000,12500.00000,12500.00000,12500.00000,12500.00000,12500.00000,12500.00000,12500.00000,12500.00000]",
+                "metrics.Brand_Spend[Brand_Marketing_Type=AR_Design_Agency] = [2857.14286,2857.14286,2857.14286,2857.14286,2857.14286,2857.14286,2857.14286,2857.14286,2857.14286,2857.14286,2857.14286,2857.14286]",
+                "metrics.Brand_Spend[Brand_Marketing_Type=Newswires] = [1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667]",
+                "metrics.Brand_Spend[Brand_Marketing_Type=Media_Relations] = [23000.00000,23000.00000,23000.00000,23000.00000,23000.00000,23000.00000,23000.00000,23000.00000,23000.00000,23000.00000,23000.00000,23000.00000]",
+                "metrics.Brand_Spend[Brand_Marketing_Type=Content_marketing] = [1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667]",
+                "metrics.Brand_Spend[Brand_Marketing_Type=Digital_Marketing] = [44666.66667,44666.66667,44666.66667,44666.66667,44666.66667,44666.66667,44666.66667,44666.66667,44666.66667,44666.66667,44666.66667,44666.66667]",
+                "metrics.Brand_Spend[Brand_Marketing_Type=Video_Production] = [1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667,1666.66667]",
+                "metrics.Brand_Spend[Brand_Marketing_Type=Awards_SEO_Backlinks] = [4166.66667,4166.66667,4166.66667,4166.66667,4166.66667,4166.66667,4166.66667,4166.66667,4166.66667,4166.66667,4166.66667,4166.66667]",
+                "metrics.Brand_Spend[Brand_Marketing_Type=Miscellaneous] = [4166.66667,4166.66667,4166.66667,4166.66667,4166.66667,4166.66667,4166.66667,4166.66667,4166.66667,4166.66667,4166.66667,4166.66667]",
+                "metrics.Brand_Spend[Brand_Marketing_Type=Partnership_Marketing_Budget] = [9833.33333,9833.33333,9833.33333,9833.33333,9833.33333,9833.33333,9833.33333,9833.33333,9833.33333,9833.33333,9833.33333,9833.33333]"
+            ]
+        },
+        {
+            "name": "Performance_Spend",
+            "display_name": "Performance Spend",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Performance_Marketing_Type",
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Performance_Spend[Region=Americas][Performance_Marketing_Type=Adwords] = [3600.0,3600.0,4800.0,3600.0,3600.0,4800.0,3600.0,3600.0,4800.0,3600.0,3600.0,4800.0]",
+                "metrics.Performance_Spend[Region=Americas][Performance_Marketing_Type=Organic] = [12000.0,12000.0,16000.0,12000.0,12000.0,16000.0,12000.0,12000.0,16000.0,12000.0,12000.0,16000.0]",
+                "metrics.Performance_Spend[Region=Americas][Performance_Marketing_Type=Events] = [30000.0,30000.0,40000.0,22500.0,22500.0,30000.0,22500.0,22500.0,30000.0,15000.0,15000.0,20000.0]",
+                "metrics.Performance_Spend[Region=Americas][Performance_Marketing_Type=Association] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]",
+                "metrics.Performance_Spend[Region=Americas][Performance_Marketing_Type=Roundtable] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]",
+                "metrics.Performance_Spend[Region=Americas][Performance_Marketing_Type=Partner_Marketing] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]",
+                "metrics.Performance_Spend[Region=EMEA][Performance_Marketing_Type=Adwords] = [3000.0,3000.0,4000.0,3000.0,3000.0,4000.0,3000.0,3000.0,4000.0,3000.0,3000.0,4000.0]",
+                "metrics.Performance_Spend[Region=EMEA][Performance_Marketing_Type=Organic] = [9000.0,9000.0,12000.0,9000.0,9000.0,12000.0,9000.0,9000.0,12000.0,9000.0,9000.0,12000.0]",
+                "metrics.Performance_Spend[Region=EMEA][Performance_Marketing_Type=Events] = [22500.0,22500.0,30000.0,22500.0,22500.0,30000.0,22500.0,22500.0,30000.0,15000.0,15000.0,20000.0]",
+                "metrics.Performance_Spend[Region=EMEA][Performance_Marketing_Type=Association] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]",
+                "metrics.Performance_Spend[Region=EMEA][Performance_Marketing_Type=Roundtable] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]",
+                "metrics.Performance_Spend[Region=EMEA][Performance_Marketing_Type=Partner_Marketing] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]",
+                "metrics.Performance_Spend[Region=APAC][Performance_Marketing_Type=Adwords] = [3600.0,3600.0,4800.0,3600.0,3600.0,4800.0,3600.0,3600.0,4800.0,3600.0,3600.0,4800.0]",
+                "metrics.Performance_Spend[Region=APAC][Performance_Marketing_Type=Organic] = [6000.0,6000.0,8000.0,6000.0,6000.0,8000.0,6000.0,6000.0,8000.0,6000.0,6000.0,8000.0]",
+                "metrics.Performance_Spend[Region=APAC][Performance_Marketing_Type=Partner_Marketing] = [750.0,750.0,1000.0,750.0,750.0,1000.0,750.0,750.0,1000.0,750.0,750.0,1000.0]",
+                "metrics.Performance_Spend[Region=APAC][Performance_Marketing_Type=Events] = [450.0,450.0,600.0,450.0,450.0,600.0,450.0,450.0,600.0,450.0,450.0,600.0]",
+                "metrics.Performance_Spend[Region=APAC][Performance_Marketing_Type=Association] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]",
+                "metrics.Performance_Spend[Region=APAC][Performance_Marketing_Type=Roundtable] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]"
+            ]
+        },
+        {
+            "name": "MQL_Performance_Marketing",
+            "display_name": "MQL Performance Marketing",
+            "description": "No description",
+            "type": "decimal",
+            "dimensions": [
+                "Performance_Marketing_Type",
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.MQL_Performance_Marketing[Region=Americas][Performance_Marketing_Type=Adwords] = [0.8999999999999999,0.8999999999999999,1.2000000000000002,0.8999999999999999,0.8999999999999999,1.2000000000000002,0.8999999999999999,0.8999999999999999,1.2000000000000002,0.8999999999999999,0.8999999999999999,1.2000000000000002]",
+                "metrics.MQL_Performance_Marketing[Region=Americas][Performance_Marketing_Type=Organic] = [0.8999999999999999,0.8999999999999999,1.2000000000000002,0.8999999999999999,0.8999999999999999,1.2000000000000002,0.8999999999999999,0.8999999999999999,1.2000000000000002,0.8999999999999999,0.8999999999999999,1.2000000000000002]",
+                "metrics.MQL_Performance_Marketing[Region=Americas][Performance_Marketing_Type=Events] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]",
+                "metrics.MQL_Performance_Marketing[Region=Americas][Performance_Marketing_Type=Association] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]",
+                "metrics.MQL_Performance_Marketing[Region=Americas][Performance_Marketing_Type=Roundtable] = [1.5,1.5,2.0,1.5,1.5,2.0,1.5,1.5,2.0,0.8999999999999999,0.8999999999999999,1.2000000000000002]",
+                "metrics.MQL_Performance_Marketing[Region=Americas][Performance_Marketing_Type=Partner_Marketing] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]",
+                "metrics.MQL_Performance_Marketing[Region=EMEA][Performance_Marketing_Type=Adwords] = [0.8999999999999999,0.8999999999999999,1.2000000000000002,0.8999999999999999,0.8999999999999999,1.2000000000000002,0.8999999999999999,0.8999999999999999,1.2000000000000002,0.8999999999999999,0.8999999999999999,1.2000000000000002]",
+                "metrics.MQL_Performance_Marketing[Region=EMEA][Performance_Marketing_Type=Organic] = [1.2,1.2,1.6,1.2,1.2,1.6,1.2,1.2,1.6,1.2,1.2,1.6]",
+                "metrics.MQL_Performance_Marketing[Region=EMEA][Performance_Marketing_Type=Events] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]",
+                "metrics.MQL_Performance_Marketing[Region=EMEA][Performance_Marketing_Type=Association] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]",
+                "metrics.MQL_Performance_Marketing[Region=EMEA][Performance_Marketing_Type=Roundtable] = [1.5,1.5,2.0,1.5,1.5,2.0,1.5,1.5,2.0,0.8999999999999999,0.8999999999999999,1.2000000000000002]",
+                "metrics.MQL_Performance_Marketing[Region=EMEA][Performance_Marketing_Type=Partner_Marketing] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]",
+                "metrics.MQL_Performance_Marketing[Region=APAC][Performance_Marketing_Type=Adwords] = [0.6,0.6,0.8,0.6,0.6,0.8,0.6,0.6,0.8,0.6,0.6,0.8]",
+                "metrics.MQL_Performance_Marketing[Region=APAC][Performance_Marketing_Type=Organic] = [0.8999999999999999,0.8999999999999999,1.2000000000000002,0.8999999999999999,0.8999999999999999,1.2000000000000002,0.8999999999999999,0.8999999999999999,1.2000000000000002,0.8999999999999999,0.8999999999999999,1.2000000000000002]",
+                "metrics.MQL_Performance_Marketing[Region=APAC][Performance_Marketing_Type=Partner_Marketing] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]",
+                "metrics.MQL_Performance_Marketing[Region=APAC][Performance_Marketing_Type=Events] = [0.3,0.3,0.4,0.3,0.3,0.4,0.3,0.3,0.4,0.3,0.3,0.4]",
+                "metrics.MQL_Performance_Marketing[Region=APAC][Performance_Marketing_Type=Association] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]",
+                "metrics.MQL_Performance_Marketing[Region=APAC][Performance_Marketing_Type=Roundtable] = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]"
+            ]
+        },
+        {
+            "name": "Cost_Per_MQL",
+            "display_name": "Cost Per MQL",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Performance_Marketing_Type",
+                "Region"
+            ],
+            "aggregations": [
+                "formula",
+                "formula",
+                "formula"
+            ],
+            "formulae": [
+                "metrics.Cost_Per_MQL = metrics.Performance_Spend / metrics.MQL_Performance_Marketing"
+            ]
+        },
+        {
+            "name": "SQL_Deal_Conversion",
+            "display_name": "SQL Deal Conversion",
+            "description": "No description",
+            "type": "percentage",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "formula",
+                "formula"
+            ],
+            "formulae": [
+                "metrics.SQL_Deal_Conversion = 0.2"
+            ]
+        },
+        {
+            "name": "MQL_SQL_Conversion",
+            "display_name": "MQL SQL Conversion",
+            "description": "No description",
+            "type": "percentage",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "formula",
+                "formula"
+            ],
+            "formulae": [
+                "metrics.MQL_SQL_Conversion = 0.4"
+            ]
+        },
+        {
+            "name": "Total_Deals_Quarter",
+            "display_name": "Total Deals Quarter",
+            "description": "No description",
+            "type": "decimal",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Total_Deals_Quarter = metrics.New_Logo_Count + metrics.Cross_Upsell_Count"
+            ]
+        },
+        {
+            "name": "SQL",
+            "display_name": "SQL",
+            "description": "No description",
+            "type": "decimal",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.SQL = metrics.Total_Deals_Quarter / metrics.SQL_Deal_Conversion"
+            ]
+        },
+        {
+            "name": "MQL_Total",
+            "display_name": "MQL Total",
+            "description": "No description",
+            "type": "decimal",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.MQL_Total = metrics.SQL / metrics.MQL_SQL_Conversion"
+            ]
+        },
+        {
+            "name": "MQL_BDR",
+            "display_name": "MQL BDR",
+            "description": "No description",
+            "type": "decimal",
+            "dimensions": [
+                "Region"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.MQL_BDR = metrics.MQL_Total - metrics.MQL_Performance_Marketing"
+            ]
+        },
+        {
+            "name": "Count_New_Hire",
+            "display_name": "Count New Hire",
+            "description": "No description",
+            "type": "decimal",
+            "dimensions": [
+                "Department",
+                "Designation",
+                "Location"
+            ],
+            "aggregations": [
+                "sum",
+                "sum",
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Count_New_Hire[Department=Accounts_Finance][Accounts_Finance=AM_Accounts_Finance][Location=Noida_HP] = [1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Accounts_Finance][Accounts_Finance=AM_MIS][Location=Noida_HP] = [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Accounts_Finance][Accounts_Finance=AM_Secretarial_Legal][Location=Noida_HP] = [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Accounts_Finance][Accounts_Finance=TBD_3][Location=Noida_HP] = [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Business_Development][Business_Development=BD][Location=APAC_HP] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Business_Development][Business_Development=BD][Location=Americas_HP] = [1.112, 0.944, 0.944, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Business_Development][Business_Development=BD][Location=EMEA_HP] = [1.226, 0.0, 0.0, 0.774, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Customer_Success][Customer_Success=CSM][Location=Noida_HP] = [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Customer_Success][Customer_Success=CSM-USA][Location=Noida_HP] = [0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Customer_Success][Customer_Success=CSM_EMEA][Location=Noida_HP] = [0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Customer_Success][Customer_Success=Leads_ADr_CSM][Location=Americas_HP] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Customer_Success][Customer_Success=Leads_ADr_CSM][Location=EMEA_HP] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Customer_Success][Customer_Success=Leads_ADr_CSM][Location=Noida_HP] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Customer_Success][Customer_Success=Low_Touch_CSM][Location=Noida_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Customer_Success][Customer_Success=Sr_CSM][Location=Americas_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Customer_Success][Customer_Success=Sr_CSM][Location=EMEA_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Customer_Success][Customer_Success=Sr_CSM][Location=Noida_HP] = [1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Development][Development=New_Hire_Dev_DevOPs][Location=Noida_HP] = [9.0, 9.0, 8.0, 9.0, 9.0, 8.0, 5.0, 5.0, 6.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Development][Development=New_Hire_Infrastructure_Management_COGS][Location=Noida_HP] = [1.0, 1.0, 2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]",
+                "metrics.Count_New_Hire[Department=Development][Development=New_Hire_Quality_Egnineering][Location=Noida_HP] = [3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 2.0, 2.0, 2.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Development][Development=New_Hire_Template_Engineering][Location=Noida_HP] = [1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Development][Development=New_Hiring_Management_Architects][Location=Noida_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Development][Development=Tech_PMs_TPMs][Location=Noida_HP] = [1.0, 1.0, 2.0, 1.0, 1.0, 2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=HR_Admin][HR_Admin=Administration_Executive_Compliance_Support][Location=Noida_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=HR_Admin][HR_Admin=Management_Trainee][Location=Noida_HP] = [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=HR_Admin][HR_Admin=Receptionist_Contractual][Location=Noida_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=HR_Admin][HR_Admin=Sr_Executive_MIS][Location=Noida_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=HR_Admin][HR_Admin=Sr_Manager_Global_Payroll][Location=Noida_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=HR_Admin][HR_Admin=Sr_Manager_Procurement][Location=Noida_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=HR_Admin][HR_Admin=Transport_Executive_Shifts][Location=Noida_HP] = [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=HR_Admin][HR_Admin=Travel_Implant][Location=Noida_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Marketing][Marketing=Content_Writer_EMEA_US_Sit_in_India][Location=EMEA_HP] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Marketing][Marketing=Content_writer_India][Location=Noida_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Marketing][Marketing=Digital_Manager][Location=Noida_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Marketing][Marketing=Director_Marketing][Location=EMEA_HP] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Marketing][Marketing=Director_Product_Marketing][Location=Americas_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Marketing][Marketing=Exec_email_Automation][Location=Noida_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Marketing][Marketing=General_Marketer][Location=Americas_HP] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Marketing][Marketing=General_Marketer][Location=Noida_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Marketing][Marketing=Interns_Marketing][Location=Noida_HP] = [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Marketing][Marketing=Lead-RFP_Content_Desk][Location=Noida_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Marketing][Marketing=PMM][Location=Noida_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Marketing][Marketing=RMD][Location=Americas_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=OD][OD=TBD_1][Location=Noida_HP] = [0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=OD][OD=TBD_2][Location=Noida_HP] = [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Partner][Partner=Partner_APAC][Location=APAC_HP] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Partner][Partner=Partner_EMEA][Location=EMEA_HP] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Partner][Partner=Presales_Enablement_Central][Location=Noida_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Presales][Presales=Director-Presales_Central][Location=Noida_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Presales][Presales=Presales_Executive_3PL][Location=Americas_HP] = [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Presales][Presales=Presales_Executive_Overall][Location=Americas_HP] = [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Presales][Presales=Presales_Executive_Retail][Location=Americas_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Presales][Presales=Sr.Presales_Executive][Location=EMEA_HP] = [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Presales][Presales=Tech_Presales_Central][Location=Noida_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Process][Process=PA_Lead_Process][Location=Noida_HP] = [0.0, 0.0, 5.0, 0.0, 2.0, 4.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Process][Process=PA_Process][Location=Noida_HP] = [9.0, 8.0, 11.0, 8.0, 2.0, 10.0, 12.0, 15.0, -2.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Process][Process=PM_Lead_Process][Location=Noida_HP] = [1.0, 0.0, 2.0, 0.0, 1.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Process][Process=PM_Process][Location=Noida_HP] = [3.0, 3.0, 3.0, 3.0, 1.0, 6.0, 6.0, 9.0, 2.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Process][Process=QA_Lead_Process][Location=Noida_HP] = [1.0, 0.0, 2.0, 0.0, 1.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Process][Process=QA_Process][Location=Noida_HP] = [4.0, 4.0, 4.0, 4.0, 1.0, 2.0, 6.0, 9.0, 2.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Product][Product=Carrier_Manager][Location=Americas_HP] = [0.0, 0.0, 2.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Product][Product=Carrier_Manager][Location=Noida_HP] = [0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Product][Product=Director_Product][Location=Americas_HP] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Product][Product=Director_Product][Location=Noida_HP] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Product][Product=PM_Product][Location=Americas_HP] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Product][Product=PM_Product][Location=Noida_HP] = [0.0, 0.0, 2.0, 0.0, 2.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Product][Product=Principal_PM_Product][Location=Americas_HP] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Product][Product=Principal_PM_Product][Location=Noida_HP] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Product][Product=Sr_PM_Product][Location=Americas_HP] = [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Product][Product=Sr_PM_Product][Location=Noida_HP] = [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Product][Product=Sr_UX][Location=Americas_HP] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Product][Product=Sr_UX][Location=Noida_HP] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Product][Product=UX][Location=Americas_HP] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Product][Product=UX][Location=Noida_HP] = [0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Sales][Sales=Director_Sales][Location=Americas_HP] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Sales][Sales=Sr_Accts_Executive][Location=APAC_HP] = [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Sales][Sales=Sr_Accts_Executive][Location=Americas_HP] = [0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Sales][Sales=Sr_Accts_Executive][Location=EMEA_HP] = [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Sales][Sales=VP_Industry_Strategy][Location=Americas_HP] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=Support][Support=Support_Support][Location=Noida_HP] = [5.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=TA_LD][TA_LD=Executive_TA][Location=Noida_HP] = [0.857, 1.143, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=TA_LD][TA_LD=Lead_TA][Location=Noida_HP] = [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Count_New_Hire[Department=TA_LD][TA_LD=Recruitment_Specialist][Location=Americas_HP] = [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+            ]
+        },
+        {
+            "name": "CTC_Per_New_Hire",
+            "display_name": "CTC Per New Hire",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Department",
+                "Designation",
+                "Location"
+            ],
+            "aggregations": [
+                "sum",
+                "sum",
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.CTC_Per_New_Hire[Department=Accounts_Finance][Accounts_Finance=AM_Accounts_Finance][Location=Noida_HP] =  13333.0",
+                "metrics.CTC_Per_New_Hire[Department=Accounts_Finance][Accounts_Finance=AM_MIS][Location=Noida_HP] =  13333.0",
+                "metrics.CTC_Per_New_Hire[Department=Accounts_Finance][Accounts_Finance=AM_Secretarial_Legal][Location=Noida_HP] =  8000.0",
+                "metrics.CTC_Per_New_Hire[Department=Accounts_Finance][Accounts_Finance=TBD_3][Location=Noida_HP] =  32000.0",
+                "metrics.CTC_Per_New_Hire[Department=Business_Development][Business_Development=BD][Location=APAC_HP] =  0.0",
+                "metrics.CTC_Per_New_Hire[Department=Business_Development][Business_Development=BD][Location=Americas_HP] =  105958.33333333333",
+                "metrics.CTC_Per_New_Hire[Department=Business_Development][Business_Development=BD][Location=EMEA_HP] =  106037.5",
+                "metrics.CTC_Per_New_Hire[Department=Customer_Success][Customer_Success=CSM][Location=Noida_HP] =  20000.0",
+                "metrics.CTC_Per_New_Hire[Department=Customer_Success][Customer_Success=CSM-USA][Location=Noida_HP] =  30000.0",
+                "metrics.CTC_Per_New_Hire[Department=Customer_Success][Customer_Success=CSM_EMEA][Location=Noida_HP] =  30000.0",
+                "metrics.CTC_Per_New_Hire[Department=Customer_Success][Customer_Success=Leads_ADr_CSM][Location=Americas_HP] =  0.0",
+                "metrics.CTC_Per_New_Hire[Department=Customer_Success][Customer_Success=Leads_ADr_CSM][Location=EMEA_HP] =  0.0",
+                "metrics.CTC_Per_New_Hire[Department=Customer_Success][Customer_Success=Leads_ADr_CSM][Location=Noida_HP] =  0.0",
+                "metrics.CTC_Per_New_Hire[Department=Customer_Success][Customer_Success=Low_Touch_CSM][Location=Noida_HP] =  15000.0",
+                "metrics.CTC_Per_New_Hire[Department=Customer_Success][Customer_Success=Sr_CSM][Location=Americas_HP] =  120000.0",
+                "metrics.CTC_Per_New_Hire[Department=Customer_Success][Customer_Success=Sr_CSM][Location=EMEA_HP] =  120000.0",
+                "metrics.CTC_Per_New_Hire[Department=Customer_Success][Customer_Success=Sr_CSM][Location=Noida_HP] =  30000.0",
+                "metrics.CTC_Per_New_Hire[Department=Development][Development=New_Hire_Dev_DevOPs][Location=Noida_HP] =  37333.35294117647",
+                "metrics.CTC_Per_New_Hire[Department=Development][Development=New_Hire_Infrastructure_Management_COGS][Location=Noida_HP] =  18666.833333333332",
+                "metrics.CTC_Per_New_Hire[Department=Development][Development=New_Hire_Quality_Egnineering][Location=Noida_HP] =  25333.391304347828",
+                "metrics.CTC_Per_New_Hire[Department=Development][Development=New_Hire_Template_Engineering][Location=Noida_HP] =  14667.0",
+                "metrics.CTC_Per_New_Hire[Department=Development][Development=New_Hiring_Management_Architects][Location=Noida_HP] =  126667.0",
+                "metrics.CTC_Per_New_Hire[Department=Development][Development=Tech_PMs_TPMs][Location=Noida_HP] =  37333.22222222222",
+                "metrics.CTC_Per_New_Hire[Department=HR_Admin][HR_Admin=Administration_Executive_Compliance_Support][Location=Noida_HP] =  4800.0",
+                "metrics.CTC_Per_New_Hire[Department=HR_Admin][HR_Admin=Management_Trainee][Location=Noida_HP] =  2400.0",
+                "metrics.CTC_Per_New_Hire[Department=HR_Admin][HR_Admin=Receptionist_Contractual][Location=Noida_HP] =  4800.0",
+                "metrics.CTC_Per_New_Hire[Department=HR_Admin][HR_Admin=Sr_Executive_MIS][Location=Noida_HP] =  7200.0",
+                "metrics.CTC_Per_New_Hire[Department=HR_Admin][HR_Admin=Sr_Manager_Global_Payroll][Location=Noida_HP] =  26667.0",
+                "metrics.CTC_Per_New_Hire[Department=HR_Admin][HR_Admin=Sr_Manager_Procurement][Location=Noida_HP] =  26667.0",
+                "metrics.CTC_Per_New_Hire[Department=HR_Admin][HR_Admin=Transport_Executive_Shifts][Location=Noida_HP] =  4800.0",
+                "metrics.CTC_Per_New_Hire[Department=HR_Admin][HR_Admin=Travel_Implant][Location=Noida_HP] =  5600.0",
+                "metrics.CTC_Per_New_Hire[Department=Marketing][Marketing=Content_Writer_EMEA_US_Sit_in_India][Location=EMEA_HP] =  0.0",
+                "metrics.CTC_Per_New_Hire[Department=Marketing][Marketing=Content_writer_India][Location=Noida_HP] =  21429.0",
+                "metrics.CTC_Per_New_Hire[Department=Marketing][Marketing=Digital_Manager][Location=Noida_HP] =  180000.0",
+                "metrics.CTC_Per_New_Hire[Department=Marketing][Marketing=Director_Marketing][Location=EMEA_HP] =  0.0",
+                "metrics.CTC_Per_New_Hire[Department=Marketing][Marketing=Director_Product_Marketing][Location=Americas_HP] =  200000.0",
+                "metrics.CTC_Per_New_Hire[Department=Marketing][Marketing=Exec_email_Automation][Location=Noida_HP] =  15000.0",
+                "metrics.CTC_Per_New_Hire[Department=Marketing][Marketing=General_Marketer][Location=Americas_HP] =  0.0",
+                "metrics.CTC_Per_New_Hire[Department=Marketing][Marketing=General_Marketer][Location=Noida_HP] =  21429.0",
+                "metrics.CTC_Per_New_Hire[Department=Marketing][Marketing=Interns_Marketing][Location=Noida_HP] =  4285.5",
+                "metrics.CTC_Per_New_Hire[Department=Marketing][Marketing=Lead-RFP_Content_Desk][Location=Noida_HP] =  27333.0",
+                "metrics.CTC_Per_New_Hire[Department=Marketing][Marketing=PMM][Location=Noida_HP] =  42857.0",
+                "metrics.CTC_Per_New_Hire[Department=Marketing][Marketing=RMD][Location=Americas_HP] =  200000.0",
+                "metrics.CTC_Per_New_Hire[Department=OD][OD=TBD_1][Location=Noida_HP] =  21333.0",
+                "metrics.CTC_Per_New_Hire[Department=OD][OD=TBD_2][Location=Noida_HP] =  21333.0",
+                "metrics.CTC_Per_New_Hire[Department=Partner][Partner=Partner_APAC][Location=APAC_HP] =  0.0",
+                "metrics.CTC_Per_New_Hire[Department=Partner][Partner=Partner_EMEA][Location=EMEA_HP] =  0.0",
+                "metrics.CTC_Per_New_Hire[Department=Partner][Partner=Presales_Enablement_Central][Location=Noida_HP] =  50000.0",
+                "metrics.CTC_Per_New_Hire[Department=Presales][Presales=Director-Presales_Central][Location=Noida_HP] =  80000.0",
+                "metrics.CTC_Per_New_Hire[Department=Presales][Presales=Presales_Executive_3PL][Location=Americas_HP] =  170000.0",
+                "metrics.CTC_Per_New_Hire[Department=Presales][Presales=Presales_Executive_Overall][Location=Americas_HP] =  170000.0",
+                "metrics.CTC_Per_New_Hire[Department=Presales][Presales=Presales_Executive_Retail][Location=Americas_HP] =  170000.0",
+                "metrics.CTC_Per_New_Hire[Department=Presales][Presales=Sr.Presales_Executive][Location=EMEA_HP] =  190000.0",
+                "metrics.CTC_Per_New_Hire[Department=Presales][Presales=Tech_Presales_Central][Location=Noida_HP] =  80000.0",
+                "metrics.CTC_Per_New_Hire[Department=Process][Process=PA_Lead_Process][Location=Noida_HP] =  13552.0",
+                "metrics.CTC_Per_New_Hire[Department=Process][Process=PA_Process][Location=Noida_HP] =  8534.520547945205",
+                "metrics.CTC_Per_New_Hire[Department=Process][Process=PM_Lead_Process][Location=Noida_HP] =  63000.0",
+                "metrics.CTC_Per_New_Hire[Department=Process][Process=PM_Process][Location=Noida_HP] =  33287.916666666664",
+                "metrics.CTC_Per_New_Hire[Department=Process][Process=QA_Lead_Process][Location=Noida_HP] =  22711.333333333332",
+                "metrics.CTC_Per_New_Hire[Department=Process][Process=QA_Process][Location=Noida_HP] =  11838.305555555555",
+                "metrics.CTC_Per_New_Hire[Department=Product][Product=Carrier_Manager][Location=Americas_HP] =  120000.0",
+                "metrics.CTC_Per_New_Hire[Department=Product][Product=Carrier_Manager][Location=Noida_HP] =  48000.0",
+                "metrics.CTC_Per_New_Hire[Department=Product][Product=Director_Product][Location=Americas_HP] =  0.0",
+                "metrics.CTC_Per_New_Hire[Department=Product][Product=Director_Product][Location=Noida_HP] =  0.0",
+                "metrics.CTC_Per_New_Hire[Department=Product][Product=PM_Product][Location=Americas_HP] =  0.0",
+                "metrics.CTC_Per_New_Hire[Department=Product][Product=PM_Product][Location=Noida_HP] =  37700.0",
+                "metrics.CTC_Per_New_Hire[Department=Product][Product=Principal_PM_Product][Location=Americas_HP] =  0.0",
+                "metrics.CTC_Per_New_Hire[Department=Product][Product=Principal_PM_Product][Location=Noida_HP] =  0.0",
+                "metrics.CTC_Per_New_Hire[Department=Product][Product=Sr_PM_Product][Location=Americas_HP] =  140000.0",
+                "metrics.CTC_Per_New_Hire[Department=Product][Product=Sr_PM_Product][Location=Noida_HP] =  57143.0",
+                "metrics.CTC_Per_New_Hire[Department=Product][Product=Sr_UX][Location=Americas_HP] =  0.0",
+                "metrics.CTC_Per_New_Hire[Department=Product][Product=Sr_UX][Location=Noida_HP] =  0.0",
+                "metrics.CTC_Per_New_Hire[Department=Product][Product=UX][Location=Americas_HP] =  0.0",
+                "metrics.CTC_Per_New_Hire[Department=Product][Product=UX][Location=Noida_HP] =  21929.0",
+                "metrics.CTC_Per_New_Hire[Department=Sales][Sales=Director_Sales][Location=Americas_HP] =  150000.0",
+                "metrics.CTC_Per_New_Hire[Department=Sales][Sales=Sr_Accts_Executive][Location=APAC_HP] =  100000.0",
+                "metrics.CTC_Per_New_Hire[Department=Sales][Sales=Sr_Accts_Executive][Location=Americas_HP] =  120000.0",
+                "metrics.CTC_Per_New_Hire[Department=Sales][Sales=Sr_Accts_Executive][Location=EMEA_HP] =  150000.0",
+                "metrics.CTC_Per_New_Hire[Department=Sales][Sales=VP_Industry_Strategy][Location=Americas_HP] =  0.0",
+                "metrics.CTC_Per_New_Hire[Department=Support][Support=Support_Support][Location=Noida_HP] =  11040.0",
+                "metrics.CTC_Per_New_Hire[Department=TA_LD][TA_LD=Executive_TA][Location=Noida_HP] =  9333.5",
+                "metrics.CTC_Per_New_Hire[Department=TA_LD][TA_LD=Lead_TA][Location=Noida_HP] =  17333.0",
+                "metrics.CTC_Per_New_Hire[Department=TA_LD][TA_LD=Recruitment_Specialist][Location=Americas_HP] =  60000.0"
+            ]
+        },
+        {
+            "name": "Total_CTC_New_Hires",
+            "display_name": "Total CTC New Hires",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Department",
+                "Designation",
+                "Location"
+            ],
+            "aggregations": [
+                "sum",
+                "sum",
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Total_CTC_New_Hires = metrics.Count_New_Hire * metrics.CTC_Per_New_Hire"
+            ]
+        },
+        {
+            "name": "GA_Office_Expense",
+            "display_name": "GA Office Expense",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [],
+            "aggregations": [
+                "sum"
+            ],
+            "formulae": [
+                "metrics.GA_Office_Expense = [28714.0, 27429.0, 31273.0, 26931.0, 26343.0, 37977.0, 27995.0, 27826.0, 27826.0, 28032.0, 27826.0, 27826.0]"
+            ]
+        },
+        {
+            "name": "GA_Sim_Expenses",
+            "display_name": "GA Sim Expenses",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [],
+            "aggregations": [
+                "sum"
+            ],
+            "formulae": [
+                "metrics.GA_Sim_Expenses = [10400.0, 10400.0, 10400.0, 10400.0, 10400.0, 10400.0, 10400.0, 10400.0, 10400.0, 10400.0, 10400.0, 10400.0]"
+            ]
+        },
+        {
+            "name": "GA_Legal_Professional_Charges",
+            "display_name": "GA Legal Professional Charges",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [],
+            "aggregations": [
+                "sum"
+            ],
+            "formulae": [
+                "metrics.GA_Legal_Professional_Charges = [27757.0, 37946.0, 27374.0, 40530.0, 31841.0, 67663.0, 32214.0, 61148.0, 72879.0, 47881.0, 37593.0, 244904.0]"
+            ]
+        },
+        {
+            "name": "GA_Insurance",
+            "display_name": "GA Insurance",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [],
+            "aggregations": [
+                "sum"
+            ],
+            "formulae": [
+                "metrics.GA_Insurance = [17793.0, 26593.0, 23042.0, 56103.0, 48842.0, 26767.0, 143600.0, 29391.0, 31678.0, 31678.0, 33202.0, 33202.0]"
+            ]
+        },
+        {
+            "name": "GA_Employee_Welfare",
+            "display_name": "GA Employee Welfare",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [],
+            "aggregations": [
+                "sum"
+            ],
+            "formulae": [
+                "metrics.GA_Employee_Welfare = [13212.0, 13212.0, 13212.0, 13212.0, 13212.0, 13212.0, 23212.0, 113878.0, 36545.0, 23212.0, 23212.0, 23212.0]"
+            ]
+        },
+        {
+            "name": "GA_Celebtrations",
+            "display_name": "GA Celebtrations",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [],
+            "aggregations": [
+                "sum"
+            ],
+            "formulae": [
+                "metrics.GA_Celebtrations = [4222.0, 4222.0, 4356.0, 4889.0, 6622.0, 4889.0, 5689.0, 79422.0, 7822.0, 6222.0, 6356.0, 19422.0]"
+            ]
+        },
+        {
+            "name": "GA_Expat_Cost_Visa_Immigration",
+            "display_name": "GA Expat Cost Visa Immigration",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [],
+            "aggregations": [
+                "sum"
+            ],
+            "formulae": [
+                "metrics.GA_Expat_Cost_Visa_Immigration = [33333.0, 0.0, 0.0, 33333.0, 0.0, 0.0, 33333.0, 0.0, 0.0, 33333.0, 0.0, 0.0]"
+            ]
+        },
+        {
+            "name": "GA_Rent",
+            "display_name": "GA Rent",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [],
+            "aggregations": [
+                "sum"
+            ],
+            "formulae": [
+                "metrics.GA_Rent = [36205.0, 36205.0, 36205.0, 36205.0, 36205.0, 36205.0, 36205.0, 36565.0, 36565.0, 36565.0, 36565.0, 36565.0]"
+            ]
+        },
+        {
+            "name": "GA_New_Office_Rent",
+            "display_name": "GA New Office Rent",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [],
+            "aggregations": [
+                "sum"
+            ],
+            "formulae": [
+                "metrics.GA_New_Office_Rent = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 11735.0, 11735.0, 11735.0, 11735.0, 11735.0, 11735.0]"
+            ]
+        },
+        {
+            "name": "GA_Office_Security",
+            "display_name": "GA Office Security",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [],
+            "aggregations": [
+                "sum"
+            ],
+            "formulae": [
+                "metrics.GA_Office_Security = [1740.0, 1740.0, 1740.0, 1740.0, 1740.0, 1740.0, 1740.0, 1740.0, 1740.0, 1740.0, 1740.0, 1740.0]"
+            ]
+        },
+        {
+            "name": "GA_Compliance_Training",
+            "display_name": "GA Compliance Training",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [],
+            "aggregations": [
+                "sum"
+            ],
+            "formulae": [
+                "metrics.GA_Compliance_Training = [0.0, 1067.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1067.0, 0.0, 0.0, 0.0, 0.0]"
+            ]
+        },
+        {
+            "name": "GA_New_Office_Additional_Expense",
+            "display_name": "GA New Office Additional Expense",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [],
+            "aggregations": [
+                "sum"
+            ],
+            "formulae": [
+                "metrics.GA_New_Office_Additional_Expense = [0.0, 0.0, 0.0, 0.0, 0.0, 51373.0, 33906.0, 18973.0, 18440.0, 17906.0, 17906.0, 18306.0]"
+            ]
+        },
+        {
+            "name": "GA_Employer_Branding",
+            "display_name": "GA Employer Branding",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [],
+            "aggregations": [
+                "sum"
+            ],
+            "formulae": [
+                "metrics.GA_Employer_Branding = [12000.0, 4000.0, 0.0, 0.0, 0.0, 4400.0, 2667.0, 0.0, 0.0, 0.0, 0.0, 6667.0]"
+            ]
+        },
+        {
+            "name": "GA_Employee_Rewards",
+            "display_name": "GA Employee Rewards",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [],
+            "aggregations": [
+                "sum"
+            ],
+            "formulae": [
+                "metrics.GA_Employee_Rewards = [2967.0, 5300.0, 333.0, 5900.0, 2900.0, 4167.0, 3667.0, 2367.0, 0.0, 3667.0, 2467.0, 5833.0]"
+            ]
+        },
+        {
+            "name": "GA_Learning_Training",
+            "display_name": "GA Learning Training",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [],
+            "aggregations": [
+                "sum"
+            ],
+            "formulae": [
+                "metrics.GA_Learning_Training = [9722.0, 23056.0, 9722.0, 9722.0, 9722.0, 9722.0, 16389.0, 9722.0, 9722.0, 9722.0, 9722.0, 9722.0]"
+            ]
+        },
+        {
+            "name": "GA_Ta_Recruitment_Effort",
+            "display_name": "GA Ta Recruitment Effort",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [],
+            "aggregations": [
+                "sum"
+            ],
+            "formulae": [
+                "metrics.GA_Ta_Recruitment_Effort = [2222.0, 2222.0, 2222.0, 2222.0, 2222.0, 2222.0, 2222.0, 2222.0, 2222.0, 2222.0, 2222.0, 2222.0]"
+            ]
+        },
+        {
+            "name": "GA_Social_Security_Taxes_Overseas",
+            "display_name": "GA Social Security Taxes Overseas",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [],
+            "aggregations": [
+                "sum"
+            ],
+            "formulae": [
+                "metrics.GA_Social_Security_Taxes_Overseas = [43775.0, 45492.0, 54592.0, 56750.0, 58683.0, 60283.0, 61216.0, 61216.0, 62150.0, 62150.0, 62150.0, 62150.0]"
+            ]
+        },
+        {
+            "name": "GA_Total",
+            "display_name": "GA Total",
+            "description": "No description",
+            "type": "decimal",
+            "dimensions": [],
+            "aggregations": [
+                "sum"
+            ],
+            "formulae": [
+                "metrics.GA_Total = metrics.GA_Office_Expense + metrics.GA_Sim_Expenses + metrics.GA_Legal_Professional_Charges + metrics.GA_Insurance + metrics.GA_Employee_Welfare + metrics.GA_Celebtrations + metrics.GA_Expat_Cost_Visa_Immigration + metrics.GA_Rent + metrics.GA_New_Office_Rent + metrics.GA_Office_Security + metrics.GA_Compliance_Training + metrics.GA_New_Office_Additional_Expense + metrics.GA_Employer_Branding + metrics.GA_Employee_Rewards + metrics.GA_Learning_Training + metrics.GA_Ta_Recruitment_Effort + metrics.GA_Social_Security_Taxes_Overseas"
+            ]
+        },
+        {
+            "name": "Incentive",
+            "display_name": "Incentive",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Department"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Incentive[Department=Accounts_Finance] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Incentive[Department=Business_Development] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Incentive[Department=CXO] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Incentive[Department=Customer_Success] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Incentive[Department=DevOps_Software] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Incentive[Department=Development] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Incentive[Department=HR_Admin] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Incentive[Department=Marketing] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Incentive[Department=OD] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Incentive[Department=Partner] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Incentive[Department=Presales] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Incentive[Department=Process] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Incentive[Department=Product] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Incentive[Department=Sales] = [114000.0, 114000.0, 114000.0, 160667.0, 160667.0, 160667.0, 250667.0, 250667.0, 250667.0, 354000.0, 354000.0, 354000.0]",
+                "metrics.Incentive[Department=Server] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Incentive[Department=Support] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Incentive[Department=TA_LD] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"
+            ]
+        },
+        {
+            "name": "Off_Roll_Employee",
+            "display_name": "Off Roll Employee",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Department"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Off_Roll_Employee[Department=Accounts_Finance] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Off_Roll_Employee[Department=Business_Development] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Off_Roll_Employee[Department=CXO] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Off_Roll_Employee[Department=Customer_Success] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Off_Roll_Employee[Department=DevOps_Software] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Off_Roll_Employee[Department=Development] = [123744.0, 145078.0, 173744.0, 175967.0, 175967.0, 175967.0, 175967.0, 175967.0, 175967.0, 166411.0, 156856.0, 156856.0]",
+                "metrics.Off_Roll_Employee[Department=HR_Admin] = [1589.0, 1589.0, 1589.0, 1589.0, 1589.0, 1589.0, 1589.0, 1589.0, 1589.0, 1589.0, 1589.0, 1589.0]",
+                "metrics.Off_Roll_Employee[Department=Marketing] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Off_Roll_Employee[Department=OD] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Off_Roll_Employee[Department=Partner] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Off_Roll_Employee[Department=Presales] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Off_Roll_Employee[Department=Process] = [64773.0, 64773.0, 64773.0, 64773.0, 64773.0, 64773.0, 64773.0, 64773.0, 64773.0, 64773.0, 64773.0, 64773.0]",
+                "metrics.Off_Roll_Employee[Department=Product] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Off_Roll_Employee[Department=Sales] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Off_Roll_Employee[Department=Server] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Off_Roll_Employee[Department=Support] = [19979.0, 19979.0, 19979.0, 19979.0, 19979.0, 19979.0, 19979.0, 19979.0, 19979.0, 19979.0, 19979.0, 19979.0]",
+                "metrics.Off_Roll_Employee[Department=TA_LD] = [1800.0, 1800.0, 1800.0, 2867.0, 2867.0, 2867.0, 2867.0, 3400.0, 3400.0, 3400.0, 3400.0, 3400.0]"
+            ]
+        },
+        {
+            "name": "Software",
+            "display_name": "Software",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Department"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Software[Department=Accounts_Finance] = [29086.0, 2726.0, 2733.0, 3365.0, 2674.0, 2683.0, 3406.0, 6050.0, 2730.0, 3456.0, 2771.0, 2788.0]",
+                "metrics.Software[Department=Business_Development] = [1525.0, 1532.0, 1539.0, 1676.0, 1683.0, 1690.0, 1828.0, 1836.0, 1843.0, 1981.0, 1989.0, 1997.0]",
+                "metrics.Software[Department=CXO] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Software[Department=Customer_Success] = [1737.0, 1904.0, 2088.0, 2290.0, 2512.0, 2757.0, 3026.0, 3322.0, 3648.0, 4006.0, 4400.0, 4833.0]",
+                "metrics.Software[Department=DevOps_Software] = [50942.0, 52987.0, 55135.0, 57462.0, 59830.0, 62316.0, 65002.0, 67743.0, 70620.0, 73722.0, 76895.0, 80226.0]",
+                "metrics.Software[Department=Development] = [35233.0, 36499.0, 37828.0, 39224.0, 40689.0, 42228.0, 43843.0, 45539.0, 47321.0, 49191.0, 51154.0, 53216.0]",
+                "metrics.Software[Department=HR_Admin] = [25738.0, 17352.0, 18406.0, 19451.0, 20654.0, 21910.0, 23150.0, 24608.0, 26076.0, 27517.0, 29155.0, 31028.0]",
+                "metrics.Software[Department=Marketing] = [21572.0, 21604.0, 21636.0, 21814.0, 21848.0, 21882.0, 22063.0, 22099.0, 22135.0, 22318.0, 22357.0, 22396.0]",
+                "metrics.Software[Department=OD] = [1998.0, 1998.0, 1998.0, 1998.0, 2776.0, 5442.0, 2776.0, 2776.0, 2776.0, 2776.0, 2776.0, 2776.0]",
+                "metrics.Software[Department=Partner] = [391.0, 391.0, 391.0, 521.0, 521.0, 521.0, 651.0, 651.0, 651.0, 782.0, 782.0, 782.0]",
+                "metrics.Software[Department=Presales] = [520.0, 520.0, 520.0, 585.0, 585.0, 585.0, 650.0, 650.0, 650.0, 715.0, 715.0, 715.0]",
+                "metrics.Software[Department=Process] = [285.0, 285.0, 285.0, 285.0, 285.0, 285.0, 285.0, 285.0, 285.0, 285.0, 285.0, 285.0]",
+                "metrics.Software[Department=Product] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Software[Department=Sales] = [3396.0, 3411.0, 3427.0, 3704.0, 3850.0, 3865.0, 4142.0, 4288.0, 4369.0, 4516.0, 4532.0, 4548.0]",
+                "metrics.Software[Department=Server] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Software[Department=Support] = [6640.0, 6972.0, 7321.0, 7687.0, 8071.0, 8474.0, 8898.0, 9342.0, 9809.0, 10299.0, 10814.0, 11355.0]",
+                "metrics.Software[Department=TA_LD] = [2339.0, 872.0, 3539.0, 3539.0, 872.0, 872.0, 872.0, 9539.0, 872.0, 35085.0, 872.0, 872.0]"
+            ]
+        },
+        {
+            "name": "Travel",
+            "display_name": "Travel",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Department"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Travel[Department=Accounts_Finance] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Travel[Department=Business_Development] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Travel[Department=CXO] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Travel[Department=Customer_Success] = [26250.0, 27750.0, 33000.0, 36750.0, 41250.0, 42750.0, 44250.0, 45000.0, 45000.0, 45000.0, 45000.0, 45000.0]",
+                "metrics.Travel[Department=DevOps_Software] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Travel[Department=Development] = [7204.0, 7564.0, 7942.0, 8339.0, 8756.0, 9194.0, 9653.0, 10136.0, 10643.0, 11175.0, 11734.0, 12320.0]",
+                "metrics.Travel[Department=HR_Admin] = [820.0, 861.0, 904.0, 949.0, 997.0, 1047.0, 1099.0, 1154.0, 1212.0, 1272.0, 1336.0, 1403.0]",
+                "metrics.Travel[Department=Marketing] = [820.0, 861.0, 904.0, 949.0, 997.0, 1047.0, 1099.0, 1154.0, 1212.0, 1272.0, 1336.0, 1403.0]",
+                "metrics.Travel[Department=OD] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Travel[Department=Partner] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Travel[Department=Presales] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Travel[Department=Process] = [45354.0, 47622.0, 50003.0, 52503.0, 55129.0, 57885.0, 60779.0, 63818.0, 67009.0, 70360.0, 73878.0, 77571.0]",
+                "metrics.Travel[Department=Product] = [4167.0, 4167.0, 4167.0, 4167.0, 4167.0, 4167.0, 4167.0, 4167.0, 4167.0, 4167.0, 4167.0, 4167.0]",
+                "metrics.Travel[Department=Sales] = [1800.0, 1800.0, 2300.0, 2300.0, 34500.0, 60500.0, 60500.0, 110500.0, 121000.0, 171000.0, 171000.0, 171000.0]",
+                "metrics.Travel[Department=Server] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+                "metrics.Travel[Department=Support] = [8000.0, 8400.0, 8820.0, 9261.0, 9724.0, 10210.0, 10721.0, 11257.0, 11820.0, 12411.0, 13031.0, 13683.0]",
+                "metrics.Travel[Department=TA_LD] = [3333.0, 3333.0, 3333.0, 3333.0, 3333.0, 3333.0, 3333.0, 3333.0, 3333.0, 3333.0, 3333.0, 3333.0]"
+            ]
+        },
+        {
+            "name": "Salary_New_Hire",
+            "display_name": "Salary New Hire",
+            "description": "No description",
+            "type": "decimal",
+            "dimensions": [
+                "Department"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Salary_New_Hire = metrics.Total_CTC_New_Hires / 12"
+            ]
+        },
+        {
+            "name": "Salary_Increment",
+            "display_name": "Salary Increment",
+            "description": "No description",
+            "type": "decimal",
+            "dimensions": [
+                "Department"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Salary_Increment[Department=Development] = [10968.0, 5686.0, 3548.0, 6708.0, 7571.0, 2007.0, 10243.0, 5756.0, 6062.0, 49323.0, 49734.0, 48992.0]",
+                "metrics.Salary_Increment[Department=Process] = [-5375.0, 3505.0, 5402.0, 2714.0, 1113.0, 3627.0, 3257.0, 3344.0, 2312.0, 8714.0, 2038.0, 0.0]",
+                "metrics.Salary_Increment[Department=Product] = [511.0, 244.0, 709.0, 1138.0, 0.0, 622.0, 433.0, 2000.0, 506.0, 0.0, 632.0, 1249.0]",
+                "metrics.Salary_Increment[Department=Sales] = [-6036.0, 583.0, 0.0, 1095.0, 1466.0, 489.0, 1344.0, 910.0, 0.0, 1094.0, 0.0, 862.0]",
+                "metrics.Salary_Increment[Department=Presales] = [0.0, 0.0, 774.0, 0.0, 1456.0, 281.0, 914.0, 233.0, 0.0, 0.0, 0.0, 1403.0]",
+                "metrics.Salary_Increment[Department=Business_Development] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 913.0, 437.0, 1637.0, 0.0, 250.0]",
+                "metrics.Salary_Increment[Department=Partner] = [0.0, 730.0, 0.0, 422.0, 0.0, 0.0, 0.0, 0.0, 497.0, 563.0, 694.0, 0.0]",
+                "metrics.Salary_Increment[Department=Marketing] = [333.0, 889.0, 0.0, 0.0, 0.0, 356.0, 919.0, 1078.0, 0.0, 62.0, 0.0, 0.0]",
+                "metrics.Salary_Increment[Department=Customer_Success] = [974.0, 0.0, 244.0, 422.0, 680.0, 1111.0, 1830.0, 580.0, 456.0, 278.0, 0.0, 1462.0]",
+                "metrics.Salary_Increment[Department=Support] = [1079.0, 339.0, 514.0, 434.0, 664.0, 98.0, 484.0, 1025.0, 677.0, 885.0, 219.0, 168.0]",
+                "metrics.Salary_Increment[Department=HR_Admin] = [125.0, 356.0, 350.0, 107.0, 281.0, 511.0, 667.0, 0.0, 0.0, 444.0, 339.0, 418.0]",
+                "metrics.Salary_Increment[Department=TA_LD] = [200.0, 0.0, 0.0, 639.0, 0.0, 333.0, 0.0, 0.0, 767.0, 0.0, 0.0, 2031.0]",
+                "metrics.Salary_Increment[Department=OD] = [0.0, 0.0, 0.0, 322.0, 333.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1200.0]",
+                "metrics.Salary_Increment[Department=Accounts_Finance] = [1467.0, 0.0, 252.0, 422.0, 0.0, 0.0, 522.0, 0.0, 386.0, 153.0, 0.0, 920.0]"
+            ]
+        },
+        {
+            "name": "Recruitment_Charge_Percentage",
+            "display_name": "Recruitment Charge Percentage",
+            "description": "No description",
+            "type": "percentage",
+            "dimensions": [
+                "Department"
+            ],
+            "aggregations": [
+                "formula",
+                "formula"
+            ],
+            "formulae": [
+                "metrics.Recruitment_Charge_Percentage = 0.032"
+            ]
+        },
+        {
+            "name": "Salary_Total",
+            "display_name": "Salary Total",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Department"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Salary_Total[Department=Development][t=-1] = 476833.0",
+                "metrics.Salary_Total[Department=Process][t=-1] = 201081.0",
+                "metrics.Salary_Total[Department=Product][t=-1] = 53163.0",
+                "metrics.Salary_Total[Department=Sales][t=-1] = 133229.0",
+                "metrics.Salary_Total[Department=Presales][t=-1] = 81915.0",
+                "metrics.Salary_Total[Department=Business_Development][t=-1] = 50787.0",
+                "metrics.Salary_Total[Department=Partner][t=-1] = 51768.0",
+                "metrics.Salary_Total[Department=Marketing][t=-1] = 18181.0",
+                "metrics.Salary_Total[Department=Customer_Success][t=-1] = 49887.0",
+                "metrics.Salary_Total[Department=Support][t=-1] = 36316.0",
+                "metrics.Salary_Total[Department=HR_Admin][t=-1] = 17978.0",
+                "metrics.Salary_Total[Department=TA_LD][t=-1] = 19852.0",
+                "metrics.Salary_Total[Department=OD][t=-1] = 9278.0",
+                "metrics.Salary_Total[Department=Accounts_Finance][t=-1] = 16010.0",
+                "metrics.Salary_Total[t=t] = metrics.Salary_Total[t=t-1] + metrics.Salary_New_Hire[t=t] + metrics.Salary_Increment[t=t]"
+            ]
+        },
+        {
+            "name": "Recruitment_Charge",
+            "display_name": "Recruitment Charge",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Department"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Recruitment_Charge = metrics.Total_CTC_New_Hires * metrics.Recruitment_Charge_Percentage"
+            ]
+        },
+        {
+            "name": "Employee_Cost",
+            "display_name": "Employee Cost",
+            "description": "No description",
+            "type": "currency",
+            "dimensions": [
+                "Department"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Employee_Cost = metrics.Salary_Total + metrics.Recruitment_Charge"
+            ]
+        },
+        {
+            "name": "Employee_Count",
+            "display_name": "Employee Count",
+            "description": "No description",
+            "type": "decimal",
+            "dimensions": [
+                "Department"
+            ],
+            "aggregations": [
+                "eop",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Employee_Count[Department=Development][t=-1] = 155",
+                "metrics.Employee_Count[Department=Process][t=-1] = 153",
+                "metrics.Employee_Count[Department=Product][t=-1] = 16",
+                "metrics.Employee_Count[Department=Sales][t=-1] = 13",
+                "metrics.Employee_Count[Department=Presales][t=-1] = 9",
+                "metrics.Employee_Count[Department=Business_Development][t=-1] = 12",
+                "metrics.Employee_Count[Department=Partner][t=-1] = 6",
+                "metrics.Employee_Count[Department=Marketing][t=-1] = 12",
+                "metrics.Employee_Count[Department=Customer_Success][t=-1] = 21",
+                "metrics.Employee_Count[Department=Support][t=-1] = 80",
+                "metrics.Employee_Count[Department=HR_Admin][t=-1] = 20",
+                "metrics.Employee_Count[Department=TA_LD][t=-1] = 8",
+                "metrics.Employee_Count[Department=OD][t=-1] = 3",
+                "metrics.Employee_Count[Department=Accounts_Finance][t=-1] = 12",
+                "metrics.Employee_Count[Department=CXO][t=-1] = 7",
+                "metrics.Employee_Count[t=t] = metrics.Employee_Count[t=t-1] + metrics.Count_New_Hire[t=t]"
+            ]
+        },
+        {
+            "name": "Server_Spend_Discount",
+            "display_name": "Server Spend Discount",
+            "description": "No description",
+            "type": "decimal",
+            "dimensions": [],
+            "aggregations": [
+                "formula",
+                "formula"
+            ],
+            "formulae": [
+                "metrics.Server_Spend_Discount = 0.08"
+            ]
+        },
+        {
+            "name": "Marginal_Server_Spend",
+            "display_name": "Marginal Server Spend",
+            "description": "No description",
+            "type": "percentage",
+            "dimensions": [],
+            "aggregations": [
+                "formula",
+                "formula"
+            ],
+            "formulae": [
+                "metrics.Marginal_Server_Spend = 0.07"
+            ]
+        },
+        {
+            "name": "DevOps_Software_Cost_Percentage",
+            "display_name": "DevOps Software Cost Percentage",
+            "description": "No description",
+            "type": "percentage",
+            "dimensions": [],
+            "aggregations": [
+                "formula",
+                "formula"
+            ],
+            "formulae": [
+                "metrics.DevOps_Software_Cost_Percentage = 0.3"
+            ]
+        },
+        {
+            "name": "Server_Spend",
+            "display_name": "Server Spend",
+            "description": "No description",
+            "type": "percentage",
+            "dimensions": [],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.Server_Spend[t=t] = metrics.Server_Spend[t=t-1] + metrics.Marginal_Server_Spend[t=t] * ( metrics.Billed_ARR[t=t] - metrics.Billed_ARR[t=t-1] ) *  ( 1 - metrics.Server_Spend_Discount[t=t] )"
+            ]
+        },
+        {
+            "name": "DevOps_Software_Cost",
+            "display_name": "DevOps Software Cost",
+            "description": "No description",
+            "type": "percentage",
+            "dimensions": [],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "formulae": [
+                "metrics.DevOps_Software_Cost = metrics.Server_Spend * metrics.DevOps_Software_Cost_Percentage"
+            ]
+        }
+    ],
+    "modules": [
+        {
+            "name": "Contracted ARR",
+            "dimensions": [
+                "Region"
+            ],
+            "input": [
+                "metrics.New_Logo_ARR",
+                "metrics.Scaleup_ARR",
+                "metrics.Cross_Upsell_ARR",
+                "metrics.New_Logo_Count",
+                "metrics.Cross_Upsell_Count",
+                "metrics.Churn_ARR",
+                "metrics.Churn_Customers"
+            ],
+            "calculations": [
+                "metrics.Contracted_ARR",
+                "metrics.New_Logo_ARPA",
+                "metrics.Cross_Upsell_ARPA",
+                "metrics.Contracted_Customers"
+            ],
+            "formulae": []
+        },
+        {
+            "name": "Billing ARR",
+            "dimensions": [
+                "Region"
+            ],
+            "input": [
+                "metrics.New_Sales_Immediate_Billing",
+                "metrics.Contracted_ARR_March",
+                "metrics.Billed_ARR_March"
+            ],
+            "calculations": [
+                "metrics.New_Billing_ARR",
+                "metrics.Scaleup_Billing_ARR",
+                "metrics.Old_Pending_Go_Live_Billing_ARR",
+                "metrics.Churn_Billing_ARR",
+                "metrics.Billed_ARR"
+            ],
+            "formulae": []
+        },
+        {
+            "name": "Brand Marketing",
+            "dimensions": [
+                "Brand_Marketing_Type"
+            ],
+            "input": [
+                "metrics.Brand_Spend"
+            ],
+            "calculations": [],
+            "formulae": []
+        },
+        {
+            "name": "Performance Marketing",
+            "dimensions": [
+                "Performance_Marketing_Type",
+                "Region"
+            ],
+            "input": [
+                "metrics.Performance_Spend",
+                "metrics.MQL_Performance_Marketing"
+            ],
+            "calculations": [
+                "metrics.Cost_Per_MQL"
+            ],
+            "formulae": []
+        },
+        {
+            "name": "MQL and SQL Build Up",
+            "dimensions": [
+                "Region"
+            ],
+            "input": [
+                "metrics.SQL_Deal_Conversion",
+                "metrics.MQL_SQL_Conversion"
+            ],
+            "calculations": [
+                "metrics.Total_Deals_Quarter",
+                "metrics.SQL",
+                "metrics.MQL_Total",
+                "metrics.MQL_BDR"
+            ],
+            "formulae": []
+        },
+        {
+            "name": "New Hiring",
+            "dimensions": [
+                "Department",
+                "Designation",
+                "Location"
+            ],
+            "input": [
+                "metrics.Count_New_Hire",
+                "metrics.CTC_Per_New_Hire"
+            ],
+            "calculations": [
+                "metrics.Total_CTC_New_Hires"
+            ],
+            "formulae": []
+        },
+        {
+            "name": "General and Administration",
+            "dimensions": [],
+            "input": [
+                "metrics.GA_Office_Expense",
+                "metrics.GA_Sim_Expenses",
+                "metrics.GA_Legal_Professional_Charges",
+                "metrics.GA_Insurance",
+                "metrics.GA_Employee_Welfare",
+                "metrics.GA_Celebtrations",
+                "metrics.GA_Expat_Cost_Visa_Immigration",
+                "metrics.GA_Rent",
+                "metrics.GA_New_Office_Rent",
+                "metrics.GA_Office_Security",
+                "metrics.GA_Compliance_Training",
+                "metrics.GA_New_Office_Additional_Expense",
+                "metrics.GA_Employer_Branding",
+                "metrics.GA_Employee_Rewards",
+                "metrics.GA_Learning_Training",
+                "metrics.GA_Ta_Recruitment_Effort",
+                "metrics.GA_Social_Security_Taxes_Overseas"
+            ],
+            "calculations": [
+                "metrics.GA_Total"
+            ],
+            "formulae": []
+        },
+        {
+            "name": "Employee Expenses",
+            "dimensions": [
+                "Department"
+            ],
+            "input": [
+                "metrics.Salary_New_Hire",
+                "metrics.Salary_Increment",
+                "metrics.Recruitment_Charge_Percentage",
+                "metrics.Incentive",
+                "metrics.Off_Roll_Employee",
+                "metrics.Software",
+                "metrics.Travel"
+            ],
+            "calculations": [
+                "metrics.Salary_Total",
+                "metrics.Recruitment_Charge",
+                "metrics.Employee_Cost",
+                "metrics.Employee_Count"
+            ],
+            "formulae": []
+        },
+        {
+            "name": "Server & DevOps",
+            "dimensions": [],
+            "input": [
+                "metrics.Server_Spend_Discount",
+                "metrics.Marginal_Server_Spend",
+                "metrics.DevOps_Software_Cost_Percentage"
+            ],
+            "calculations": [
+                "metrics.Server_Spend",
+                "metrics.DevOps_Software_Cost"
+            ],
+            "formulae": []
+        }
+    ],
+    "dimensions": [
+        {
+            "Region": [
+                "Americas",
+                "EMEA",
+                "APAC"
+            ]
+        },
+        {
+            "Brand_Marketing_Type": [
+                "Events_Brand_Marketing",
+                "Gartner",
+                "AR_Design_Agency",
+                "Newswires",
+                "Media_Relations",
+                "Content_marketing",
+                "Digital_Marketing",
+                "Video_Production",
+                "Awards_SEO_Backlinks",
+                "Miscellaneous",
+                "Partnership_Marketing_Budget"
+            ]
+        },
+        {
+            "Performance_Marketing_Type": [
+                "Adwords",
+                "Organic",
+                "Events",
+                "Association",
+                "Roundtable",
+                "Partner_Marketing"
+            ]
+        },
+        {
+            "Department": [
+                "Development",
+                "Product",
+                "Process",
+                "Customer_Success",
+                "Marketing",
+                "Sales",
+                "Partner",
+                "Presales",
+                "Business_Development",
+                "Support",
+                "HR_Admin",
+                "TA_LD",
+                "OD",
+                "Accounts_Finance",
+                "CXO",
+                "DevOps_Software",
+                "Server"
+            ]
+        },
+        {
+            "Location": [
+                "Noida_HP",
+                "Americas_HP",
+                "EMEA_HP",
+                "APAC_HP"
+            ]
+        },
+        {
+            "Accounts_Finance::Designation": [
+                "AM_Accounts_Finance",
+                "TBD_3",
+                "AM_Secretarial_Legal",
+                "AM_MIS"
+            ]
+        },
+        {
+            "Business_Development::Designation": [
+                "BD"
+            ]
+        },
+        {
+            "Customer_Success::Designation": [
+                "Leads_ADr_CSM",
+                "Sr_CSM",
+                "CSM-USA",
+                "CSM_EMEA",
+                "CSM",
+                "Low_Touch_CSM"
+            ]
+        },
+        {
+            "Development::Designation": [
+                "New_Hire_Dev_DevOPs",
+                "New_Hire_Quality_Egnineering",
+                "New_Hire_Infrastructure_Management_COGS",
+                "New_Hire_Template_Engineering",
+                "Tech_PMs_TPMs",
+                "New_Hiring_Management_Architects"
+            ]
+        },
+        {
+            "HR_Admin::Designation": [
+                "Receptionist_Contractual",
+                "Travel_Implant",
+                "Transport_Executive_Shifts",
+                "Sr_Executive_MIS",
+                "Sr_Manager_Procurement",
+                "Administration_Executive_Compliance_Support",
+                "Sr_Manager_Global_Payroll",
+                "Management_Trainee"
+            ]
+        },
+        {
+            "Marketing::Designation": [
+                "Director_Marketing",
+                "Director_Product_Marketing",
+                "RMD",
+                "PMM",
+                "Exec_email_Automation",
+                "Digital_Manager",
+                "Interns_Marketing",
+                "Content_writer_India",
+                "General_Marketer",
+                "Content_Writer_EMEA_US_Sit_in_India",
+                "Lead-RFP_Content_Desk"
+            ]
+        },
+        {
+            "OD::Designation": [
+                "TBD_1",
+                "TBD_2"
+            ]
+        },
+        {
+            "Partner::Designation": [
+                "Presales_Enablement_Central",
+                "Partner_EMEA",
+                "Partner_APAC"
+            ]
+        },
+        {
+            "Presales::Designation": [
+                "Presales_Executive_Retail",
+                "Presales_Executive_3PL",
+                "Presales_Executive_Overall",
+                "Sr.Presales_Executive",
+                "Director-Presales_Central",
+                "Tech_Presales_Central"
+            ]
+        },
+        {
+            "Process::Designation": [
+                "PM_Process",
+                "PA_Process",
+                "QA_Process",
+                "PM_Lead_Process",
+                "PA_Lead_Process",
+                "QA_Lead_Process"
+            ]
+        },
+        {
+            "Product::Designation": [
+                "UX",
+                "Sr_UX",
+                "PM_Product",
+                "Sr_PM_Product",
+                "Principal_PM_Product",
+                "Carrier_Manager",
+                "Director_Product"
+            ]
+        },
+        {
+            "Sales::Designation": [
+                "Sr_Accts_Executive",
+                "Director_Sales",
+                "VP_Industry_Strategy"
+            ]
+        },
+        {
+            "Support::Designation": [
+                "Support_Support"
+            ]
+        },
+        {
+            "TA_LD::Designation": [
+                "Lead_TA",
+                "Executive_TA",
+                "Recruitment_Specialist"
+            ]
+        }
+    ],
+    "formula_agg": [
+        "metrics.New_Logo_ARPA = metrics.New_Logo_ARR / metrics.New_Logo_Count",
+        "metrics.Cross_Upsell_ARPA = metrics.Cross_Upsell_ARR / metrics.Cross_Upsell_Count",
+        "metrics.New_Sales_Immediate_Billing = 0.86",
+        "metrics.Cost_Per_MQL = metrics.Performance_Spend / metrics.MQL_Performance_Marketing",
+        "metrics.SQL_Deal_Conversion = 0.2",
+        "metrics.MQL_SQL_Conversion = 0.4",
+        "metrics.Recruitment_Charge_Percentage = 0.032",
+        "metrics.Server_Spend_Discount = 0.08",
+        "metrics.Marginal_Server_Spend = 0.07",
+        "metrics.DevOps_Software_Cost_Percentage = 0.3"
+    ]
+}

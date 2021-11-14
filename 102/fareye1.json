@@ -1,0 +1,976 @@
+{
+    "meta": {
+        "period": "1m",
+        "currency": null,
+        "duration": "6",
+        "plan_name": "Fareye Forecast Model",
+        "customer_id": null,
+        "dtml_version": null,
+        "plan_start_date": "2021/10",
+        "plan_description": null
+    },
+    "metrics": [
+        {
+            "name": "MQL__SQL____",
+            "type": "PERCENTAGE",
+            "formulae": [
+                "metrics.MQL__SQL____ = 0.15"
+            ],
+            "dimensions": [
+                "Regions"
+            ],
+            "aggregations": [
+                "avg",
+                "formula"
+            ],
+            "description": null,
+            "display_name": "MQL->SQL (%)"
+        },
+        {
+            "name": "Usage_Expansion_ARR",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Usage_Expansion_ARR[Regions=Americas][t=t] = metrics.Usage_ARR_Customers[All_Customers=Americas_Customers][t=t][Americas_Customers=*]",
+                "metrics.Usage_Expansion_ARR[Regions=EMEA][t=t] = metrics.Usage_ARR_Customers[All_Customers=EMEA_Customers][t=t][EMEA_Customers=*]",
+                "metrics.Usage_Expansion_ARR[Regions=APAC][t=t] = metrics.Usage_ARR_Customers[All_Customers=APAC_Customers][t=t][APAC_Customers=*]"
+            ],
+            "dimensions": [
+                "Regions"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "Usage Expansion ARR"
+        },
+        {
+            "name": "MQL__SQL__Days_",
+            "type": "NUMBER",
+            "formulae": [
+                "metrics.MQL__SQL__Days_ = 30"
+            ],
+            "dimensions": [
+                "Regions"
+            ],
+            "aggregations": [
+                "avg",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "MQL->SQL (Days)"
+        },
+        {
+            "name": "MQL_by_Sources",
+            "type": "NUMBER",
+            "formulae": [
+                "metrics.MQL_by_Sources[MQL_Sources=Upsell] = 0",
+                "metrics.MQL_by_Sources[MQL_Sources=Investor_Connect] = 0",
+                "metrics.MQL_by_Sources[Regions=Americas][MQL_Sources=BD_Team][t=t] = metrics.MQL__BD_[All_BDs=Americas_BDs][t=t][Americas_BDs=*]",
+                "metrics.MQL_by_Sources[Regions=EMEA][MQL_Sources=BD_Team][t=t] = metrics.MQL__BD_[All_BDs=EMEA_BDs][t=t][EMEA_BDs=*]",
+                "metrics.MQL_by_Sources[Regions=APAC][MQL_Sources=BD_Team][t=t] = metrics.MQL__BD_[All_BDs=APAC_BDs][t=t][APAC_BDs=*]",
+                "metrics.MQL_by_Sources[MQL_Sources=Marketing] = 0",
+                "metrics.MQL_by_Sources[MQL_Sources=Global_Accounts] = 0",
+                "metrics.MQL_by_Sources[Regions=Americas][MQL_Sources=Partner][t=2] = 0",
+                "metrics.MQL_by_Sources[MQL_Sources=Partner] = 0",
+                "metrics.MQL_by_Sources[Regions=APAC][MQL_Sources=Partner][t=0] = 5",
+                "metrics.MQL_by_Sources[Regions=Americas][MQL_Sources=Partner][t=0] = 5",
+                "metrics.MQL_by_Sources[Regions=EMEA][MQL_Sources=Partner][t=0] = 5",
+                "metrics.MQL_by_Sources[Regions=Americas][MQL_Sources=Partner][t=1] = 5",
+                "metrics.MQL_by_Sources[Regions=APAC][MQL_Sources=Partner][t=1] = 5",
+                "metrics.MQL_by_Sources[Regions=EMEA][MQL_Sources=Partner][t=1] = 5",
+                "metrics.MQL_by_Sources[MQL_Sources=Agency] = 0"
+            ],
+            "dimensions": [
+                "MQL_Sources",
+                "Regions"
+            ],
+            "aggregations": [
+                "sum",
+                "sum",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "MQL by Sources"
+        },
+        {
+            "name": "MQL",
+            "type": "NUMBER",
+            "formulae": [
+                "metrics.MQL[t=t] = metrics.MQL_by_Sources[MQL_Sources=*][t=t]",
+                "metrics.MQL[Regions=Americas][t=-1] = 0",
+                "metrics.MQL[Regions=EMEA][t=-1] = 0",
+                "metrics.MQL[Regions=APAC][t=-1] = 0"
+            ],
+            "dimensions": [
+                "Regions"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "MQL"
+        },
+        {
+            "name": "Booking_ARR",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Booking_ARR[t=t] = metrics.Booking_ARR[t=t-1] + metrics.New_Booking_ARR[t=t] - metrics.Churn_ARR[t=t] + metrics.Usage_Expansion_ARR[t=t] + metrics.Cross_Sell_ARR[t=t] + metrics.Booking_ARR__Current_Pipe_[Pipeline_Stages=*][t=t]",
+                "metrics.Booking_ARR[Regions=Americas][t=-1] = 3102425",
+                "metrics.Booking_ARR[Regions=EMEA][t=-1] = 5016535",
+                "metrics.Booking_ARR[Regions=APAC][t=-1] = 6562885"
+            ],
+            "dimensions": [
+                "Regions"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "Booking ARR"
+        },
+        {
+            "name": "Crossell_ARR_Customers",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Crossell_ARR_Customers = 0",
+                "metrics.Crossell_ARR_Customers[All_Customers=APAC_Customers][APAC_Customers=Central_Group_(Customer_16)][t=5] = 100000",
+                "metrics.Crossell_ARR_Customers[All_Customers=EMEA_Customers][EMEA_Customers=DAO_365_(Customer_118)][t=5] = 50000",
+                "metrics.Crossell_ARR_Customers[All_Customers=Americas_Customers][Americas_Customers=Metro_Home_To_Logistics_Inc_(Customer_139)][t=2] = 300000",
+                "metrics.Crossell_ARR_Customers[All_Customers=APAC_Customers][APAC_Customers=Singpost_(Quantium)_(Customer_146)][t=5] = 600000",
+                "metrics.Crossell_ARR_Customers[All_Customers=APAC_Customers][APAC_Customers=Deutsche_Post_AG_(DHL)_(Customer_22)][t=0] = 150000",
+                "metrics.Crossell_ARR_Customers[All_Customers=EMEA_Customers][EMEA_Customers=Hilti_Qatar_(Customer_42)][t=5] = 200000",
+                "metrics.Crossell_ARR_Customers[All_Customers=APAC_Customers][APAC_Customers=Johnson_&_Johnson_Pte_Ltd_(Customer_54)][t=5] = 150000"
+            ],
+            "dimensions": [
+                "All_Customers"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "Crossell ARR - Customers"
+        },
+        {
+            "name": "Deals",
+            "type": "NUMBER",
+            "formulae": [
+                "metrics.Deals[t=t] = metrics.SQL[t=t-3] * metrics.SQL__Deal____[t=t]"
+            ],
+            "dimensions": [
+                "Regions"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "Deals"
+        },
+        {
+            "name": "SQL",
+            "type": "NUMBER",
+            "formulae": [
+                "metrics.SQL[t=t] = metrics.MQL[t=t-1] * metrics.MQL__SQL____[t=t]",
+                "metrics.SQL[Regions=Americas][t=-3] = 0",
+                "metrics.SQL[Regions=EMEA][t=-3] = 0",
+                "metrics.SQL[Regions=APAC][t=-3] = 0",
+                "metrics.SQL[Regions=Americas][t=-2] = 0",
+                "metrics.SQL[Regions=EMEA][t=-2] = 0",
+                "metrics.SQL[Regions=APAC][t=-2] = 0",
+                "metrics.SQL[Regions=Americas][t=-1] = 0",
+                "metrics.SQL[Regions=EMEA][t=-1] = 0",
+                "metrics.SQL[Regions=APAC][t=-1] = 0"
+            ],
+            "dimensions": [
+                "Regions"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "SQL"
+        },
+        {
+            "name": "Booking_ARR__Current_Pipe_",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Booking_ARR__Current_Pipe_[t=t] = metrics.Raw_Pipeline[t=t] * metrics.Pipeline_Conversion_Rate____[t=t]",
+                "metrics.Booking_ARR__Current_Pipe_[Pipeline_Stages=Qualification][t=t] = metrics.Raw_Pipeline[t=t-6][Pipeline_Stages=Qualification] * metrics.Pipeline_Conversion_Rate____[t=t][Pipeline_Stages=Qualification]",
+                "metrics.Booking_ARR__Current_Pipe_[Pipeline_Stages=Nurture][t=t] = metrics.Raw_Pipeline[t=t-6][Pipeline_Stages=Nurture] * metrics.Pipeline_Conversion_Rate____[t=t][Pipeline_Stages=Nurture]",
+                "metrics.Booking_ARR__Current_Pipe_[Pipeline_Stages=Needs_Analysis][t=t] = metrics.Raw_Pipeline[t=t-5][Pipeline_Stages=Needs_Analysis] * metrics.Pipeline_Conversion_Rate____[Pipeline_Stages=Needs_Analysis][t=t]",
+                "metrics.Booking_ARR__Current_Pipe_[Pipeline_Stages=Impact_Analysis][t=t] = metrics.Raw_Pipeline[t=t-4][Pipeline_Stages=Impact_Analysis] * metrics.Pipeline_Conversion_Rate____[t=t][Pipeline_Stages=Impact_Analysis]",
+                "metrics.Booking_ARR__Current_Pipe_[Pipeline_Stages=Proposal][t=t] = metrics.Raw_Pipeline[t=t-2][Pipeline_Stages=Proposal] * metrics.Pipeline_Conversion_Rate____[t=t][Pipeline_Stages=Proposal]",
+                "metrics.Booking_ARR__Current_Pipe_[Pipeline_Stages=Negotiation][t=t] = metrics.Raw_Pipeline[t=t-1][Pipeline_Stages=Negotiation] * metrics.Pipeline_Conversion_Rate____[t=t][Pipeline_Stages=Negotiation]"
+            ],
+            "dimensions": [
+                "Pipeline_Stages",
+                "Regions"
+            ],
+            "aggregations": [
+                "sum",
+                "sum",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "Booking ARR (Current Pipe)"
+        },
+        {
+            "name": "Usage_ARR_Customers",
+            "type": "NUMBER",
+            "formulae": [
+                "metrics.Usage_ARR_Customers = 0"
+            ],
+            "dimensions": [
+                "All_Customers"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "Usage ARR - Customers"
+        },
+        {
+            "name": "Pipeline_Conversion_Rate____",
+            "type": "PERCENTAGE",
+            "formulae": [
+                "metrics.Pipeline_Conversion_Rate____[Pipeline_Stages=Nurture] = 0.1",
+                "metrics.Pipeline_Conversion_Rate____[Pipeline_Stages=Qualification] = 0.1",
+                "metrics.Pipeline_Conversion_Rate____[Pipeline_Stages=Needs_Analysis] = 0.2",
+                "metrics.Pipeline_Conversion_Rate____[Pipeline_Stages=Impact_Analysis] = 0.4",
+                "metrics.Pipeline_Conversion_Rate____[Pipeline_Stages=Proposal] = 0.6",
+                "metrics.Pipeline_Conversion_Rate____[Pipeline_Stages=Negotiation] = 0.8"
+            ],
+            "dimensions": [
+                "Pipeline_Stages",
+                "Regions"
+            ],
+            "aggregations": [
+                "avg",
+                "avg",
+                "formula"
+            ],
+            "description": null,
+            "display_name": "Pipeline Conversion Rate (%)"
+        },
+        {
+            "name": "Churn_ARR",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Churn_ARR[Regions=Americas][t=t] = metrics.Churn_ARR_Customers[All_Customers=Americas_Customers][t=t][Americas_Customers=*]",
+                "metrics.Churn_ARR[Regions=EMEA][t=t] = metrics.Churn_ARR_Customers[All_Customers=EMEA_Customers][t=t][EMEA_Customers=*]",
+                "metrics.Churn_ARR[Regions=APAC][t=t] = metrics.Churn_ARR_Customers[All_Customers=APAC_Customers][t=t][APAC_Customers=*]"
+            ],
+            "dimensions": [
+                "Regions"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "Churn ARR"
+        },
+        {
+            "name": "Upsell_ARR",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Upsell_ARR[Regions=Americas][t=t] = metrics.Upsell_ARR_Customers[All_Customers=Americas_Customers][t=t][Americas_Customers=*]",
+                "metrics.Upsell_ARR[Regions=EMEA][t=t] = metrics.Upsell_ARR_Customers[All_Customers=EMEA_Customers][t=t][EMEA_Customers=*]",
+                "metrics.Upsell_ARR[Regions=APAC][t=t] = metrics.Upsell_ARR_Customers[All_Customers=APAC_Customers][t=t][APAC_Customers=*]"
+            ],
+            "dimensions": [
+                "Regions"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "Upsell ARR"
+        },
+        {
+            "name": "SQL__Deal__Days_",
+            "type": "NUMBER",
+            "formulae": [
+                "metrics.SQL__Deal__Days_ = 90"
+            ],
+            "dimensions": [
+                "Regions"
+            ],
+            "aggregations": [
+                "avg",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "SQL->Deal (Days)"
+        },
+        {
+            "name": "Pipeline_Conversion__Months_",
+            "type": "NUMBER",
+            "formulae": [
+                "metrics.Pipeline_Conversion__Months_[Pipeline_Stages=Nurture] = 6",
+                "metrics.Pipeline_Conversion__Months_[Pipeline_Stages=Qualification] = 6",
+                "metrics.Pipeline_Conversion__Months_[Pipeline_Stages=Needs_Analysis] = 5",
+                "metrics.Pipeline_Conversion__Months_[Pipeline_Stages=Impact_Analysis] = 4",
+                "metrics.Pipeline_Conversion__Months_[Pipeline_Stages=Proposal] = 2",
+                "metrics.Pipeline_Conversion__Months_[Pipeline_Stages=Negotiation] = 1"
+            ],
+            "dimensions": [
+                "Pipeline_Stages",
+                "Regions"
+            ],
+            "aggregations": [
+                "avg",
+                "avg",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "Pipeline Conversion (Months)"
+        },
+        {
+            "name": "Churn_ARR_Customers",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Churn_ARR_Customers = 0",
+                "metrics.Churn_ARR_Customers[All_Customers=APAC_Customers][APAC_Customers=Caratlane_Trading_Pvt_Ltd_(Customer_15)][t=2] = 1366",
+                "metrics.Churn_ARR_Customers[All_Customers=APAC_Customers][APAC_Customers=JNE-PT_Tiki_Jalur_Nugraha_Ekakurir_(Customer_53)][t=5] = 7228",
+                "metrics.Churn_ARR_Customers[All_Customers=APAC_Customers][APAC_Customers=Maruti_Suzuki_India_Limited_(Customer_64)][t=2] = 3485"
+            ],
+            "dimensions": [
+                "All_Customers"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "Churn ARR - Customers"
+        },
+        {
+            "name": "Upsell_ARR_Customers",
+            "type": "NUMBER",
+            "formulae": [
+                "metrics.Upsell_ARR_Customers = 0",
+                "metrics.Upsell_ARR_Customers[All_Customers=APAC_Customers][APAC_Customers=Zalora_South_East_Asia_Pte_Ltd_(Customer_99)][t=2] = 20000",
+                "metrics.Upsell_ARR_Customers[All_Customers=APAC_Customers][APAC_Customers=Entrego_(Customer_29)][t=2] = 500000"
+            ],
+            "dimensions": [
+                "All_Customers"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "Upsell ARR - Customers"
+        },
+        {
+            "name": "New_Booking_ARR",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.New_Booking_ARR[t=t] = metrics.Deals[t=t] * metrics.ARPA[t=t]"
+            ],
+            "dimensions": [
+                "Regions"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "New Booking ARR"
+        },
+        {
+            "name": "Cross_Sell_ARR",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Cross_Sell_ARR[Regions=APAC][t=t] = metrics.Crossell_ARR_Customers[All_Customers=APAC_Customers][APAC_Customers=*][t=t]",
+                "metrics.Cross_Sell_ARR[Regions=EMEA][t=t] = metrics.Crossell_ARR_Customers[All_Customers=EMEA_Customers][EMEA_Customers=*][t=t]",
+                "metrics.Cross_Sell_ARR[Regions=Americas][t=t] = metrics.Crossell_ARR_Customers[All_Customers=Americas_Customers][Americas_Customers=*][t=t]"
+            ],
+            "dimensions": [
+                "Regions"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "Cross Sell ARR"
+        },
+        {
+            "name": "SQL__Deal____",
+            "type": "PERCENTAGE",
+            "formulae": [
+                "metrics.SQL__Deal____ = 0.5"
+            ],
+            "dimensions": [
+                "Regions"
+            ],
+            "aggregations": [
+                "avg",
+                "formula"
+            ],
+            "description": null,
+            "display_name": "SQL->Deal (%)"
+        },
+        {
+            "name": "Raw_Pipeline",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Nurture][t=-6] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Nurture][t=-6] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Nurture][t=-6] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Qualification][t=-6] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Qualification][t=-6] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Qualification][t=-6] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Needs_Analysis][t=-6] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Needs_Analysis][t=-6] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Needs_Analysis][t=-6] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Impact_Analysis][t=-6] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Impact_Analysis][t=-6] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Impact_Analysis][t=-6] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Proposal][t=-6] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Proposal][t=-6] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Proposal][t=-6] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Negotiation][t=-6] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Negotiation][t=-6] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Negotiation][t=-6] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Nurture][t=-5] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Nurture][t=-5] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Nurture][t=-5] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Qualification][t=-5] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Qualification][t=-5] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Qualification][t=-5] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Needs_Analysis][t=-5] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Needs_Analysis][t=-5] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Needs_Analysis][t=-5] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Impact_Analysis][t=-5] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Impact_Analysis][t=-5] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Impact_Analysis][t=-5] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Proposal][t=-5] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Proposal][t=-5] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Proposal][t=-5] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Negotiation][t=-5] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Negotiation][t=-5] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Negotiation][t=-5] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Nurture][t=-4] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Nurture][t=-4] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Nurture][t=-4] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Qualification][t=-4] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Qualification][t=-4] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Qualification][t=-4] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Needs_Analysis][t=-4] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Needs_Analysis][t=-4] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Needs_Analysis][t=-4] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Impact_Analysis][t=-4] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Impact_Analysis][t=-4] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Impact_Analysis][t=-4] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Proposal][t=-4] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Proposal][t=-4] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Proposal][t=-4] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Negotiation][t=-4] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Negotiation][t=-4] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Negotiation][t=-4] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Nurture][t=-3] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Nurture][t=-3] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Nurture][t=-3] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Qualification][t=-3] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Qualification][t=-3] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Qualification][t=-3] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Needs_Analysis][t=-3] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Needs_Analysis][t=-3] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Needs_Analysis][t=-3] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Impact_Analysis][t=-3] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Impact_Analysis][t=-3] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Impact_Analysis][t=-3] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Proposal][t=-3] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Proposal][t=-3] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Proposal][t=-3] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Negotiation][t=-3] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Negotiation][t=-3] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Negotiation][t=-3] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Nurture][t=-2] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Nurture][t=-2] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Nurture][t=-2] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Qualification][t=-2] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Qualification][t=-2] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Qualification][t=-2] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Needs_Analysis][t=-2] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Needs_Analysis][t=-2] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Needs_Analysis][t=-2] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Impact_Analysis][t=-2] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Impact_Analysis][t=-2] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Impact_Analysis][t=-2] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Proposal][t=-2] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Proposal][t=-2] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Proposal][t=-2] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Negotiation][t=-2] = 0",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Negotiation][t=-2] = 0",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Negotiation][t=-2] = 0",
+                "metrics.Raw_Pipeline = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Nurture][t=-1] = 1821725",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Nurture][t=-1] = 1520000",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Nurture][t=-1] = 990000",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Qualification][t=-1] = 1060000",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Negotiation][t=-1] = 0",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Qualification][t=-1] = 5775000",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Needs_Analysis][t=-1] = 1670000",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Impact_Analysis][t=-1] = 1109650",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Proposal][t=-1] = 352000",
+                "metrics.Raw_Pipeline[Regions=Americas][Pipeline_Stages=Negotiation][t=-1] = 976756",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Qualification][t=-1] = 4055000",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Needs_Analysis][t=-1] = 2190000",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Impact_Analysis][t=-1] = 525000",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Proposal][t=-1] = 225000",
+                "metrics.Raw_Pipeline[Regions=EMEA][Pipeline_Stages=Negotiation][t=-1] = 466000",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Impact_Analysis][t=-1] = 977000",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Needs_Analysis][t=-1] = 495000",
+                "metrics.Raw_Pipeline[Regions=APAC][Pipeline_Stages=Proposal][t=-1] = 165000"
+            ],
+            "dimensions": [
+                "Pipeline_Stages",
+                "Regions"
+            ],
+            "aggregations": [
+                "sum",
+                "sum",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "Raw Pipeline"
+        },
+        {
+            "name": "MQL__BD_",
+            "type": "NUMBER",
+            "formulae": [
+                "metrics.MQL__BD_ = 5"
+            ],
+            "dimensions": [
+                "All_BDs"
+            ],
+            "aggregations": [
+                "sum",
+                "sum"
+            ],
+            "description": null,
+            "display_name": "MQL (BD)"
+        },
+        {
+            "name": "ARPA",
+            "type": "CURRENCY",
+            "formulae": [
+                "metrics.ARPA = 175357"
+            ],
+            "dimensions": [
+                "Regions"
+            ],
+            "aggregations": [
+                "avg",
+                "formula"
+            ],
+            "description": null,
+            "display_name": "ARPA"
+        }
+    ],
+    "modules": [
+        {
+            "name": "MQL__BD_",
+            "displayName": "MQL (BD)",
+            "description": "Plan for MQL generated by BD team split by region and individual BD",
+            "input": [
+                "metrics.MQL__BD_"
+            ],
+            "calculations": [],
+            "formulae": [],
+            "dimensions": [
+                "All_BDs"
+            ]
+        },
+        {
+            "name": "MQL_By_Sources",
+            "displayName": "MQL By Sources",
+            "description": "Plan for MQL generated by all MQL sources",
+            "input": [
+                "metrics.MQL_by_Sources"
+            ],
+            "calculations": [],
+            "formulae": [],
+            "dimensions": [
+                "MQL_Sources",
+                "Regions"
+            ]
+        },
+        {
+            "name": "Funnel",
+            "displayName": "Funnel",
+            "description": "Funnel plan from MQL to SQL to Deal including conversion rate and time delays",
+            "input": [
+                "metrics.MQL__SQL____",
+                "metrics.SQL__Deal____",
+                "metrics.MQL__SQL__Days_",
+                "metrics.SQL__Deal__Days_"
+            ],
+            "calculations": [
+                "metrics.MQL",
+                "metrics.SQL",
+                "metrics.Deals"
+            ],
+            "formulae": [],
+            "dimensions": [
+                "Regions"
+            ]
+        },
+        {
+            "name": "ARR_and_Customer_Buildup",
+            "displayName": "ARR and Customer Buildup",
+            "description": "Model for how Booking and Billing ARR and customers would grow\n",
+            "input": [
+                "metrics.ARPA"
+            ],
+            "calculations": [
+                "metrics.Booking_ARR",
+                "metrics.New_Booking_ARR",
+                "metrics.Churn_ARR",
+                "metrics.Cross_Sell_ARR",
+                "metrics.Usage_Expansion_ARR",
+                "metrics.Upsell_ARR"
+            ],
+            "formulae": [],
+            "dimensions": [
+                "Regions"
+            ]
+        },
+        {
+            "name": "Bookings_from_Current_Pipe",
+            "displayName": "Bookings from Current Pipe",
+            "description": "Model to estimate ARR generated from current pipe",
+            "input": [
+                "metrics.Raw_Pipeline",
+                "metrics.Pipeline_Conversion_Rate____",
+                "metrics.Pipeline_Conversion__Months_"
+            ],
+            "calculations": [
+                "metrics.Booking_ARR__Current_Pipe_"
+            ],
+            "formulae": [],
+            "dimensions": [
+                "Pipeline_Stages",
+                "Regions"
+            ]
+        },
+        {
+            "name": "Upsell_ARR",
+            "displayName": "Upsell ARR",
+            "description": "Upsell ARR plan at individual customer level",
+            "input": [
+                "metrics.Upsell_ARR_Customers"
+            ],
+            "calculations": [],
+            "formulae": [],
+            "dimensions": [
+                "All_Customers"
+            ]
+        },
+        {
+            "name": "Crosssell_ARR",
+            "displayName": "Crosssell ARR",
+            "description": "Crosssell ARR planned at individual customer level",
+            "input": [
+                "metrics.Crossell_ARR_Customers"
+            ],
+            "calculations": [],
+            "formulae": [],
+            "dimensions": [
+                "All_Customers"
+            ]
+        },
+        {
+            "name": "Churn_ARR",
+            "displayName": "Churn ARR",
+            "description": "Churn ARR estimates at customer level",
+            "input": [
+                "metrics.Churn_ARR_Customers"
+            ],
+            "calculations": [],
+            "formulae": [],
+            "dimensions": [
+                "All_Customers"
+            ]
+        },
+        {
+            "name": "Usage_Expansion_ARR",
+            "displayName": "Usage Expansion ARR",
+            "description": "Usage based expansion plan at customer level",
+            "input": [
+                "metrics.Usage_ARR_Customers"
+            ],
+            "calculations": [],
+            "formulae": [],
+            "dimensions": [
+                "All_Customers"
+            ]
+        }
+    ],
+    "dimensions": [
+        {
+            "Regions": [
+                "Americas",
+                "EMEA",
+                "APAC"
+            ]
+        },
+        {
+            "All_BDs": [
+                "Americas_BDs",
+                "EMEA_BDs",
+                "APAC_BDs"
+            ]
+        },
+        {
+            "Americas_BDs::BD_Team": [
+                "Valerie_Marie_Bennett",
+                "Carla_Braun_Schranz",
+                "Juan_Porrata_Jr"
+            ]
+        },
+        {
+            "EMEA_BDs::BD_Team": [
+                "Alex_John_Harvey",
+                "James_John_Wild",
+                "Joseph_Daniel_Walmsley",
+                "Elizabeth_Rose_Sharpe"
+            ]
+        },
+        {
+            "APAC_BDs::BD_Team": [
+                "Prakash_Kumar"
+            ]
+        },
+        {
+            "MQL_Sources": [
+                "BD_Team",
+                "Agency",
+                "Partner",
+                "Global_Accounts",
+                "Upsell",
+                "Marketing",
+                "Investor_Connect"
+            ]
+        },
+        {
+            "All_Customers": [
+                "Americas_Customers",
+                "EMEA_Customers",
+                "APAC_Customers"
+            ]
+        },
+        {
+            "Americas_Customers::Customers": [
+                "Accucode_Inc_(Customer_133)",
+                "Blue_Yonder_Inc-Becton_Dickinson_(Customer_122)",
+                "DHL_Ecommerce_(Customer_22)",
+                "DHL_Express-US_(Customer_22)",
+                "DHL_General_Motor_(Customer_22)",
+                "DHL_Metropolitan_Logistics_SC_Mexico_(Customer_22)",
+                "DHL_Supply_Chain_US_(RLV_GM)_(Customer_22)",
+                "DHL_Supply_Chain_US_(Upsell_Automotive_Cross_Dock)_(Customer_22)",
+                "Electrolux_Home_Products_Inc_(Customer_130)",
+                "Gordon_Food_Store_LLC_(Customer_134)",
+                "Hello_Fresh_(Customer_145)",
+                "Metro_Home_To_Logistics_Inc_(Customer_139)",
+                "Runway_Messenger_(Customer_114)"
+            ]
+        },
+        {
+            "EMEA_Customers::Customers": [
+                "365_Express_Parcel_Delivery_(Namshi)_(Customer_1)",
+                "Al_Ghanim_(Customer_128)",
+                "Al_Tayer_Insignia_LLC_(Customer_4)",
+                "Apparel_LLC_(Customer_8)",
+                "Aster_CEBS_(Customer_9)",
+                "Boxy_(Customer_151)",
+                "Careem_Networks_FZ_LLC_(Customer_138)",
+                "DANX_(Customer_143)",
+                "DAO_365_(Customer_118)",
+                "DHL_Supply_Chain_Limited(CSI)_(Customer_22)",
+                "Dubai_Technologies_LLC_(Customer_147)",
+                "EIRAD_Trading_&_Contracting_Company_ASC(Eirad_UPS)_(Customer_27)",
+                "Emirates_Post_Dubai_(Customer_28)",
+                "Front_Line_Logistics_(Customer_35)",
+                "Hilti_Qatar_(Customer_42)",
+                "Jumbo_Electronics_Co_Ltd_(LLC)_(Customer_55)",
+                "LOGIS_FASHION_SA_(Customer_149)",
+                "Life-Me_(Customer_59)",
+                "Lineten_Limited_(Customer_144)",
+                "Lithunia_Post_(Addendum)_(Customer_119)",
+                "MH_Alshaya_Co_WLL_(Customer_125)",
+                "Magyar_Lapterjeszto_Zrt_(Customer_148)",
+                "Massmart_(Customer_97)",
+                "Medscan_Express_(Customer_142)",
+                "Nahdi_Medical_Co_(Customer_108)",
+                "Neighbourhood_Express_LLC_(Customer_131)",
+                "Noon_E_Commerce_Owned_By_Noon_AD_Holdings_One_Person_Company_LLC_(Customer_69)",
+                "Oman_Post_Company_LLC_(Customer_115)",
+                "Ontime_Express_(Customer_120)",
+                "Posta_Plus_(Customer_74)",
+                "Posti_Group_Corporation_(Customer_106)",
+                "Posti_Testing_Environment_(Customer_106)",
+                "Pylis_PC_(Svuum)_(Customer_135)",
+                "RNA_RESOURCES_GROUP_LTD_(Landmark)-_Courier_Aggregator_(Customer_79)",
+                "RNA_RESOURCES_GROUP_LTD_(Landmark)-LMD_(Customer_79)",
+                "Real_Emirates_LLC_(Customer_76)",
+                "SLS_Express_(Customer_61)",
+                "Salasa_(Customer_113)",
+                "Sharaf_DG_LLC_(Customer_84)",
+                "Sprinter_(Customer_85)",
+                "Sun_&_Sand_Sports_(Customer_132)",
+                "Tam_Express_Delivery_&_Trading_WLL_(Customer_110)",
+                "Unimasters_(Customer_93)",
+                "VASP_PREMIUM_-_Entrega_Personalizada_De_Publicacoes_Lda_(Customer_107)",
+                "Wayfair_(Customer_98)",
+                "Yusuf_Ahmed_Alghanim_&_Sons_Co_WLL_(Customer_128)",
+                "Zajil_Express_(Customer_127)"
+            ]
+        },
+        {
+            "APAC_Customers::Customers": [
+                "2Go_Express_Inc_(Customer_136)",
+                "Adani_(Customer_112)",
+                "Amway_India_Enterprises_Pvt_Ltd_(Customer_6)",
+                "Amway_Philipines_(Customer_6)",
+                "Apollo_Health_&_Life_Style_Ltd_(Customer_7)",
+                "BVC_LOGISTICS_PVT_LTD_(Customer_14)",
+                "Bajaj_Capital_Insurance_Broking_Ltd_(Customer_10)",
+                "Bajaj_Capital_Ltd_(Customer_10)",
+                "Bayer_CropScience_Limited_(Customer_67)",
+                "Bhukta_(Customer_89)",
+                "Blue_Dart_Express_Ltd_(Customer_11)",
+                "BlueStone_Jewellery_&_Lifestyle_Pvt_Ltd_(Customer_12)",
+                "CJ_Darcel_(Freight)_-_Tata_Steel_(Customer_89)",
+                "CJ_Darcl_(Tata_Tubes)_(Customer_89)",
+                "CJ_Darcl_Logistics_Limited_(Bluescope)_(Customer_89)",
+                "Calcutta_Carriers_(Customer_89)",
+                "Caratlane_Trading_Pvt_Ltd_(Customer_15)",
+                "Central_Group_(Customer_16)",
+                "Corner_Store_Technologies_Pvt_Ltd_(Customer_20)",
+                "DHL_ECOMMERCE_(INDIA)_LLP_(Smart_Trucking)_(Customer_22)",
+                "DMI_Finance_(Customer_23)",
+                "Delightful_Gourmet_Pvt_Ltd_(Licious)_(Customer_117)",
+                "Deutsche_Post_AG_(DHL)_(Customer_22)",
+                "Deutsche_Post_Global_Mail_(Australia)_Pty_Ltd_(Customer_22)",
+                "Domino_Sri_Lanka_(Customer_24)",
+                "Dr_Lal_Path_Lab_Ltd_(Customer_25)",
+                "EX_ARMY_BROTHERS_(BSL)_(Customer_89)",
+                "Entrego_(Customer_29)",
+                "Entrego_Parcel_(Customer_29)",
+                "Entrego-Transport_(Customer_29)",
+                "Exide_Industies_Limited_(Customer_31)",
+                "Exim_Logistics_Private_Ltd_(Aarti_Steel)_(Customer_140)",
+                "Exim_Logistics_Pvt_Ltd_(Customer_89)",
+                "FORTUNE_500_INVESTMENTS_(S)_PTE_LTD_(FABELIO)_(Name_changed_to_Pt_Kayu_Raya_Indonesia)_(Customer_34)",
+                "FedEx_(Customer_32)",
+                "Future_Supply_Chain_Solutions_Ltd_(Customer_36)",
+                "Future_Supply_Chain_Solutions_Ltd-_Line_haul_(Customer_36)",
+                "Gainwell_Commosales_Private_Limited_(Customer_126)",
+                "Gateway_East_India_Private_Limited_(Tata_FAMD_port)_(Customer_89)",
+                "Globe_Eco_Logistics_(Customer_89)",
+                "Godrej_&_Boyce_Mfg_Co_Ltd_(Customer_37)",
+                "Gujarat_Civil_(Customer_38)",
+                "Hilti_India_Private_Limited_(Customer_42)",
+                "Hindustan_Zinc_(Customer_43)",
+                "Hitachi_Hi_Rel_Power_Electronic_Ltd_(Customer_44)",
+                "Honda_Cars_India_Ltd_(Customer_46)",
+                "Inland_World_Logistics_Pvt_Ltd_(Customer_89)",
+                "J&J_ANZ_(Customer_54)",
+                "J&J_China_(Customer_54)",
+                "J&J_India_(Customer_54)",
+                "J&J_Indonesia_(Customer_54)",
+                "J&J_Japan_(Customer_54)",
+                "J&J_Malaysia_(Customer_54)",
+                "J&J_South_Korea_(Customer_54)",
+                "J&J_Thailand_(Customer_54)",
+                "J&J_Vietnam_(Customer_54)",
+                "J&J-_HK_(Customer_54)",
+                "J&J-_Taiwan_(Customer_54)",
+                "JK_Lakshmi_(Customer_52)",
+                "JK_Lakshmi_(Sim_Tracking)_(Customer_52)",
+                "JNE-PT_Tiki_Jalur_Nugraha_Ekakurir_(Customer_53)",
+                "Jindal_Steel_(Customer_51)",
+                "Johnson_&_Johnson_Pte_Ltd_(Customer_54)",
+                "Jubilant_FoodWorks_Limited_(Customer_24)",
+                "Jubilant_Golden_Harvest_Ltd-Bangladesh_(Customer_24)",
+                "Kabra_(Customer_89)",
+                "Kandoi_Transport_Limited_(Customer_89)",
+                "LBCXPH_Inc_(Customer_57)",
+                "LBCXPH_Inc_On_Demand_(Customer_57)",
+                "LBCXPH_Inc-_Mid_Mile_(Customer_57)",
+                "Lakshya_Internet_Pvt_Ltd_(SAR)_-_Livpure_(Customer_56)",
+                "Lifestyle_International_P_Ltd_(_Home_Centre)_(Customer_60)",
+                "Logitact_Solutions_(Customer_89)",
+                "Luxottica_(Customer_62)",
+                "MILK_MANTRA_DAIRY_PRIVATE_LIMITED_(Customer_123)",
+                "Maruti_Suzuki_India_Limited_(Customer_64)",
+                "Maruti_Suzuki_India_Limited_-_Telematics_(Customer_64)",
+                "Monginis_(Customer_66)",
+                "North_Eastern_carrying_Corporation_(Customer_89)",
+                "Om_Sharda_(Customer_89)",
+                "Om_Sharda_(FAMD)_(Customer_89)",
+                "PT_Jembatan_Akar_Teknologi_(Ula)_(Customer_137)",
+                "PT_Kahar_Duta_Sarana_Business_Solution_(LSI)_(Customer_109)",
+                "PT_Kahar_Duta_Sarana_Business_Solution_(Tabhitha)_(Customer_121)",
+                "PT_Kahar_Duta_Sarana_Business_Solution_(Tabhitha)_White_Labelling_(Customer_121)",
+                "PT_Kreasi_Nostra_Mandiri-SayurBox_(Customer_81)",
+                "PT_SiCepat_Ekspres_Indonesia_(Customer_141)",
+                "Pathkind_Diagnostics_Private_Limited_(Customer_72)",
+                "Pawan_Mishra_(Customer_89)",
+                "Philippine_Seven_Corporation_(Customer_73)",
+                "Prakash_Transport_Corporation_(Customer_89)",
+                "Praxis_Home_Retail_Limited_(Customer_36)",
+                "Rashmi_Mettaliks_(Customer_111)",
+                "Regal_Eagle_Pte_Ltd_(Evglo)_(Customer_30)",
+                "SAFEXPRESS_PVT_LTD_(Customer_80)",
+                "SRL_Limited_(Customer_86)",
+                "Schaeffler_(Customer_82)",
+                "Service_Lee_Technologies_Pvt_Ltd_(Customer_83)",
+                "Shiva_(Customer_89)",
+                "Shivani_Carriers_Pvt_Ltd_(Customer_89)",
+                "Shree_Ganesh_Transport_(FAMD)_(Customer_89)",
+                "Singpost_(Quantium)_(Customer_146)",
+                "Sravan_Shipping_Services_Private_Limited_(Tata_FAMD_port)_(Customer_89)",
+                "Super_sonic_(Tata)_(Customer_89)",
+                "Super_sonic_(Usha)_(Customer_89)",
+                "TATA_POWER_SOLAR_SYSTEMS_LIMITED_(Customer_89)",
+                "TATA_STEEL_BSL_LIMITED_(Customer_89)",
+                "TATA_STEEL_BSL_LIMITED_-_Ash_Unit_(Customer_89)",
+                "Tangent_(Chethan_Hedge)_(Customer_88)",
+                "Tinplate_(Customer_129)",
+                "Trendsutra_Platform_Service_PvtLtd_(Customer_92)",
+                "Union_Roadways_(Customer_89)",
+                "Visa_Steel_(Customer_95)",
+                "Visakha_Container_Terminal_Private_Limited_(Tata_FAMD_port)_(Customer_89)",
+                "WESTERNLAND_DAIRY_PRIVATE_LIMITED_(Customer_123)",
+                "Wal-Mart_India_Pvt_Ltd_(Customer_97)",
+                "Zalora_South_East_Asia_Pte_Ltd_(Customer_99)",
+                "Zomato_(Customer_100)",
+                "mgX_(Customer_150)"
+            ]
+        },
+        {
+            "Pipeline_Stages": [
+                "Nurture",
+                "Qualification",
+                "Needs_Analysis",
+                "Impact_Analysis",
+                "Proposal",
+                "Negotiation"
+            ]
+        }
+    ]
+}

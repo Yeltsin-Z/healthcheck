@@ -1,0 +1,162 @@
+{
+    "meta": {
+        "period": "1m",
+        "currency": "USD",
+        "duration": "12",
+        "negLimit": "-2",
+        "posLimit": "0",
+        "plan_name": "Fareye - Sales Metrics",
+        "customer_id": null,
+        "dtml_version": "2",
+        "plan_start_date": "2021/04",
+        "plan_description": "Fareye - Sales Metrics"
+    },
+    "views": [
+        {
+            "name": "Win Loss",
+            "metrics": [
+                {
+                    "name": "metrics.Deals_Won"
+                },
+                {
+                    "name": "metrics.Deals_Lost"
+                },
+                {
+                    "name": "metrics.Win_Loss_Ratio"
+                }
+            ],
+            "dimensions": [
+                "Vertical",
+                "Region",
+                "Deal_Size",
+                "Type"
+            ],
+            "displayName": null
+        }
+    ],
+    "metrics": [
+        {
+            "name": "Deals_Won",
+            "type": "decimal",
+            "formulae": [
+                "metrics.Deals_Won = 0"
+            ],
+            "dimensions": [
+                "Vertical",
+                "Region",
+                "Deal_Size",
+                "Type"
+            ],
+            "description": "Deals that are marked as Closed Won in a quarter/month",
+            "aggregations": [
+                "sum",
+                "sum",
+                "sum",
+                "sum",
+                "sum"
+            ],
+            "display_name": "Deals Won"
+        },
+        {
+            "name": "Deals_Lost",
+            "type": "decimal",
+            "formulae": [
+                "metrics.Deals_Lost = 0"
+            ],
+            "dimensions": [
+                "Vertical",
+                "Region",
+                "Deal_Size",
+                "Type"
+            ],
+            "description": "Deals that are marked as Closed Lost in a quarter/month",
+            "aggregations": [
+                "sum",
+                "sum",
+                "sum",
+                "sum",
+                "sum"
+            ],
+            "display_name": "Deals Lost"
+        },
+        {
+            "name": "Win_Loss_Ratio",
+            "type": "percentage",
+            "formulae": [
+                "metrics.Win_Loss_Ratio = metrics.Deals_Won / metrics.Deals_Lost"
+            ],
+            "dimensions": [
+                "Vertical",
+                "Region",
+                "Deal_Size",
+                "Type"
+            ],
+            "description": "",
+            "aggregations": [
+                "formula",
+                "formula",
+                "formula",
+                "formula",
+                "formula"
+            ],
+            "display_name": "Win Loss Ratio"
+        }
+    ],
+    "modules": [
+        {
+            "name": "Win Loss",
+            "input": [
+                "metrics.Deals_Won",
+                "metrics.Deals_Lost"
+            ],
+            "formulae": [],
+            "dimensions": [
+                "Vertical",
+                "Region",
+                "Deal_Size",
+                "Type"
+            ],
+            "description": null,
+            "displayName": null,
+            "calculations": [
+                "metrics.Win_Loss_Ratio"
+            ]
+        }
+    ],
+    "dimensions": [
+        {
+            "Vertical": [
+                "Big_Bulky",
+                "CPG",
+                "Grocery_Food",
+                "Logistics_3PL",
+                "QSR",
+                "Retail",
+                "eCommerce",
+                "Others"
+            ]
+        },
+        {
+            "Region": [
+                "Americas",
+                "EMEA",
+                "APAC"
+            ]
+        },
+        {
+            "Deal_Size": [
+                "Greater_Than_100k",
+                "Less_Than_100k"
+            ]
+        },
+        {
+            "Type": [
+                "New_Business",
+                "Existing_Business"
+            ]
+        }
+    ],
+    "formula_agg": [
+        "metrics.Win_Loss_Ratio = metrics.Deals_Won / metrics.Deals_Lost"
+    ]
+}

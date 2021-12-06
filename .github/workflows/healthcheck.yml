@@ -25,19 +25,4 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest
-        pytest -v --html=./automation_report.html 
-  publish-test-results:
-    name: "Publish Unit Tests Results"
-    needs: build
-    runs-on: ubuntu-latest
-    if: success() || failure()
-    steps:
-    - name: Download Artifacts
-      uses: actions/download-artifact@v2
-      with:
-        path: artifacts
-    - name: Publish Test Results
-      uses: git@github.com:Yeltsin-Z/healthcheck.git
-      with:
-        check_name: Test Results
-        files: "target/surefire-reports/*.html"
+        pytest -v --html=./automation_report.html

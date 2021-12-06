@@ -25,11 +25,11 @@ jobs:
         pip install pytest
         pytest -v --junit-xml pytest.xml
     
-    - name: Upload Unit Test Results
+    - name: Upload Test Results
       if: always()
       uses: actions/upload-artifact@v2
       with:
-          name: Unit Test Results (Python ${{ matrix.python-version }})
+          name: Test Results (Python ${{ matrix.python-version }})
           path: pytest.xml
   
   publish-test-results:

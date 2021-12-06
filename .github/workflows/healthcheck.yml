@@ -33,7 +33,7 @@ jobs:
           path: pytest.xml
   
   publish-test-results:
-    name: "Publish Unit Tests Results"
+    name: "Publish Tests Results"
     needs: build
     runs-on: ubuntu-latest
     if: always()
@@ -44,7 +44,7 @@ jobs:
         with:
           path: artifacts
 
-      - name: Publish Unit Test Results
+      - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v1
         with:
           files: artifacts/**/*.xml
